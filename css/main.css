@@ -20,6 +20,10 @@ a, a:hover, a:visited, a:active, a:focus {
   -webkit-tap-highlight-color: transparent;
 }
 
+p a {
+  color: #ffeb3b !important;
+}
+
 #primary-header {
   background-image: url(../assets/background.jpg);
   filter: blur(5px);
