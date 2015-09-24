@@ -1,7 +1,7 @@
 # Site settings
-title: Kabir's Blog
+title: Kabir Goel
 description: >
-  The thoughts and ramblings of a 13 year old.
+  This is where I write about technology and more.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kbrgl.github.io/" # the base hostname & protocol for your site
 twitter_username: notkabir
