@@ -1,22 +1,22 @@
-<div id="primary-header">
-<header class="centered text">
-<div class="container">
-<div class="row">
-<div class="ten columns offset-by-one">
-<h1 class="heading"><a class="link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a></h1>
-</div>
-</div>
-<div class="row">
-<div class="ten columns offset-by-one">
-<p class="lead">{{ site.description }}</p>
-</div>
-</div>
-<div class="row">
-<div class="ten columns offset-by-one">
-{% include links.html %}
-</div>
-</div>
-</div>
+<header id="primary-header">
+    <div class="centered text container">
+        <div class="row">
+            <div class="ten columns offset-by-one">
+                <h1 class="heading">
+                    <a class="link" href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ten columns offset-by-one">
+                <p class="lead">{{ site.description }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ten columns offset-by-one">
+                {% include links.html %}
+            </div>
+        </div>
+    </div>
 </header>
-</div>
 

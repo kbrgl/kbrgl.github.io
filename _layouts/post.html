@@ -2,16 +2,21 @@
 layout: default
 ---
 
-<section class="ten columns offset-by-one">
 <div class="container">
-<a class="link" href="{{ "/" | prepend: site.baseurl }}">&laquo; back</a>
-<header class="post-header">
-<h1 class="post-title">{{ page.title }}</h1>
-<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-</header>
-<article class="post-content">
-{{ content }}
-</article>
+    <div class="ten columns offset-by-one">
+        <a href="{{ '/' | prepend: site.baseurl }}">&laquo; back</a>
+        <section class="post">
+	        <header class="post-header">
+	            <h1 class="post-title">
+	                {{ page.title }}
+	            </h1>
+	            <p class="post-meta">
+	                {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+	            </p>
+	        </header>
+	        <article class="post-content">
+	            {{ content }}
+	        </article>
+        </section>
+    </div>
 </div>
-</section>
-
