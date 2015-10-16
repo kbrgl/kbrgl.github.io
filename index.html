@@ -2,14 +2,14 @@
 layout: default
 ---
 <div class="container">
-    <div class="ten columns offset-by-one">
+    <div class="nine columns offset-by-one">
         {% for post in site.posts %}
             <section class="post">
-                <h2>
+                <h3>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                         {{ post.title }}
                     </a>
-                </h2>
+                </h3>
                 <span class="post-meta">
                     {{ post.date | date: "%b %-d, %Y" }}
                 </span>
@@ -17,7 +17,10 @@ layout: default
                     {{ post.excerpt }}
                 </article>
             </section>
+            <hr class="post-separator">
         {% endfor %}
+        <!--<div class="text-align right">
+            <a id="archive-link" href="/archive.html">archive</a>
+        </div>-->
     </div>
 </div>
-
