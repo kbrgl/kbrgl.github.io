@@ -1,3 +1,9 @@
 <nav>
-    <a href="/" id="link">K</a> &nbsp; {% include links.html %}
+    <a href="{{ '/' | prepend: site.baseurl }}" class="bold serif">K</a>
+    &nbsp;
+    <a href="{{ '/archive.html' | prepend: site.baseurl }}">Archive</a> 
+    &nbsp;
+    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+    &nbsp;
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
 </nav>
