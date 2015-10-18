@@ -1,5 +1,5 @@
 {% for post in site.posts %}
-    <section class="post">
+    <section>
         <h3>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
@@ -9,8 +9,9 @@
             {{ post.date | date: "%b %-d, %Y" }}
         </span>
         <article class="post-content">
-            {{ post.excerpt }}
+            {{ post.content | strip_html | truncatewords: 20 }}
+            <a class="post-readon" href="{{ post.url | prepend: site.baseurl }}">read on...</a>
         </article>
     </section>
-    <hr class="post-separator">
+    <hr>
 {% endfor %}

@@ -1,5 +1,5 @@
 WebFontConfig = {
-  google: { families: [ 'Merriweather:400,300,700:latin', 'Ubuntu+Condensed::latin', 'Lato:300,700:latin' ] }
+  google: { families: [ 'Merriweather:400,300,700:latin' ] }
 };
 (function() {
   var wf = document.createElement('script');

@@ -1,0 +1,107 @@
+---
+# front matter to ensure Jekyll reads file properly
+---
+
+$primary-font: 'Merriweather'
+$display-font: 'Merriweather'
+$alternate-font: 'Merriweather'
+
+$black: #212121
+$white: #ffffff
+$grey: #555555
+$dark-grey: #424242
+$accent-color: #2fe7ad
+$alternate-color: #8c9eff
+
+$header-image: url(../assets/aurora.jpg)
+
+body
+	font:
+		family: $primary-font
+		size: 1.8rem
+	color: $dark-grey
+
+h1, h2, h3, h4, h5, h6
+	color: inherit
+	font:
+		family: $display-font
+		weight: 700
+	margin: 0
+
+ul
+	list-style: disc
+	padding: 1rem 0 0 2rem
+
+p
+	margin: 0
+
+a, a:hover, a:visited, a:active, a:focus
+	color: inherit
+	text-decoration: none
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	-webkit-tap-highlight-color: transparent
+
+a:hover
+	border-bottom: 1px solid
+
+article
+	padding-top: 1.5rem
+	& a
+		border-bottom: 1px dotted
+		color: $accent-color !important
+		transition: color .5s
+	& a:hover
+		color: $alternate-color !important
+		transition: color .5s
+
+.container
+	margin-top: 5rem
+	margin-bottom: 5rem
+
+.post-meta
+	font-family: $alternate-font
+	color: $grey
+
+.post-readon
+	border-bottom: 1px dotted
+
+.text-align
+	&.right
+		text-align: right
+	&.left
+		text-align: left
+	&.center
+		text-align: center
+
+#aurora
+	background-image: $header-image
+	background-attachment: fixed
+	height: 25rem
+
+#navbar
+	background-color: $white
+	font:
+		family: $primary-font
+		weight: 300
+	color: $black
+	border-bottom: 1px solid $white
+	width: 100%
+	padding: 1rem 3rem
+
+#navbar-fixed
+	@extend #navbar
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 9999
+
+#k
+	font:
+		family: $primary-font
+		weight: 400
+
+#page-footer
+	margin: 0 auto 3rem auto
+	text-align: center
+	color: $grey

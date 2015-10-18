@@ -6,26 +6,27 @@ You can check out my source code at http://github.com/kbrgl/kbrgl.github.io :D
 - Kabir
 -->
 <html>
-	{% include head.html %}
-	<body>
-		{% include nav.html %}
-		<div class="container">
-    		<div class="ten columns offset-by-one">
-        		<a href="{{ '/' | prepend: site.baseurl }}">go back</a>
-        		<section class="post">
-	        		<header class="post-header">
-	            		<h3 class="post-title">
-	                	{{ page.title }}
-	            		</h3>
-	            		<p class="post-meta">
-	                		{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-	            		</p>
-	        		</header>
-	        		<article class="post-content">
-	            		{{ content }}
-	        		</article>
-        		</section>
-    		</div>
+{% include head.html %}
+<body>
+	{% include navbar.html %}
+	<div class="container">
+		<div class="ten columns offset-by-one">
+			<a href="{{ '/' | prepend: site.baseurl }}">go back</a>
+			<section class="post">
+				<header class="post-header">
+					<h3 class="post-title">
+						{{ page.title }}
+					</h3>
+					<p class="post-meta">
+						{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+					</p>
+				</header>
+				<article class="post-content">
+					{{ content }}
+				</article>
+			</section>
 		</div>
-	</body>
+	</div>
+	{% include footer.html %}
+</body>
 </html>
