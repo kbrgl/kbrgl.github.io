@@ -1,5 +1,5 @@
 WebFontConfig = {
-  google: { families: [ 'Merriweather:400,300,700:latin' ] }
+  google: { families: [ 'Source+Serif+Pro:400,700:latin', 'Fira+Sans:400,300,300italic,400italic,500,500italic,700,700italic:latin' ] }
 };
 (function() {
   var wf = document.createElement('script');

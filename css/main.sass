@@ -1,10 +1,9 @@
 ---
-# front matter to ensure Jekyll reads file properly
 ---
 
-$primary-font: 'Merriweather'
-$display-font: 'Merriweather'
-$alternate-font: 'Merriweather'
+$primary-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
+$display-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
+$alternate-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
 
 $black: #212121
 $white: #ffffff
@@ -13,96 +12,87 @@ $dark-grey: #424242
 $accent-color: #2fe7ad
 $alternate-color: #8c9eff
 
-$header-image: url(../assets/aurora.jpg)
-
 body
-	font:
-		family: $primary-font
-		size: 1.8rem
-	color: $dark-grey
+    font:
+        family: $primary-font
+        size: 2rem
+    color: $dark-grey
         overflow: hidden
 
 h1, h2, h3, h4, h5, h6
-	color: inherit
-	font:
-		family: $display-font
-		weight: 700
-	margin: 0
+    color: inherit
+    font:
+        family: $display-font
+        weight: 700
+    margin: 0
 
 ul
-	list-style: disc
-	padding: 1rem 0 0 2rem
+    list-style: disc
+    padding: 1rem 0 0 2rem
 
 p
-	margin: 0
+    margin: 0
 
 a, a:hover, a:visited, a:active, a:focus
-	color: inherit
-	text-decoration: none
-	-webkit-tap-highlight-color: rgba(0,0,0,0)
-	-webkit-tap-highlight-color: transparent
+    color: inherit
+    text-decoration: none
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    -webkit-tap-highlight-color: transparent
 
 a:hover
-	border-bottom: 1px solid
+    border-bottom: 1px solid
 
 article
-	padding-top: 1.5rem
-	& a
-		border-bottom: 1px dotted
-		color: $accent-color !important
-		transition: color .5s
-	& a:hover
-		color: $alternate-color !important
-		transition: color .5s
+    padding-top: 1.5rem
+    & a
+        border-bottom: 1px dotted
+        color: $accent-color !important
+        transition: color .5s
+    & a:hover
+        color: $alternate-color !important
+        transition: color .5s
+
+.social
+    list-style: none
+    li
+        display: inline
+        a
+            svg
+                height: 2rem
+                width: 2rem
 
 .container
-	margin-top: 5rem
-	margin-bottom: 5rem
+    margin-top: 5rem
+    margin-bottom: 5rem
+
+.post-header
+    text-align: center
 
 .post-meta
-	font-family: $alternate-font
-	color: $grey
+    font:
+        family: $alternate-font
+        size: 70%
+    color: $grey
 
 .post-readon
-	border-bottom: 1px dotted
+    border-bottom: 1px dotted
+    font-size: 80%
 
 .text-align
-	&.right
-		text-align: right
-	&.left
-		text-align: left
-	&.center
-		text-align: center
-
-#aurora
-	background-image: $header-image
-	background-attachment: fixed
-	height: 25rem
-
-#navbar
-	background-color: $white
-	font:
-		family: $primary-font
-		weight: 300
-	color: $black
-	border-bottom: 1px solid $white
-	width: 100%
-	padding: 1rem 3rem
-
-#navbar-fixed
-	@extend #navbar
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	z-index: 9999
-
-#k
-	font:
-		family: $primary-font
-		weight: 400
+    &.right
+        text-align: right
+    &.left
+        text-align: left
+    &.center
+        text-align: center
 
 #page-footer
-	margin: 0 auto 3rem auto
-	text-align: center
-	color: $grey
+    margin: 0 auto 3rem auto
+    text-align: center
+    color: $grey
+
+#page-header
+    text-align: center
+    margin: 3rem auto 0 auto
+    a
+        border-bottom: 1px solid
