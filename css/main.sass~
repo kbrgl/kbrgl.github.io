@@ -1,0 +1,55 @@
+---
+---
+
+@import fonts
+
+body
+  color: #ffffff
+  font-family: 'Circular Book'
+  -webkit-animation-name: bgcolor-fade
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-timing-function: linear
+  -webkit-animation-direction: alternate
+  -webkit-animation-duration: 60s
+
+.doing
+  padding: 5rem
+  font:
+    size: 10rem
+    family: 'Circular Bold'
+  #underscore
+    -webkit-animation-name: pulse
+    -webkit-animation-iteration-count: infinite
+    -webkit-animation-direction: alternate
+    -webkit-animation-timing-function: ease
+    -webkit-animation-duration: 0.4s
+
+@-webkit-keyframes pulse
+  0%
+    opacity: 0
+  25%
+    opacity: 0.25
+  50%
+    opacity: 0.5
+  75%
+    opacity: 0.75
+  100%
+    opacity: 1
+
+@-webkit-keyframes bgcolor-fade
+  0%
+    background-color: #d500f9
+  25%
+    background-color: #651fff
+  35%
+    background-color: #6200ea
+  50%
+    background-color: #3d5afe
+  60%
+    background-color: #304ffe
+  75%
+    background-color: #2979ff
+  85%
+    background-color: #2962ff
+  100%
+    background-color: #f50057

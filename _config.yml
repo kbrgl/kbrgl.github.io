@@ -1,9 +1,10 @@
 # Site settings
 title: Kabir Goel
+email: kabirgoel.kg@gmail.com
 description: >
-  Hi. I'm Kabir, and I like to create stuff. This is where I write about technology and more.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://kbrgl.github.io/" # the base hostname & protocol for your site
+  programmer. that's about it.
+baseurl: ""
+url: "http://kabirgoel.com" # the base hostname & protocol for your site
 twitter_username: notkabir
 github_username:  kbrgl
 

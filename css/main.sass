@@ -1,95 +1,26 @@
 ---
 ---
 
-$primary-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
-$display-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
-$alternate-font: 'Source Serif Pro', serif // 'Fira Sans', sans-serif
-
-$black: #212121
-$white: #ffffff
-$grey: #555555
-$dark-grey: #424242
-$accent-color: #2fe7ad
-$alternate-color: #8c9eff
-
 body
-    font:
-        family: $primary-font
-        size: 2rem
-    color: $dark-grey
-        overflow: hidden
-
-h1, h2, h3, h4, h5, h6
-    color: inherit
-    font:
-        family: $display-font
-        weight: 700
-    margin: 0
-
-ul
-    list-style: disc
-    padding: 1rem 0 0 2rem
+  color: #000
+  padding: 15% 0
+  font-family: 'Ubuntu Mono'
+  font-size: 2rem
 
 p
-    margin: 0
+  padding: 3rem 0
 
-a, a:hover, a:visited, a:active, a:focus
+a
+  text-decoration: none
+  color: inherit
+  border-bottom: 2px dotted #2fe7ad
+  &:hover
     color: inherit
-    text-decoration: none
-    -webkit-tap-highlight-color: rgba(0,0,0,0)
-    -webkit-tap-highlight-color: transparent
+    border-bottom-style: solid
 
-a:hover
-    border-bottom: 1px solid
+strong
+  font-family: "Fira Mono"
 
-article
-    padding-top: 1.5rem
-    & a
-        border-bottom: 1px dotted
-        color: $accent-color !important
-        transition: color .5s
-    & a:hover
-        color: $alternate-color !important
-        transition: color .5s
-
-.social
-    a
-        svg
-            height: 2rem
-            width: 2rem
-
-.container
-    margin-top: 5rem
-    margin-bottom: 5rem
-
-.post-header
-    text-align: center
-
-.post-meta
-    font:
-        family: $alternate-font
-        size: 70%
-    color: $grey
-
-.post-readon
-    border-bottom: 1px dotted
-    font-size: 80%
-
-.text-align
-    &.right
-        text-align: right
-    &.left
-        text-align: left
-    &.center
-        text-align: center
-
-#page-footer
-    margin: 0 auto 3rem auto
-    text-align: center
-    color: $grey
-
-#page-header
-    text-align: center
-    margin: 3rem auto 0 auto
-    a
-        border-bottom: 1px solid
+#occupation
+  display: inline-block
+  text-transform: lowercase
