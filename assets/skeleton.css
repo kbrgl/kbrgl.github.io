@@ -125,7 +125,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+}
 
 
 /* Typography
@@ -298,11 +298,8 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  /*margin: 1.5rem 0 1.5rem 3rem;*/
   font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
-
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -336,7 +333,7 @@ td:last-child {
 
 
 /* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–-–––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
   margin-bottom: 1rem; }
@@ -350,7 +347,7 @@ blockquote,
 dl,
 figure,
 table,
-p,
+/*p,*/
 ul,
 ol,
 form {

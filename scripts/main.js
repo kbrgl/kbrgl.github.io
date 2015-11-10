@@ -1,12 +1,12 @@
 $(
   function(){
     $("#occupation").typed({
-            strings: ["web designer", "13 year old", "programmer", "Pythonista", "Rubyist", "Clojurist", "Lisper", "Linux geek", "Ubuntu fan", "pirate", "spammer", "Nigerian prince"],
+            strings: ["web designer", "13 year old", "programmer", "Pythonista", "Rubyist", "Clojurist", "Lisper", "Linux geek", "Ubuntu fan", "pirate"],
             // typing speed
-            typeSpeed: 50,
+            typeSpeed: 60,
             // time before typing starts
             // backspacing speed
-            backSpeed: 10,
+            backSpeed: 30,
             // time before backspacing
             backDelay: 500,
             // loop

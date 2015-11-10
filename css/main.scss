@@ -1,0 +1,69 @@
+---
+---
+
+body {
+  position: relative;
+  font-family: 'Ubuntu Mono';
+  font-size: 2rem;
+  top: 10rem;
+  margin-bottom: 10rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+nav {
+  margin-top: 2rem;
+}
+
+p {
+  padding: 2rem 0;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: inherit
+  }
+}
+
+p a {
+  border-bottom: 1px dotted #2fe7ad;
+  transition: color .2s;
+  &:hover {
+    color: #2fe7ad;
+    transition: color .2s;
+    border-bottom-style: none;
+  }
+}
+
+strong {
+  font-family: "Fira Mono";
+}
+
+i[class^="icon-"] {
+  font-size: 150%;
+  transition: opacity .2s;
+  &:hover {
+    opacity: 1;
+    transition: opacity .2s;
+  }
+}
+
+nav a {
+  border-bottom: 0;
+}
+
+.icon-spotify {
+  color: #00d166;
+}
+
+.icon-twitter {
+  color: #55acee;
+}
+
+#occupation {
+  display: inline-block;
+  text-transform: lowercase;
+}
