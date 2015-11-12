@@ -8,5 +8,6 @@ url: "http://kabirgoel.com" # the base hostname & protocol for your site
 twitter_username: notkabir
 github_username: kbrgl
 spotify: 12181834510
+medium_username: kbrgl
 # Build settings
 markdown: kramdown
