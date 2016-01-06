@@ -2,9 +2,20 @@
 layout: default
 ---
 <div class="container">
-  <div class="eight columns offset-by-two">
+  <div class="twelve columns">
     <section>
-      <strong>kabir goel | <span id="occupation"></span></strong>
+      <strong id="main">kabir goel | <span id="occupation"></span></strong>
+      <hr/>
+      <nav>
+        <a href="//medium.com/@{{ site.medium_username }}"><i class="icon-medium"></i></a>
+        <a href="//open.spotify.com/user/{{ site.spotify }}"><i class="icon-spotify"></i></a>
+        <a href="//twitter.com/{{ site.twitter_username }}"><i class="icon-twitter"></i></a>
+        <a href="//github.com/{{ site.github_username }}"><i class="icon-github"></i></a>
+      </nav>
+      <hr/>
+    </section>
+
+    <section>
       <p>
         Hello. I'm Kabir. I'm an avid coder and can usually be found on <a href="//github.com/">GitHub</a> or <a href="//hackerrank.com/">HackerRank</a>.
       </p>
@@ -17,11 +28,14 @@ layout: default
       </p>
     </section>
 
-    <nav>
-      <a href="//medium.com/@{{ site.medium_username }}"><i class="icon-medium"></i></a>
-      <a href="//open.spotify.com/user/{{ site.spotify }}"><i class="icon-spotify"></i></a>
-      <a href="//twitter.com/{{ site.twitter_username }}"><i class="icon-twitter"></i></a>
-      <a href="//github.com/{{ site.github_username }}"><i class="icon-github"></i></a>
-    </nav>
+    <section>
+      <strong>these comics define me</strong>
+      <div id="comics">
+        <img class="potd" src="http://imgs.xkcd.com/comics/your_mom.png"/>
+        <img class="potd" src="http://imgs.xkcd.com/comics/abstraction.png"/>
+        <img class="potd" src="http://imgs.xkcd.com/comics/turing_test.png"/>
+        <img class="potd" src="http://imgs.xkcd.com/comics/sandwich.png"/>
+      </div>
+    </section>
   </div>
 </div>

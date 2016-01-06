@@ -6,8 +6,8 @@ body {
   font-family: 'Ubuntu Mono';
   font-size: 2rem;
   top: 10rem;
-  margin-bottom: 10rem;
-  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 5rem;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 nav {
@@ -15,7 +15,9 @@ nav {
 }
 
 p {
-  padding: 2rem 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 
 a {
@@ -66,4 +68,24 @@ nav a {
 #occupation {
   display: inline-block;
   text-transform: lowercase;
+}
+
+.potd {
+  border-radius: .2rem;
+  height: 25rem;
+  width: auto;
+  transition: box-shadow .5s;
+}
+
+.potd:hover {
+  box-shadow: 0px 1.5px 8px 0px rgba(0,0,0,0.75);
+  transition: box-shadow .5s;
+}
+
+#comics {
+  margin: 2rem;
+}
+
+#main {
+  font-size: 2.1rem;
 }
