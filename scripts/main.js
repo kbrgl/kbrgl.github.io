@@ -15,6 +15,7 @@ $(
         }
     }
     ageStr = myAge + " years old";
+    $(".js-current-year").html(year);
     $("#occupation").typed({
             strings: ["web designer", ageStr, "programmer", "Pythonista", "Rubyist", "Clojurist", "Lisper", "Linux geek", "Ubuntu fan", "pirate"],
             // typing speed
