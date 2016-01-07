@@ -10,7 +10,7 @@ $(
     month = dateToday.getMonth() + 1; // +1 because months are 0-indexed
     myAge = year - bdayYear;
     if (month < 4)  {
-        if (month === 3 && day < 24 || month < 3) {
+        if ((month === 3 && day < 24) || month < 3) {
             myAge -= 1;
         }
     }
