@@ -1,13 +1,20 @@
 ---
 ---
 
+$primary-font: 'Slabo 27px';
+$alt-font: 'PT Mono';
+
 body {
   position: relative;
-  font-family: 'Ubuntu Mono';
+  font-family: $primary-font;
   font-size: 2rem;
   top: 10rem;
   margin-bottom: 5rem;
   color: rgba(0, 0, 0, 0.8);
+}
+
+strong {
+  font-family: $alt-font;
 }
 
 nav {
@@ -42,12 +49,8 @@ p a, .link {
 
 ul {
   list-style: disc;
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-top: 1rem;
-}
-
-strong {
-  font-family: "Fira Mono";
 }
 
 footer {
@@ -80,8 +83,7 @@ nav a {
   color: #26a69a;
 }
 
-#occupation {
-  display: inline-block;
+.lowered {
   text-transform: lowercase;
 }
 
@@ -101,6 +103,6 @@ nav a {
   margin: 2rem;
 }
 
-#main {
-  font-size: 2.1rem;
+#typed {
+  display: inline-block;
 }

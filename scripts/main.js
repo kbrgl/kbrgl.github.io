@@ -14,15 +14,14 @@ $(
             myAge -= 1;
         }
     }
-    ageStr = myAge + " years old";
+    ageStr = myAge + " year old";
     $(".js-current-year").html(year);
-    $("#occupation").typed({
-            strings: ["web designer", ageStr, "programmer", "Pythonista", "Rubyist", "Clojurist", "Lisper", "Linux geek", "Ubuntu fan", "pirate"],
+    $("#typed").typed({
+            strings: [ageStr, "web designer", "programmer", "Pythonista", "Rubyist", "Clojurist", "Lisper", "Linux geek", "Ubuntu fan", "pirate"],
             // typing speed
-            typeSpeed: 60,
-            // time before typing starts
+            typeSpeed: 50,
             // backspacing speed
-            backSpeed: 30,
+            backSpeed: 20,
             // time before backspacing
             backDelay: 500,
             // loop
