@@ -1,8 +1,8 @@
 ---
 ---
 
-$primary-font: 'Slabo 27px';
-$alt-font: 'PT Mono';
+$primary-font: 'Kreon';
+$alt-font: 'Fira Mono';
 
 body {
   position: relative;
@@ -17,14 +17,8 @@ strong {
   font-family: $alt-font;
 }
 
-nav {
-  margin-top: 2rem;
-}
-
 p {
   padding: 0;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
 }
 
 a {
