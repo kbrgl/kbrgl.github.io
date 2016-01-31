@@ -8,6 +8,8 @@ body {
   position: relative;
   font-family: $primary-font;
   font-size: 2rem;
+  top: 10rem;
+  margin-bottom: 10rem;
   background-color: #f5f5f5;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -31,7 +33,6 @@ a {
 }
 
 p a, .link {
-  -webkit-tap-highlight-color: rgba(47,231,173,0.4);
   border-bottom: 1px dotted #2fe7ad;
   transition: color .2s;
   &:hover {
@@ -66,12 +67,9 @@ nav a {
 }
 
 .container {
-  position: relative;
-  top: -10rem;
   background-color: #ffffff;
   padding: 5rem;
   border-radius: .5rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
 }
 
 .icon-spotify {
@@ -98,7 +96,7 @@ nav a {
 }
 
 .potd:hover {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+  box-shadow: 0px 1.5px 8px 0px rgba(0,0,0,0.75);
   transition: box-shadow .5s;
 }
 
@@ -108,30 +106,4 @@ nav a {
 
 #typed {
   display: inline-block;
-}
-
-#cover-wrapper {
-  overflow: hidden;
-}
-
-#cover {
-  min-width: 100%;
-  height: 30rem;
-  margin: -2rem;
-  background-image: url(/assets/img/aurora.jpg);
-  filter: blur(5px);
-  -webkit-filter: blur(10px);
-}
-
-@media only screen and (max-width : 500px) {
-  body {
-    font-size: 1.85rem;
-  }
-  .container {
-    border-radius: .5rem;
-    width: 95%;
-    top: -10rem;
-    position: relative;
-    padding: 4rem 2.5rem;
-  }
 }
