@@ -70,7 +70,7 @@ nav a {
   left: 0;
   right: 0;
   margin: 0 auto;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   background-color: #ffffff;
   padding: 5rem;
   border-radius: .5rem;
@@ -119,22 +119,20 @@ nav a {
 }
 
 #cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-width: 100%;
-  margin: -2rem;
+  margin: -15px;
   background-image: url(/assets/img/aurora.jpg);
-  filter: blur(5px);
+  filter: blur(10px);
   -webkit-filter: blur(10px);
 }
 
 @media only screen and (max-width : 500px) {
-  body {
-    font-size: 1.85rem;
-  }
   .container {
-    border-radius: .5rem;
     width: 95%;
-    top: -10rem;
-    position: relative;
     padding: 4rem 2.5rem;
   }
 }

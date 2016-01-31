@@ -1,3 +1,5 @@
+var coverHeightFactor = 1.7;
+var containerOffsetFactor = 4;
 $(
   function(){
     // calculate my current age. it's typed out.
@@ -18,8 +20,18 @@ $(
     ][Math.floor(Math.random() * 4)]) // 4 is length of array. if another comic is added, 4 must be changed accordingly.
     
     // dynamically size the cover image
-    $("#cover").height($(window).height() / 1.6);
-    $(".container").css("top", $(window).height() / 3.2);
+    $("#cover").height($(window).height() / coverHeightFactor);
+    $(".container").css("top", $(window).height() / containerOffsetFactor);
+
+    // recalculate cover height and container offset in case the orientation changes
+    $(window).on("orientationchange", function(){
+        // using setTimeout because browser takes a small amount of time to update height
+        var setHeight = function() {
+            $("#cover").height($(window).height() / coverHeightFactor);
+            $(".container").css("top", $(window).height() / containerOffsetFactor);
+        };
+        setTimeout(setHeight, 500);
+    });
 
     // insert the current year into elements that require it
     $(".js-current-year").html(now.getFullYear());
