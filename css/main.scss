@@ -66,7 +66,11 @@ nav a {
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-bottom: 15rem;
   background-color: #ffffff;
   padding: 5rem;
   border-radius: .5rem;

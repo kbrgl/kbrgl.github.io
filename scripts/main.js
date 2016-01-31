@@ -19,7 +19,7 @@ $(
     
     // dynamically size the cover image
     $("#cover").height($(window).height() / 1.6);
-    $(".container").css("top", $(window).height() / -3.2);
+    $(".container").css("top", $(window).height() / 3.2);
 
     // insert the current year into elements that require it
     $(".js-current-year").html(now.getFullYear());
