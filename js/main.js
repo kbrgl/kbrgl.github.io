@@ -1,8 +1,14 @@
 var coverHeightFactor = 1.7;
 var containerOffsetFactor = 4;
+var comics = [
+        '<a href="//xkcd.com/366/"><img class="potd" src="http://imgs.xkcd.com/comics/your_mom.png" alt="xkcd comic strip"/></a>',
+        '<a href="//xkcd.com/676/"><img class="potd" src="http://imgs.xkcd.com/comics/abstraction.png" alt="xkcd comic strip"/></a>',
+        '<a href="//xkcd.com/1597/"><img class="potd" src="https://imgs.xkcd.com/comics/git.png" alt="xkcd comic strip"/></a>',
+        '<a href="//xkcd.com/149/"><img class="potd" src="http://imgs.xkcd.com/comics/sandwich.png" alt="xkcd comic strip"/></a>',
+];
 $(
   function(){
-    // calculate my current age. it's typed out.
+    // calculate my current age
     now = new Date();
     month = now.getMonth() + 1; // +1 because months are 0-indexed
     myAge = now.getFullYear() - 2002;
@@ -12,12 +18,7 @@ $(
     ageStr = myAge + " year old";
 
     // randomly choose the xkcd comic to display
-    $("#comics").html([
-        '<a href="//xkcd.com/366/"><img class="potd" src="http://imgs.xkcd.com/comics/your_mom.png"/></a>',
-        '<a href="//xkcd.com/676/"><img class="potd" src="http://imgs.xkcd.com/comics/abstraction.png"/></a>',
-        '<a href="//xkcd.com/1597/"><img class="potd" src="https://imgs.xkcd.com/comics/git.png"/></a>',
-        '<a href="//xkcd.com/149/"><img class="potd" src="http://imgs.xkcd.com/comics/sandwich.png"/></a>',
-    ][Math.floor(Math.random() * 4)]) // 4 is length of array. if another comic is added, 4 must be changed accordingly.
+    $("#comics").html(comics[Math.floor(Math.random() * 4)])
     
     // dynamically size the cover image
     $("#cover").height($(window).height() / coverHeightFactor);
@@ -25,7 +26,7 @@ $(
 
     // recalculate cover height and container offset in case the orientation changes
     $(window).on("orientationchange", function(){
-        // using setTimeout because browser takes a small amount of time to update height
+        // using setTimeout because animate the orientation change and if jQuery captures the new dimensions during the animation then we get a pretty funky result
         var setHeight = function() {
             $("#cover").height($(window).height() / coverHeightFactor);
             $(".container").css("top", $(window).height() / containerOffsetFactor);

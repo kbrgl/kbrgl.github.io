@@ -48,7 +48,7 @@ layout: default
   <hr/>
   
   <section>
-    <h6>and here's an xkcd comic</h6>
+    <h6>one of my favourite xkcd comics</h6>
     <div id="comics"></div>
   </section>
 
