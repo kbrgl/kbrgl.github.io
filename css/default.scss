@@ -52,15 +52,6 @@ footer {
   text-align: center;
 }
 
-i[class^="icon-"] {
-  font-size: 150%;
-  transition: opacity .2s;
-  &:hover {
-    opacity: 1;
-    transition: opacity .2s;
-  }
-}
-
 nav a {
   border-bottom: 0;
 }
@@ -77,6 +68,42 @@ nav a {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
 }
 
+i[class^="icon-"] {
+  transition: opacity .2s;
+  &:hover {
+    opacity: 1;
+    transition: opacity .2s;
+  }
+}
+
+.icon-facebook, .icon-facebook-official, .icon-instagram {
+  color: #3b5998;
+}
+
+.icon-ie {
+  color: #00baf0;
+}
+
+.icon-opera {
+  color: #ff1b2d;
+}
+
+.icon-chrome {
+  color: #7eaedc;
+}
+
+.icon-firefox {
+  color: #db5226;
+}
+
+.icon-star {
+  color: #e9fa55;
+}
+
+.icon-android {
+  color: #a4c639;
+}
+
 .icon-spotify {
   color: #00d166;
 }
@@ -89,43 +116,26 @@ nav a {
   color: #26a69a;
 }
 
+.icon-youtube-play {
+  color:#e52d27;
+}
+
 .lowered {
   text-transform: lowercase;
 }
 
-.potd {
-  border-radius: .2rem;
-  height: 25rem;
-  width: auto;
-  transition: box-shadow .5s;
-}
-
-.potd:hover {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
-  transition: box-shadow .5s;
-}
-
-#comics {
-  margin: 2rem;
-}
-
-#typed {
-  display: inline-block;
-}
-
-#cover-wrapper {
-  overflow: hidden;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
-}
-
 #cover {
+  overflow: hidden;
+}
+
+#cover-img {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-width: 100%;
   margin: -15px;
-  background-image: url(/assets/img/aurora.jpg);
+  background-image: url(/img/aurora.jpg);
   filter: blur(10px);
   -webkit-filter: blur(10px);
 }
