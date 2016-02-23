@@ -1,149 +1,189 @@
 ---
 ---
 
-$primary-font: 'Slabo 27px';
-$alt-font: 'PT Mono';
+@import 'variables';
 
 body {
-  position: relative;
-  font-family: $primary-font;
-  font-size: 2rem;
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.8);
+	background: $body-background;
+	color: $font-color;
+	font-family: $primary-font;
+	font-size: 2rem;
+	position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $alt-font;
+	font-size: 110%;
+	font-family: $alt-font;
 }
 
 p {
-  padding: 0;
+	padding: 0;
 }
 
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    color: inherit
-  }
+	border-bottom: 2px dotted $accent-color;
+	color: inherit;
+	text-decoration: none;
+	transition: color .2s;
+	-webkit-tap-highlight-color: transparentize($accent-color, .6);
+
+	&:hover {
+		color: $accent-color;
+		transition: color .2s;
+		border-bottom-style: none;
+	}
 }
 
-p a, .link {
-  -webkit-tap-highlight-color: rgba(47,231,173,0.4);
-  border-bottom: 1px dotted #2fe7ad;
-  transition: color .2s;
-  &:hover {
-    color: #2fe7ad;
-    transition: color .2s;
-    border-bottom-style: none;
-  }
+a.nostyling {
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+	border-bottom: 0;
+
+	&:hover {
+		color: inherit
+	}
 }
 
 ul {
-  list-style: disc;
-  padding-left: 2rem;
-  padding-top: 1rem;
+	list-style: disc;
+	padding-left: 2rem;
+	padding-top: 1rem;
 }
 
 footer {
-  color: #616161;
-  text-align: center;
+	color: grey;
+	text-align: center;
 }
 
 nav a {
-  border-bottom: 0;
+	border-bottom: 0;
 }
 
 .container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  margin-bottom: 10rem;
-  background-color: #ffffff;
-  padding: 5rem;
-  border-radius: .5rem;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-bottom: 10rem;
+	background-color: white;
+	padding: 5rem;
+	border-radius: .5rem;
+	box-shadow: 0 2px 2px 0 transparentize(black, 0.4);
+	top: 30vmin;
 }
 
 i[class^="icon-"] {
-  font-size: 150%;
-  transition: opacity .2s;
-  &:hover {
-    opacity: 1;
-    transition: opacity .2s;
-  }
+	font-size: 150%;
+	transition: opacity .2s;
+	&:hover {
+		opacity: 1;
+		transition: opacity .2s;
+	}
 }
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
-  color: #3b5998;
+	color: #3b5998;
 }
 
 .icon-ie {
-  color: #00baf0;
+	color: #00baf0;
 }
 
 .icon-opera {
-  color: #ff1b2d;
+	color: #ff1b2d;
 }
 
 .icon-chrome {
-  color: #7eaedc;
+	color: #7eaedc;
 }
 
 .icon-firefox {
-  color: #db5226;
+	color: #db5226;
 }
 
 .icon-star {
-  color: #e9fa55;
+	color: #e9fa55;
 }
 
 .icon-android {
-  color: #a4c639;
+	color: #a4c639;
 }
 
 .icon-spotify {
-  color: #00d166;
+	color: #00d166;
 }
 
 .icon-twitter {
-  color: #55acee;
+	color: #55acee;
 }
 
 .icon-mail-alt {
-  color: #26a69a;
+	color: #26a69a;
 }
 
 .icon-youtube-play {
-  color:#e52d27;
+	color:#e52d27;
+}
+
+.icon-github {
+	color: #000;
 }
 
 .lowered {
-  text-transform: lowercase;
+	text-transform: lowercase;
 }
 
-#cover {
-  overflow: hidden;
+.comic {
+	border-radius: .2rem;
+	height: 25rem;
+	width: auto;
+	box-shadow: 0 0 3px black;
+	transition: box-shadow .5s;
+
+	&:hover {
+		box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
+		transition: box-shadow .5s;
+	}
 }
 
-#cover-img {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-width: 100%;
-  margin: -15px;
-  background-image: url(/img/aurora.jpg);
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+.cover {
+	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-width: 100%;
+	height: 60vmin;
+	background-image: url(/img/aurora.jpg);
+}
+
+.overright {
+	position: relative;
+	top: -10px;
+	color: #f14;
+	font-size: 80%;
+	text-transform: none;
 }
 
 @media only screen and (max-width : 500px) {
-  .container {
-    width: 95%;
-    padding: 4rem 2.5rem;
-  }
+	.container {
+		width: 97%;
+		box-shadow: none;
+		padding: 4rem 2.5rem;
+	}
+	.navbar {
+		display: none;
+	}
+}
+
+.navbar {
+	font-family: $nav-font;
+	font-size: 3rem;
+	color: white;
+	vertical-align: middle;
+	padding: 2rem 5rem;
+
+	.logo {
+		font-style: italic;
+	}
 }

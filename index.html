@@ -1,29 +1,64 @@
 ---
 layout: plain
 ---
-
 <head>
-    {% include head_defaults.html %}
-    <script src="{{ '/js/index.js' | prepend: site.baseurl }}"></script>
-    <link rel="stylesheet" href="{{ '/css/index.css' | prepend: site.baseurl }}"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="theme-color" content="#2fe7ad"/>
+
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}"/>
+
+    <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/typed.min.js' | prepend: site.baseurl }}"></script>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: [ 'PT+Mono::latin', 'Slabo+27px::latin', 'Ubuntu+Mono::latin' ] }
+        };
+
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+    <link rel="icon" href="favicon.png" sizes="196x196" type="image/png"/>
+    <link rel="stylesheet" href="./font/icons/css/icons.css"/>
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <link rel="stylesheet" href="./css/skeleton.css"/>
+    <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}"/>
+    <script src="./js/default.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/default.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
 </head>
 
 <body>
-    <div id="cover">
-        <div id="cover-img"></div>
+    <div class="cover">
+        <nav class="navbar">
+            <a class="logo" href="#">k</a>
+            <a href="./minty/" style="float:right;">minty<span class="overright">NEW!</span></a>
+        </nav>
     </div>
 
     <div class="container">
         <header>
-            <h6 class="lowered">kabir goel&nbsp;|&nbsp;<span id="typed"></span></h6>
+            <h6 class="lowered">kabir goel | <span class="typed"></span></h6>
             <hr/>
             <nav>
-                <a href="//instagram.com/@{{ site.instagram_username }}" title="Instagram"><i class="icon-instagram"></i></a>
-                <a href="//open.spotify.com/user/{{ site.spotify }}" title="Spotify"><i class="icon-spotify"></i></a>
-                <a href="//twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="icon-twitter"></i></a>
-                <a href="//github.com/{{ site.github_username }}" title="GitHub"><i class="icon-github"></i></a>
-                <a href="//facebook.com/{{ site.facebook_username }}" title="Facebook"><i class="icon-facebook"></i></a>
-                <a href="mailto:{{ site.email }}" title="Email"><i class="icon-mail-alt"></i></a>
+                <a href="//instagram.com/@{{ site.instagram_username }}" class="nostyling" title="Instagram"><i class="icon-instagram"></i></a>
+                <a href="//open.spotify.com/user/{{ site.spotify }}" class="nostyling" title="Spotify"><i class="icon-spotify"></i></a>
+                <a href="//twitter.com/{{ site.twitter_username }}" class="nostyling" title="Twitter"><i class="icon-twitter"></i></a>
+                <a href="//github.com/{{ site.github_username }}" class="nostyling" title="GitHub"><i class="icon-github"></i></a>
+                <a href="//facebook.com/{{ site.facebook_username }}" class="nostyling" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="mailto:{{ site.email }}" class="nostyling" title="Email"><i class="icon-mail-alt"></i></a>
             </nav>
             <hr/>
         </header>
@@ -48,8 +83,8 @@ layout: plain
         <section>
             <h6>courses i'm taking</h6>
             <ul>
-                <li><a class="link" href="//cs50.harvard.edu/">Harvard University, CS50: Intro to Computer Science</a></li>
-                <li><a class="link" href="//www.cs.virginia.edu/~cs415/">University of Virginia, CS4610: Programming Languages</a></li>
+                <li><a href="//cs50.harvard.edu/">Harvard's CS50: Intro to Computer Science</a></li>
+                <li><a href="//www.cs.virginia.edu/~cs415/">University of Virginia, CS4610: Programming Languages</a></li>
             </ul>
         </section>
 
@@ -70,14 +105,14 @@ layout: plain
 
         <section>
             <h6>and here's an xkcd comic</h6>
-            <div id="comics"></div>
+            <div style="margin: 2rem;height:auto;width:auto;" class="xkcd"></div>
         </section>
 
         <hr/>
 
         <footer>
             <p>
-                (c) 2014-<span class="js-current-year"></span> Kabir Goel.<br/>
+                (c) 2014-{{ site.time | date: '%Y' }} Kabir Goel.<br/>
                 Written in HTML5, <a href="//sass-lang.coms">Sass</a> and JS [+ <a href="//jquery.com">jQuery</a>], using <a href="//jekyllrb.com">Jekyll</a>.<br/>
                 Hosted on <a href="//pages.github.com/">GitHub Pages</a>.
             </p>
