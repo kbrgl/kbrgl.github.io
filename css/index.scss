@@ -12,7 +12,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-size: 110%;
 	font-family: $alt-font;
 }
 
@@ -169,10 +168,7 @@ img {
 	.container {
 		width: 97%;
 		box-shadow: none;
-		padding: 4rem 2.5rem;
-	}
-	.navbar {
-		display: none;
+		padding: 4rem 2rem;
 	}
 }
 
