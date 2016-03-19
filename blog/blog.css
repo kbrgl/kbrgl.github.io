@@ -1,0 +1,14 @@
+.post-link {
+	border: 0;
+}
+
+.post-link:hover {
+	color: #2fe7ad;
+}
+
+.post-meta {
+	font-family: 'PT Mono';
+	color: #555;
+	line-height: 1em;
+	text-transform: uppercase;
+}
