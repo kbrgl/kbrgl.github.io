@@ -30,7 +30,7 @@
 
 		// the typing magic happens here
 		$('.typed').typed({
-			strings: [age + ' year old', 'web designer', 'programmer', 'Pythonista', 'Rubyist', 'Clojurist', 'Linux geek', 'Ubuntu fan', 'pirate'],
+			strings: [age + ' year old', 'web developer', 'programmer', 'Pythonista', 'Rubyist', 'lisper', 'Linux geek', 'Ubuntu fan', 'pirate'],
 			// typing speed
 			typeSpeed: 50,
 			// backspacing speed
