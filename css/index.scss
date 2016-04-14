@@ -1,26 +1,14 @@
 ---
 ---
 
-$body-background: #fff;
 $font-color: #333;
 $accent-color: #76319f;
 
 body {
-	background: $body-background;
 	color: $font-color;
 	font-family: 'Inconsolata';
-	font-size: 4rem;
 	font-weight: 300;
-	text-align: center;
-}
-
-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
-	height: 100vh;
+	font-size: 2.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,9 +16,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 7rem;
 }
 
+section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vmin;
+
+}
+
 p {
-	font-size: 3.6rem;
-	padding: 0;
+	font-size: 3.2rem;
+	margin: 3rem 0;
 }
 
 a {
@@ -64,34 +60,11 @@ hr {
 }
 
 ul {
-	list-style: disc;
+	list-style: disc;;
 	text-align: justify;
 }
 
-footer {
-	color: grey;
-	text-align: center;
-}
-
-nav.bar {
-	padding: 1rem;
-	font-weight: 400;
-	top: 0;
-	left: 0;
-	color: #777;
-	position: fixed;
-	background-color: white;
-	font-size: 40%;
-	width: 100%;
-	z-index: 5;
-	border-bottom: 1px solid #e1e1e1;
-}
-
-.social {
-	margin-top: 5rem;
-}
-
-i[class^="icon-"] {
+i {
 	font-size: 5rem;
 	transition: opacity .2s;
 	&:hover {
@@ -100,14 +73,19 @@ i[class^="icon-"] {
 	}
 }
 
-.tool-icons {
-	padding: 5rem;
-	img {
-		height: 10rem;
-		width: auto;
-		margin: 5rem;
+.sik {
+	list-style: none;
+	padding: 2rem 0 0;
+
+	li {
+		display: inline;
+		i {
+			font-size: 10rem;
+			padding: 2rem;
+		}
 	}
 }
+
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
 	color: #3b5998;
@@ -157,14 +135,46 @@ i[class^="icon-"] {
 	color: #000;
 }
 
-.lowered {
-	text-transform: lowercase;
+.devicons-python {
+	color: #4381B3;
 }
 
-.overright {
-	position: relative;
-	top: -10px;
-	color: #f14;
-	font-size: 80%;
-	text-transform: none;
+.devicons-ruby {
+	color: #A91501;
+}
+
+.devicons-coffeescript {
+	color: #28334C;
+}
+
+.devicons-haskell {
+	color: #666; // muahahahaha
+}
+
+.devicons-nodejs {
+	color: #90C53F;
+}
+
+.devicons-npm {
+	color: #CB3837;
+}
+
+.devicons-clojure {
+	color: #7FD537;
+}
+
+.devicons-ubuntu {
+	color: #DD4814;
+}
+
+.devicons-sass {
+	color: #CC6699;
+}
+
+.devicons-gulp {
+	color: #EB4A4B;
+}
+
+.lowered {
+	text-transform: lowercase;
 }
