@@ -2,13 +2,13 @@
 ---
 
 $font-color: #333;
-$accent-color: #76319f;
+$accent-color: #607D8B;
 
 body {
 	color: $font-color;
 	font-family: 'Inconsolata';
 	font-weight: 300;
-	font-size: 2.5rem;
+	font-size: 3.2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,7 +24,6 @@ section {
 }
 
 p {
-	font-size: 3.2rem;
 	margin: 3rem 0;
 }
 
@@ -53,17 +52,17 @@ a.nostyling {
 }
 
 hr {
-	padding: 0;
-	margin: 0;
+	//padding: 0;
+	//margin: 0;
 }
 
 .navbar {
+	font-size: 2.5rem;
 	margin: 1rem;
 	text-align: center;
 	background-color: #fff;
 	padding: 1rem;
 	z-index: 2002;
-	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 }
 
@@ -76,7 +75,7 @@ hr {
 }
 
 ul {
-	list-style: disc;;
+	list-style: disc;
 	text-align: justify;
 }
 
@@ -98,12 +97,18 @@ i {
 	li {
 		display: inline;
 		i {
-			font-size: 10rem;
-			padding: 2rem;
+			font-size: 12rem;
+			padding: 1rem;
 		}
 	}
 }
 
+.cover {
+	background: url(../img/matrix.jpg);
+	padding: 10rem;
+	color: #fff;
+	margin-bottom: 3rem;
+}
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
 	color: #3b5998;
@@ -157,7 +162,7 @@ i {
 	color: #4381B3;
 }
 
-.devicons-ruby {
+.devicons-ruby, .devicons-ruby_rough {
 	color: #A91501;
 }
 
@@ -202,6 +207,11 @@ i {
 }
 
 @media screen and (max-width: 500px) {
+	.cover {
+		background: url(../img/matrix.jpg);
+		padding: 5rem;
+		color: #fff;
+	}
 	p {
 		font-size: 2.5rem;
 	}
