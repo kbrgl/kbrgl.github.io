@@ -1,5 +1,4 @@
 ---
-layout: plain
 ---
 <head>
     <meta charset="utf-8">
@@ -13,7 +12,7 @@ layout: plain
     <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/js/typed.min.js' | prepend: site.baseurl }}"></script>
 
-    <link href='https://fonts.googleapis.com/css?family=PT+Mono|Ubuntu+Mono|Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -23,27 +22,26 @@ layout: plain
     </script>
 
     <link rel="icon" href="favicon.png" sizes="196x196" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/1.0.4/dist/jquery.scrollindicatorbullets.css" media="screen">
     <link rel="stylesheet" href="./font/icons/css/icons.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}">
+    <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.0/lib/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.rawgit.com/mruoss/jquery-scroll-indicator-bullets/1.0.4/dist/jquery.scrollindicatorbullets.min.js"></script>
     <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <div class="cover">
-        <nav class="navbar">
-            <a class="logo" href="#">k</a>
-            <a href="./minty/" style="float:right;">minty<span class="overright">NEW!</span></a>
-        </nav>
-    </div>
-
     <div class="container">
-        <header>
-            <h6 class="lowered">kabir goel | <span class="typed"></span></h6>
-            <hr>
-            <nav>
+        <!--<nav class="bar"><span style="font-size:2rem;font-family:'Ubuntu Mono';font-style:italic;color:#000">k</span> &middot; Minty &middot; WeatherStalker</nav>-->
+        <section class="ten columns">
+            <h1 style="margin-bottom:2rem;">Kabir Goel</h1>
+            <p>
+                <span class="comment">Hey there! I'm Kabir, a computer ninja and aspiring quizzer who can usually be found prowling <a href="//github.com/">GitHub</a>.</span>
+            </p>
+            <nav class="social">
                 <a href="//instagram.com/@{{ site.instagram_username }}" class="nostyling" title="Instagram"><i class="icon-instagram"></i></a>
                 <a href="//open.spotify.com/user/{{ site.spotify }}" class="nostyling" title="Spotify"><i class="icon-spotify"></i></a>
                 <a href="//twitter.com/{{ site.twitter_username }}" class="nostyling" title="Twitter"><i class="icon-twitter"></i></a>
@@ -51,37 +49,34 @@ layout: plain
                 <a href="//facebook.com/{{ site.facebook_username }}" class="nostyling" title="Facebook"><i class="icon-facebook"></i></a>
                 <a href="mailto:{{ site.email }}" class="nostyling" title="Email"><i class="icon-mail-alt"></i></a>
             </nav>
-            <hr>
-        </header>
-
-        <section>
-            <p>
-                Hey there! I'm Kabir, a computer ninja and aspiring quizzer who can usually be found prowling <a href="//github.com/">GitHub</a>. I enjoy learning programming languages and I'm awesome at Python, C, Ruby, JavaScript and Lisp.
-            </p>
         </section>
 
-        <hr>
-
-        <section>
-            <h6>projects</h6>
+        <section class="ten columns">
+            <h2>Stuff I've Built</h2>
             <ul>
                 <li><a class="link" href="/minty">Minty: a simple pomodoro timer with an emphasis on speed, design and simplicity</a></li>
             </ul>
         </section>
 
-        <hr>
+        <section>
+          <h2>Toolbelt</h2>
+          <div class="tool-icons ten columns">
+            <a href="//atom.io/"><img src="http://electron.atom.io/images/atom.png"></a>
+            <a href="//racket-lang.org/"><img src="https://avatars0.githubusercontent.com/u/232371?v=3&s=400"></a>
+            <a><img src="./img/Haskell-Logo.svg"></a>
+            <a><img src="./img/ruby.png"></a>
+          </div>
+        </section>
 
         <section>
-            <h6>courses i'm doing</h6>
+            <h2>Courses I'm Doing</h2>
             <ul>
                 <li><a href="//cs50.harvard.edu/">Harvard's CS50: Intro to Computer Science</a></li>
             </ul>
         </section>
 
-        <hr>
-
         <section>
-            <h6>books i'm reading</h6>
+            <h2>Books I'm Reading</h2>
             <ul>
                 <li><a href="//en.wikipedia.org/wiki/The_Lord_of_the_Rings">The Lord of The Rings series</a></li>
                 <li><a href="//mitpress.mit.edu/sicp/">Structure and Interpretation of Computer Programs</a></li>
@@ -90,10 +85,8 @@ layout: plain
             </ul>
         </section>
 
-        <hr>
-
         <section>
-            <h6>tournaments i've won</h6>
+            <h2>Tournaments I've Won</h2>
             <ul>
                 <li><strong>The Texas Instruments Science and Technology Quiz (national winner)</strong></li>
                 <li>DPS Gurgaon's Alphanode: Brainbox Quiz</li>
@@ -102,30 +95,5 @@ layout: plain
                 <li>Cambridge Indirapuram's Infoyage: Junior Quiz</li>
             </ul>
         </section>
-
-        <hr>
-
-        <section>
-            <h6>here's an xkcd comic</h6>
-            <div style="margin:2rem;height:auto;width:auto;" class="xkcd"></div>
-        </section>
-
-        <hr>
-
-        <section>
-            <h6>and if you're done reading...</h6>
-            <p>why not check out this super funny video about nodejs and web servers?</p>
-            <iframe width="560" height="315" style="max-width:100%;" src="https://www.youtube.com/embed/bzkRVzciAZg" frameborder="0" allowfullscreen></iframe>
-        </section>
-
-        <hr>
-
-        <footer>
-            <p>
-                (c) 2014-{{ site.time | date: '%Y' }} Kabir Goel.<br/>
-                Written in HTML5, <a href="//sass-lang.coms">Sass</a> and JS [+ <a href="//jquery.com">jQuery</a>], using <a href="//jekyllrb.com">Jekyll</a>.<br/>
-                Hosted on <a href="//pages.github.com/">GitHub Pages</a>.
-            </p>
-        </footer>
     </div>
 </body>
