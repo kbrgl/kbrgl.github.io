@@ -1,5 +1,5 @@
 // I Ctrl-C Ctrl-V'd this from Stack Overflow
-/*$(function(){
+$(function(){
   var
     $win = $(window),
     $filter = $('.navbar'),
@@ -16,4 +16,4 @@
       $filterSpacer.remove();
     }
   });
-});*/
+});

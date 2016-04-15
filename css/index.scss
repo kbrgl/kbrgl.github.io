@@ -17,10 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
+	padding: 10rem 0;
 }
 
 p {
@@ -51,14 +48,8 @@ a.nostyling {
 	}
 }
 
-hr {
-	//padding: 0;
-	//margin: 0;
-}
-
 .navbar {
 	font-size: 2.5rem;
-	margin: 1rem;
 	text-align: center;
 	background-color: #fff;
 	padding: 1rem;
@@ -67,16 +58,16 @@ hr {
 }
 
 .docked {
-	margin: 0;
 	position: fixed;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	top: 0;
 }
 
 ul {
 	list-style: disc;
 	text-align: justify;
+	padding-left: 2rem;
 }
 
 i {
@@ -105,9 +96,8 @@ i {
 
 .cover {
 	background: url(../img/matrix.jpg);
-	padding: 10rem;
-	color: #fff;
-	margin-bottom: 3rem;
+	background-size: cover;
+	padding: 10rem 0;
 }
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
@@ -206,13 +196,29 @@ i {
 	color: #000;
 }
 
+.devicons-html5 {
+	color: #e34f26;
+}
+
+.devicons-css {
+	color: #424242;
+}
+
 @media screen and (max-width: 500px) {
+	/*.docked {
+		position: static;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+	}*/
 	.cover {
-		background: url(../img/matrix.jpg);
-		padding: 5rem;
-		color: #fff;
+		background: url(../img/ny.jpg);
 	}
 	p {
+		font-size: 2.5rem;
+	}
+	ul {
 		font-size: 2.5rem;
 	}
 }
