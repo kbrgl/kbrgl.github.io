@@ -67,7 +67,6 @@ a.nostyling {
 ul {
 	list-style: disc;
 	text-align: justify;
-	padding-left: 2rem;
 }
 
 i {
@@ -204,14 +203,11 @@ i {
 	color: #424242;
 }
 
+::selection {
+	background-color: transparentize($accent-color, 0.5);
+}
+
 @media screen and (max-width: 500px) {
-	/*.docked {
-		position: static;
-		top: auto;
-		bottom: auto;
-		left: auto;
-		right: auto;
-	}*/
 	.cover {
 		background: url(../img/ny.jpg);
 	}
@@ -220,5 +216,6 @@ i {
 	}
 	ul {
 		font-size: 2.5rem;
+		padding-left: 2rem;
 	}
 }
