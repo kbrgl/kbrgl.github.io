@@ -1,40 +1,37 @@
 ---
 ---
 
-$font-color: #333;
-$accent-color: #607D8B;
-
 body {
-	color: $font-color;
-	font-family: 'Inconsolata';
-	font-weight: 400;
-	font-size: 3.2rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	overflow-x: scroll;
+	background-color: #eee;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	font-size: 7rem;
+.container {
+	display: flex;
+	width: 100%;
+	font-size: 10rem;
+	flex-direction: row;
 }
 
-section {
-	padding: 10rem 0;
-}
-
-p {
-	margin: 3rem 0;
+.social-wrapper {
+	display: flex;
+	margin: 0 auto;
 }
 
 a {
-	color: $accent-color;
+	color: #607D8B;
 	text-decoration: none;
 	transition: color .3s;
-	-webkit-tap-highlight-color: transparentize($accent-color, .6);
+	-webkit-tap-highlight-color: rgba(96, 125, 139, 0.4);
+}
 
-	&:hover {
-		color: darken($accent-color, 20%);
-		transition: color .3s;
-		border-bottom-style: none;
-	}
+a:hover {
+	color: #36474f;
+	transition: color .3s;
+	border-bottom-style: none;
 }
 
 a.nostyling {
@@ -42,61 +39,20 @@ a.nostyling {
 	-webkit-tap-highlight-color: transparent;
 	text-decoration: none;
 	border-bottom: 0;
-
-	&:hover {
-		color: inherit
-	}
 }
 
-.navbar {
-	font-size: 2.5rem;
-	text-align: center;
-	background-color: #fff;
-	padding: 1rem;
-	z-index: 2002;
-	border-bottom: 1px solid #eee;
-}
-
-.docked {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-
-ul {
-	list-style: disc;
-	text-align: justify;
+a.nostyling:hover {
+	color: inherit;
 }
 
 i {
-	padding: 1rem;
-	opacity: 0.8;
-	font-size: 5rem;
+	opacity: 0.7;
 	transition: opacity .2s;
-	&:hover {
-		opacity: 1;
-		transition: opacity .2s;
-	}
 }
 
-.sik {
-	list-style: none;
-	padding: 2rem 0 0;
-
-	li {
-		display: inline;
-		i {
-			font-size: 12rem;
-			padding: 1rem;
-		}
-	}
-}
-
-.cover {
-	background: url(../img/matrix.jpg);
-	background-size: cover;
-	padding: 10rem 0;
+i:hover {
+	opacity: 1;
+	transition: opacity .2s;
 }
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
@@ -147,75 +103,5 @@ i {
 	color: #000;
 }
 
-.devicons-python {
-	color: #4381B3;
-}
-
-.devicons-ruby, .devicons-ruby_rough {
-	color: #A91501;
-}
-
-.devicons-coffeescript {
-	color: #28334C;
-}
-
-.devicons-haskell {
-	color: #666; // muahahahaha
-}
-
-.devicons-nodejs {
-	color: #90C53F;
-}
-
-.devicons-npm {
-	color: #CB3837;
-}
-
-.devicons-clojure {
-	color: #7FD537;
-}
-
-.devicons-ubuntu {
-	color: #DD4814;
-}
-
-.devicons-sass {
-	color: #CC6699;
-}
-
-.devicons-gulp {
-	color: #EB4A4B;
-}
-
-.devicons-terminal {
-	color: #000;
-}
-
-.devicons-linux {
-	color: #000;
-}
-
-.devicons-html5 {
-	color: #e34f26;
-}
-
-.devicons-css {
-	color: #424242;
-}
-
-::selection {
-	background-color: transparentize($accent-color, 0.5);
-}
-
-@media screen and (max-width: 500px) {
-	.cover {
-		background: url(../img/ny.jpg);
-	}
-	p {
-		font-size: 2.5rem;
-	}
-	ul {
-		font-size: 2.5rem;
-		padding-left: 2rem;
-	}
+@media screen and (max-width: 600px) {
 }

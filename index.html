@@ -9,12 +9,6 @@
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}"/>
 
-    <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
-    <script src="{{ '/js/typed.min.js' | prepend: site.baseurl }}"></script>
-
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
@@ -25,77 +19,18 @@
     <link rel="icon" href="favicon.png" sizes="196x196" type="image/png">
     <link rel="stylesheet" href="./font/icons/css/icons.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="canonical" href="{{ site.baseurl | prepend: site.url }}">
-    <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <section class="cover">
-      <div class="container">
-          <h1>Kabir Goel</h1>
-          <p>
-              Hey there! I'm Kabir, a computer ninja and aspiring quizzer who can usually be found prowling <a href="//github.com/">GitHub</a>.
-            </p>
-            <nav class="social">
-              <a href="//twitter.com/{{ site.twitter_username }}" class="nostyling" title="Twitter"><i class="icon-twitter"></i></a>
-              <a href="//github.com/{{ site.github_username }}" class="nostyling" title="GitHub"><i class="icon-github"></i></a>
-              <a href="mailto:{{ site.email }}" class="nostyling" title="Email"><i class="icon-mail-alt"></i></a>
-              <a href="//instagram.com/@{{ site.instagram_username }}" class="nostyling" title="Instagram"><i class="icon-instagram"></i></a>
-              <a href="//facebook.com/{{ site.facebook_username }}" class="nostyling" title="Facebook"><i class="icon-facebook"></i></a>
-              <a href="//open.spotify.com/user/{{ site.spotify }}" class="nostyling" title="Spotify"><i class="icon-spotify"></i></a>
-            </nav>
-      </div>
-    </section>
-    <div class="navbar">
-      <a href="#toolbelt">Toolbelt</a> &middot; <a href="#projects">Projects</a> &middot; <a href="#wins">Wins</a>
+  <div class="container">
+    <div class="social-wrapper">
+      <a href="//github.com/{{ site.github_username }}" class="nostyling" title="GitHub"><i class="icon-github"></i></a>
+      <a href="//twitter.com/{{ site.twitter_username }}" class="nostyling" title="Twitter"><i class="icon-twitter"></i></a>
+      <a href="mailto:{{ site.email }}" class="nostyling" title="Email"><i class="icon-mail-alt"></i></a>
+      <a href="//open.spotify.com/user/{{ site.spotify }}" class="nostyling" title="Spotify"><i class="icon-spotify"></i></a>
+      <a href="//instagram.com/@{{ site.instagram_username }}" class="nostyling" title="Instagram"><i class="icon-instagram"></i></a>
     </div>
-    <div class="container">
-      <a class="nostyling" name="toolbelt"></a>
-      <section>
-          <h2>Toolbelt</h2>
-          <p>I'm a man (boy) of many skills</p>
-          <ul class="sik">
-            <li><a class="nostyling" href="//python.org"><i title="Python" class="devicons devicons-python"></i></a></li>
-            <li><a class="nostyling" href="//ruby-lang.org"><i title="Ruby" class="devicons devicons-ruby_rough"></i></a></li>
-            <li><a class="nostyling" href="//coffeescript.org"><i title="CoffeeScript" class="devicons devicons-coffeescript"></i></a></li>
-            <li><a class="nostyling" href="//haskell.org"><i title="Haskell" class="devicons devicons-haskell"></i></a></li>
-            <li><a class="nostyling" href="//clojure.org"><i title="Clojure" class="devicons devicons-clojure"></i></a></li>
-            <li><a class="nostyling" href="//js.org"><i title="JavaScript" class="devicons devicons-javascript"></i></a></li>
-            <li><a class="nostyling" href="//nodejs.org"><i title="NodeJS" class="devicons devicons-nodejs"></i></a></li>
-            <li><a class="nostyling" href="//npmjs.com"><i title="Node Package Manager" class="devicons devicons-npm"></i></a></li>
-            <li><a class="nostyling" href="//en.wikipedia.org/wiki/Unix_shell"><i title="the Unix shell" class="devicons devicons-terminal"></i></a></li>
-            <li><a class="nostyling" href="//ubuntu.com"><i title="Ubuntu" class="devicons devicons-ubuntu"></i></a></li>
-            <li><a class="nostyling" href="//gnu.org"><i title="GNU/Linux" class="devicons devicons-linux"></i></a></li>
-            <li><a class="nostyling" href="//sass-lang.org"><i title="Sass" class="devicons devicons-sass"></i></a></li>
-            <li><a class="nostyling" href="//gulpjs.com"><i title="GulpJS" class="devicons devicons-gulp"></i></a></li>
-            <li><a class="nostyling" href="#"><i title="HTML" class="devicons devicons-html5"></i></a></li>
-            <li><a class="nostyling" href="#"><i title="CSS" class="devicons devicons-css3"></i></a></li>
-          </ul>
-      </section>
-
-      <hr>
-
-      <a class="nostyling" name="projects"></a>
-      <section>
-          <h2>Projects</h2>
-          <p>You can find most of my projects on my <a href="//github.com/{{ site.github_username }}">GitHub</a>.</p>
-      </section>
-
-      <hr>
-
-      <a class="nostyling" name="wins"></a>
-      <section>
-        <h2>Wins</h2>
-        <p>
-          <ul>
-            <li>National winner, the Texas Instruments Science and Technology Quiz</li>
-            <li>Winner, Alphanode Quiz (DPS Gurgaon)</li>
-            <li>Winner, Infoyage Quiz (the Cambridge School, Indirapuram)</li>
-            <li>Runner-up, Digilogous Quiz (RDPS Pitampura)</li>
-            <li>Runner-up, Robotronix Electronics Marathon (the Cambridge School, Noida)</li>
-          </ul>
-        </p>
-    </div>
+  </div>
 </body>
