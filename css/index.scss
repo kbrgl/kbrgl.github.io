@@ -19,6 +19,10 @@ body {
 .social-wrapper {
 	display: flex;
 	margin: 0 auto;
+
+	i {
+		padding-left: 1rem;
+	}
 }
 
 a {
