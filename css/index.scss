@@ -13,7 +13,7 @@ body {
 	color: #222;
 	display: flex;
 	width: 100%;
-	font-size: 13rem;
+	font-size: 14rem;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
@@ -23,20 +23,19 @@ body {
 	margin: 0 auto;
 
 	i {
-		padding-left: 1rem;
+		padding: 0 0 0 5rem;
 	}
 }
 
 a {
 	color: #607D8B;
 	text-decoration: none;
-	transition: color .3s;
+	transition: color .5s;
 	-webkit-tap-highlight-color: rgba(96, 125, 139, 0.4);
 }
 
 a:hover {
 	color: #36474f;
-	transition: color .3s;
 	border-bottom-style: none;
 }
 
@@ -52,13 +51,12 @@ a.nostyling:hover {
 }
 
 i {
-	opacity: 0.7;
-	transition: opacity .2s;
+	opacity: 0.8;
+	transition: opacity .5s;
 }
 
 i:hover {
 	opacity: 1;
-	transition: opacity .2s;
 }
 
 .icon-facebook, .icon-facebook-official, .icon-instagram {
@@ -105,6 +103,6 @@ i:hover {
 	color:#e52d27;
 }
 
-.icon-github {
+.icon-github-circled {
 	color: #000;
 }
