@@ -2,107 +2,84 @@
 ---
 
 body {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	background-color: #fefefe;
-	overflow-x: scroll;
-}
-
-.wrapper {
-	color: #222;
-	display: flex;
 	width: 100%;
-	font-size: 14rem;
-	flex-direction: column;
-	flex-wrap: wrap;
+	text-align: center;
+	color: #333;
 }
 
-.social-wrapper {
-	display: flex;
-	margin: 0 auto;
+.container {
+	margin-top: 7rem;
+}
 
-	i {
-		padding: 0 0 0 5rem;
+.heading {
+	font-family: "Italiana";
+	font-size: 12rem;
+}
+
+.logo {
+	width: 50rem;
+	height: auto;
+}
+
+.about {
+	font-size: 3rem;
+	font-family: "Fira Sans";
+}
+
+.terminal.wrapper {
+	text-align: left;
+	margin-top: 5rem;
+	overflow: hidden;
+	line-height: 1.2em;
+	font-size: 2.4rem;
+	width: 100%;
+	box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.75);
+	border-radius: 5px;
+
+	.bar {
+		width: 100rem;
+		position: relative;
+		text-align: center;
+		padding: 5px 15px;
+		font-family: "Ubuntu";
+		font-size: 20px;
+		line-height: 17px;
+		background-color: #eee;
+		height: 20px;
+		width: 100%;
+	}
+
+	.shell {
+		height: 20rem;
+		background-color:#1b1d21;
+		color: #fff;
+		font-family: 'Anonymous Pro';
+		padding: 10px;
 	}
 }
 
-a {
-	color: #607D8B;
-	text-decoration: none;
-	transition: color .5s;
-	-webkit-tap-highlight-color: rgba(96, 125, 139, 0.4);
+.green {
+	color: #0f0;
 }
 
-a:hover {
-	color: #36474f;
-	border-bottom-style: none;
+.blue {
+	color: #77e;
 }
 
-a.nostyling {
-	color: inherit;
-	-webkit-tap-highlight-color: transparent;
-	text-decoration: none;
-	border-bottom: 0;
+.yellow {
+	color: #ff0;
 }
 
-a.nostyling:hover {
-	color: inherit;
+body::-webkit-scrollbar {
+    width: 8px;
 }
 
-i {
-	opacity: 0.8;
-	transition: opacity .5s;
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #eee;
 }
 
-i:hover {
-	opacity: 1;
-}
-
-.icon-facebook, .icon-facebook-official, .icon-instagram {
-	color: #3b5998;
-}
-
-.icon-ie {
-	color: #00baf0;
-}
-
-.icon-opera {
-	color: #ff1b2d;
-}
-
-.icon-chrome {
-	color: #7eaedc;
-}
-
-.icon-firefox {
-	color: #db5226;
-}
-
-.icon-star {
-	color: #e9fa55;
-}
-
-.icon-android {
-	color: #a4c639;
-}
-
-.icon-spotify {
-	color: #00d166;
-}
-
-.icon-twitter {
-	color: #55acee;
-}
-
-.icon-mail-alt {
-	color: #26a69a;
-}
-
-.icon-youtube-play {
-	color:#e52d27;
-}
-
-.icon-github-circled {
-	color: #000;
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #888;
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#607D8B">
+    <meta name="theme-color" content="#424242">
 
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}"/>
@@ -15,8 +15,11 @@
         ga('create', 'UA-74242254-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 
-    <link rel="icon" href="favicon.png" sizes="196x196" type="image/png">
+    <link rel="icon" href="logo.png" sizes="196x196" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Italiana|Ubuntu|Anonymous+Pro|Fira+Sans:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./font/icons/css/icons.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
@@ -25,13 +28,22 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="social-wrapper">
-      <a href="//github.com/{{ site.github_username }}" class="nostyling" title="GitHub"><i class="icon-github-circled"></i></a>
-      <a href="//twitter.com/{{ site.twitter_username }}" class="nostyling" title="Twitter"><i class="icon-twitter"></i></a>
-      <a href="mailto:{{ site.email }}" class="nostyling" title="Email"><i class="icon-mail-alt"></i></a>
-      <a href="//open.spotify.com/user/{{ site.spotify }}" class="nostyling" title="Spotify"><i class="icon-spotify"></i></a>
-      <a href="//instagram.com/{{ site.instagram_username }}" class="nostyling" title="Instagram"><i class="icon-instagram"></i></a>
+  <div class="container">
+    <div>
+      <h1 class="heading">Kabir Goel</h1>
+      <p class="about">
+        Hey there! I'm Kabir, a computer ninja and aspiring quizzer who can usually be found prowling GitHub.
+      </p>
+    </div>
+    <div class="terminal wrapper">
+      <!-- I use the fish shell in real life cuz bash is a sux -->
+      <div class="bar">bash ~ <span class="minimize"></span></div>
+      <div class="shell">
+        <p class="prompt"><span class="blue">~</span> <span class="green">$</span>
+          <span class="command"></span>
+        </p>
+        <p class="output"></p>
+      </div>
     </div>
   </div>
 </body>
