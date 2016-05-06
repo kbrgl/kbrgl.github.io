@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-	margin-top: 7rem;
-        margin-bottom: 2rem;
+	margin-top: 10rem;
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -25,6 +25,7 @@ body {
 .about {
 	font-size: 3rem;
 	font-family: "Fira Sans";
+	font-weight: 300;
 }
 
 .terminal.wrapper {
@@ -57,6 +58,28 @@ body {
 		font-family: 'Anonymous Pro';
 		padding: 10px;
 	}
+}
+
+section {
+	font-size: 2.6rem;
+	margin: 15rem 0;
+	text-align: left;
+
+	h2 {
+		font-family: 'Italiana';
+		font-size: 7rem;
+		margin-bottom: 2rem;
+	}
+
+	p {
+		font-family: 'Fira Sans';
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+}
+
+a {
+	text-decoration: none;
 }
 
 .green {
