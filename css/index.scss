@@ -1,6 +1,24 @@
 ---
 ---
 
+@font-face {
+	font-family: 'Fira Sans';
+	font-weight: 400;
+	src: url(../font/FiraSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Fira Sans';
+	font-weight: 200;
+	src: url(../font/FiraSans-Hair.ttf);
+}
+
+@font-face {
+	font-family: 'Fira Sans';
+	font-weight: 300;
+	src: url(../font/FiraSans-Light.ttf);
+}
+
 body {
 	width: 100%;
 	text-align: center;
@@ -14,7 +32,7 @@ body {
 
 .heading {
 	font-family: "Italiana";
-	font-size: 12rem;
+	font-size: 11rem;
 }
 
 .logo {
@@ -23,7 +41,7 @@ body {
 }
 
 .about {
-	font-size: 3rem;
+	font-size: 2.8rem;
 	font-family: "Fira Sans";
 	font-weight: 300;
 }
@@ -43,7 +61,7 @@ body {
 		position: relative;
 		text-align: center;
 		padding: 5px 15px;
-		font-family: "Ubuntu";
+		font-family: "Source Sans Pro";
 		font-size: 20px;
 		line-height: 17px;
 		background-color: #eee;
@@ -66,22 +84,22 @@ section {
 	text-align: left;
 
 	h2 {
-		font-family: 'Italiana';
+		font-family: 'Tenor Sans';
+		//font-weight: 400;
 		font-size: 7rem;
 		margin-bottom: 2rem;
 	}
 
 	p {
-		font-family: 'Fira Sans';
-		font-size: 2.5rem;
-		font-weight: 300;
+		font-family: 'Source Sans Pro';
+		font-size: 2.3rem;
 	}
 }
 
 a {
 	text-decoration: none;
 	color: #76319f;
-	transition: color .2s;
+	transition: color .5s;
 
 	&:hover {
 		color: darken(#76319f, 20%);
@@ -112,4 +130,9 @@ body::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: #888;
+}
+
+::selection {
+	background-color: rgba(66, 66, 66, 0.5);
+	color: #fefefe;
 }
