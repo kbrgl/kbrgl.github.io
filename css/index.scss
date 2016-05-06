@@ -80,6 +80,12 @@ section {
 
 a {
 	text-decoration: none;
+	color: #76319f;
+	transition: color .2s;
+
+	&:hover {
+		color: darken(#76319f, 20%);
+	}
 }
 
 .green {
