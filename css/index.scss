@@ -7,10 +7,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-family: 'Source Sans Pro';
+	font-size: 2rem;
 }
 
 .container {
-	padding: 5rem 3px;
+	padding: 5rem 1rem;
 }
 
 .heading {
@@ -22,7 +24,6 @@ body {
 	font-size: 2.8rem;
 	font-family: "Source Sans Pro";
 	font-weight: 300;
-	width: 80rem;
 }
 
 .terminal.wrapper {
