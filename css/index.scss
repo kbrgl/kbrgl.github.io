@@ -3,12 +3,13 @@
 
 body {
 	width: 100%;
-	color: #333;
+	color: #f6f6f6;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	font-size: 1.8rem;
     text-align: center;
+    background: url(../img/bg.jpg);
 }
 
 .container {
