@@ -7,17 +7,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: 'Source Sans Pro';
-	font-size: 2rem;
+	font-size: 1.8rem;
+    text-align: center;
 }
 
 .container {
-	padding: 5rem 1rem;
+	padding: 1rem;
 }
 
 .heading {
 	font-family: "Italiana";
-	font-size: 11rem;
+	font-size: 9rem;
 }
 
 .about {
@@ -26,68 +26,7 @@ body {
 	font-weight: 300;
 }
 
-.terminal.wrapper {
-	text-align: left;
-	margin-top: 5rem;
-	overflow: hidden;
-	line-height: 1.2em;
-	font-size: 2.4rem;
-	width: 100%;
-	box-shadow: 0px 5px 35px 0px rgba(0,0,0,0.75);
-	border-radius: 7px;
-
-	.bar {
-		width: 100rem;
-		position: relative;
-		text-align: center;
-		padding: 5px 15px;
-		font-family: "Source Sans Pro";
-		font-size: 20px;
-		line-height: 17px;
-		background-color: #eee;
-		height: 20px;
-		width: 100%;
-	}
-
-	.shell {
-		height: 25rem;
-		background-color:#1b1d21;
-		color: #fff;
-		font-family: 'Anonymous Pro';
-		padding: 10px;
-		overflow: auto;
-	}
-}
-
-.output, .prompt-2 {
-	display: none;
-}
-
-.green {
-	color: #0f0;
-}
-
-.blue {
-	color: #77e;
-}
-
-.yellow {
-	color: #ff0;
-}
-
-.typed-cursor {
-	opacity: 0.8;
-}
-
-::selection {
-	background-color: rgba(66, 66, 66, 0.5);
-	color: #fefefe;
-}
-
 @media screen and (max-width: 500px) {
-	.header {
-		text-align: center;
-	}
 	.heading {
 		font-size: 10rem;
 	}
