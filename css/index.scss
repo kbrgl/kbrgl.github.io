@@ -2,36 +2,80 @@
 ---
 
 body {
-	width: 100%;
-	color: #f6f6f6;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-size: 1.8rem;
-    text-align: center;
-    background: url(../img/bg.jpg);
+    width: 100%;
+    background-color: #131313;
+    color: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9rem;
+    font-family: 'Anonymous Pro';
+    counter-reset: line;
 }
 
-.container {
-	padding: 1rem;
+.vim-wrapper {
+    padding: 40px 40px 65px;
 }
 
-.heading {
-	font-family: "Italiana";
-	font-size: 9rem;
+p {
+    counter-increment: line;
+    line-height: 26px;
+
+    &::before {
+        color: rgba(255, 255, 255, 0.6);
+        content: counter(line) ' ';
+    }
 }
 
-.about {
-	font-size: 2.8rem;
-	font-family: "Source Sans Pro";
-	font-weight: 300;
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        border-bottom: 1px solid white;
+    }
 }
 
-@media screen and (max-width: 500px) {
-	.heading {
-		font-size: 10rem;
-	}
-	.about {
-		font-size: 2.5rem;
-	}
+.vim-pane {
+    overflow: auto;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #131313;
+    padding: 0 1rem;
+
+    .filename {
+        line-height: 20px;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: 40px;
+        background-color: #424242;
+        padding-left: 1rem;
+    }
+}
+
+// color definitions
+.blue-grey {
+    color: #7986cb;
+}
+
+.white {
+    color: #fff;
+}
+
+.red {
+    color: #e53935;
+}
+
+.brown {
+    color: #bf360c;
+}
+
+.pink {
+    color: #e91e63;
 }
