@@ -3,8 +3,8 @@
 
 body {
     width: 100%;
-    background-color: #131313;
-    color: #d6d6d6;
+    background-color: #fff;
+    color: #444;
     display: flex;
     flex-direction: column;
     font-size: 1.9rem;
@@ -21,7 +21,7 @@ p {
     line-height: 26px;
 
     &::before {
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.4);
         content: counter(line) ' ';
     }
 }
@@ -45,7 +45,7 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    background-color: #131313;
+    background-color: #fff;
     padding: 0 1rem;
 
     .filename {
@@ -54,7 +54,7 @@ a {
         left: 20px;
         right: 20px;
         bottom: 40px;
-        background-color: #424242;
+        background-color: #eee;
         padding-left: 1rem;
     }
 }
@@ -65,7 +65,7 @@ a {
 }
 
 .white {
-    color: #fff;
+    color: #000; // yes, I know it's not white
 }
 
 .red {
