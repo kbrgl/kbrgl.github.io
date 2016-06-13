@@ -51,8 +51,8 @@ a {
     .filename {
         line-height: 20px;
         position: absolute;
-        left: 40px;
-        right: 40px;
+        left: 20px;
+        right: 20px;
         bottom: 40px;
         background-color: #424242;
         padding-left: 1rem;
@@ -78,4 +78,10 @@ a {
 
 .pink {
     color: #e91e63;
+}
+
+@media screen and (max-width: 500px) {
+    .vim-wrapper {
+        padding: 20px 20px 65px;
+    }
 }
