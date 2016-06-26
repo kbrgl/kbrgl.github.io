@@ -1,5 +1,6 @@
 ---
 ---
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="js/index.js"></script>
 
-    <link rel="icon" href="logo.png" sizes="196x196" type="image/png">
-    <link
-      href='https://fonts.googleapis.com/css?family=Fira+Mono'
-      rel='stylesheet' type='text/css'>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="./font/icons/css/icons.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
@@ -30,41 +28,19 @@
 </head>
 
 <body>
-    <div class="vim-wrapper">
-        <div class="vim-pane">
-            <p><span class="blue-grey">#</span> <span class="white">Kabir Goel</span></p>
-            <p><span class="blue-grey">##</span> <span class="white">About</span></p>
-            <p>
-                Hey there! I'm Kabir, a 14 year old programmer, quizzer and Unix geek who loves to create.
-            </p>
-            <p></p>
-            <p><span class="blue-grey">##</span> <span class="white">Social</span></p>
-            <p>You can find me on <a href="//github.com/kbrgl">[<span class="red">GitHub</span>](<span class="brown">https://github.com/kbrgl</span>)</a>, <a href="//twitter.com/@notkabir">[<span class="red">Twitter</span>](<span class="brown">https://twitter.com/@notkabir</span>)</a> and <a href="//open.spotify.com/user/12181834510">[<span class="red">Spotify</span>](<span class="brown">https://open.spotify.com/user/12181834510</span>)</a>.</p>
-            <p></p>
-            <p><span class="blue-grey">##</span> <span class="white">Unix</span></p>
-            <p>I've been using Linux for the past two years. My current setup is a Lenovo Yoga 500 running Arch Linux with BSPWM as my window manager. You can find my window manager dotfiles <a href="//github.com/kbrgl/dotfiles">[<span class="red">here</span>](<span class="brown">https://github.com/kbrgl/dotfiles</span>)</a>.</p>
-            <p></p>
-            <p><span class="blue-grey">##</span> <span class="white">Programming</span></p>
-            <p>I use Python, Ruby and occassionally Rust, C or JavaScript for my programming, and I use Neovim as my text editor.</p>
-            <p></p>
-            <p>You can find a list of projects on <a href="//github.com/kbrgl">[<span class="red">my GitHub page</span>](<span class="brown">https://github.com/kbrgl</span>)</a>.</p>
-            <p></p>
-            <p><span class="blue-grey">##</span> <span class="white">Quizzing</span></p>
-            <p>I've won five events in the past year:</p>
-            <p></p>
-            <p><span class="pink">*</span> Alphanode (JQ<span class="blue-grey">\*</span>) at DPS Gurgaon</p>
-            <p><span class="pink">*</span> Digilogous (JQ) at RDPS Pitampura</p>
-            <p><span class="pink">*</span> Infoyage (JQ) at the Cambridge School, Indirapuram</p>
-            <p><span class="pink">*</span> Technolympics (Robotics) at the Cambridge School, Noida</p>
-            <p></p>
-            <p>And of course, my biggest win in the past year - the Texas Instruments Science and Technology Quiz, 2015. I was the national winner.</p>
-            <p><span class="blue-grey">*</span> JQ = junior quiz</p>
-            <p></p>
-            <p><span class="blue-grey">##</span> <span class="white">When I'm Not Writing Code</span></p>
-            <p>I can be found on <a href="//reddit.com/r/unixporn">[<span class="red">/r/unixporn</span>](<span class="brown">https://reddit.com/r/unixporn</span>)</a> or watching something on Netflix.</p>
-        </div>
-        <div class="bottom-bar">
-            <span class="filename">about.md</span>
+    <div class="container">
+        <div class="eight columns">
+            <h1>Kabir Goel</h1>
+            <ul>
+                <li><a href="//github.com/{{site.github_username}}">GitHub</a></li> &middot;
+                <li><a href="//twitter.com/@{{site.twitter_username}}">Twitter</a></li> &middot;
+                <li><a href="//open.spotify.com/user/{{spotify}}">Spotify</a></li> &middot;
+                <li><a href="mailto:{{site.email}}">Mail</a></li>
+            </ul>
+            <p>I'm a 14 year old programmer, Unix geek and quizzer from New Delhi, India. I enjoy procrastinating over my homework and staying up late.</p>
+            <br><br>
+            <p>I'm the national winner of the Texas Instruments Science and Technology Quiz and a member of my school's tech club, <a href="//exun.co">Exun clan</a>. I'm also the winner of four other inter-school events.</p>
         </div>
     </div>
 </body>
+</html>

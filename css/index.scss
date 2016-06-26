@@ -1,88 +1,53 @@
 ---
 ---
 
-body {
-    width: 100%;
-    background-color: #f6f6f6;
-    color: #444;
+@import 'https://fonts.googleapis.com/css?family=Permanent+Marker|Space+Mono|Fira+Mono|Anonymous+Pro';
+
+.container {
+    color: #212121;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family: 'Space Mono';
     display: flex;
     flex-direction: column;
-    font-size: 1.6rem;
-    font-family: 'Fira Mono';
-    counter-reset: line;
+    justify-content: center;
+    text-align: justify;
 }
 
-.vim-wrapper {
-    padding: 40px 40px 65px;
-}
-
-p {
-    counter-increment: line;
-    line-height: 26px;
-
-    &::before {
-        color: rgba(0, 0, 0, 0.4);
-        content: counter(line) ' ';
-    }
+h1 {
+    font-family: 'Permanent Marker';
+    font-size: 7rem;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #777;
+    transition: color .2s;
 
     &:hover {
-        border-bottom: 1px dotted black;
-        padding-bottom: 3px;
+        color: #000;
     }
 }
 
-.vim-pane {
-    overflow: auto;
+ul {
+    margin-top: 1rem;
+    list-style-type: none;
 }
 
-.bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: #f6f6f6;
-    padding: 0 1rem;
-
-    .filename {
-        line-height: 20px;
-        position: absolute;
-        left: 20px;
-        right: 20px;
-        bottom: 40px;
-        background-color: #eee;
-        padding-left: 1rem;
-    }
+li {
+    display: inline;
 }
 
-// color definitions
-.blue-grey {
-    color: #7986cb;
-}
-
-.white {
-    color: #000; // yes, I know it's not white
-}
-
-.red {
-    color: #e53935;
-}
-
-.brown {
-    color: #bf360c;
-}
-
-.pink {
-    color: #e91e63;
+p {
+    display: inline-block;
+    text-align: justify;
 }
 
 @media screen and (max-width: 500px) {
-    .vim-wrapper {
-        padding: 20px 20px 65px;
+    h1 {
+        font-size: 6rem;
+    }
+    .container {
+        font-size: 1.4rem;
     }
 }
