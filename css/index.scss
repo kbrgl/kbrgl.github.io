@@ -39,10 +39,11 @@ a {
     text-decoration: none;
     border-bottom: 3px solid #c8c8c8;
     color: inherit;
-    transition: color .2s;
+    transition: color .2s, border-color .3s;
 
     &:hover {
         color: #84dcc6;
+        border-bottom-color: #84dcc6;
     }
 }
 
@@ -70,6 +71,12 @@ p {
     text-align: justify;
     background-color: #fff;
     border: 2px solid #000;
+
+    a {
+        &:hover {
+            color: inherit;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
