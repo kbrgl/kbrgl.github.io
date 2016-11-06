@@ -74,9 +74,15 @@ p {
 
 @media screen and (max-width: 500px) {
     h1 {
-        font-size: 8rem;
+        font-size: 6rem;
     }
     .container {
         font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    h1 {
+        font-size: 5.5rem;
     }
 }
