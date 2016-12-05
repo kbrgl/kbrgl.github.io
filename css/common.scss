@@ -1,0 +1,67 @@
+---
+---
+
+@font-face {
+    font-family: 'Iosevka Term';
+    src: url('../iosevka-term-regular.ttf')
+}
+
+body {
+    padding: 10rem 0;
+}
+
+.container {
+    font-family: 'Iosevka Term';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    color: #222;
+    font-weight: 700;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .2s, border-color .3s;
+}
+
+ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    a {
+        border-bottom: 0;
+    }
+}
+
+li {
+    display: inline;
+}
+
+p {
+    display: block;
+    a {
+        border-bottom: 3px solid #c8c8c8;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 6rem;
+    }
+    .container {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 373px) {
+        font-size: 5.5rem;
+}

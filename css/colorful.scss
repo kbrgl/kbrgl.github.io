@@ -1,0 +1,64 @@
+---
+---
+
+.colorful {
+    body {
+        background: linear-gradient(135deg, #4b4e6d 22px, #222 22px, #222 24px, transparent 24px, transparent 67px, #222 67px, #222 69px, transparent 69px), linear-gradient(225deg, #4b4e6d 22px, #222 22px, #222 24px, transparent 24px, transparent 67px, #222 67px, #222 69px, transparent 69px)0 64px;
+        background-color: #4b4e6d;
+        background-size: 64px 128px;
+    }
+
+    .container {
+        color: #000;
+    }
+
+    h1 {
+        padding: 1rem 2rem;
+        border: 2px solid #000;
+        background-color: #84dcc6;
+        border-radius: 3px;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: #9a5bf2;
+        }
+    }
+
+    a:hover {
+        color: #84dcc6;
+        border-bottom-color: #84dcc6;
+    }
+
+    ul {
+        border: 2px solid #fff;
+        border-radius: 3px;
+        background-color: #222;
+        color: #fff;
+    }
+
+    p {
+        padding: 2rem;
+        text-align: justify;
+        background-color: #fff;
+        border: 2px solid #000;
+
+        a:hover {
+            color: inherit;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        h1 {
+            font-size: 6rem;
+        }
+        .container {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media screen and (max-width: 373px) {
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
+}
