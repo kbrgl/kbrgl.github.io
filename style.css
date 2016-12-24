@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono');
+@font-face {
+  font-family: 'GT Pressura Mono';
+  src: url(GT-Pressura-Mono-Regular.ttf);
+}
+
+body {
+  font-family: 'GT Pressura Mono';
+  -webkit-font-smoothing: antialiased;
+  background-image: url(geometry2.png);
+  background-attachment: fixed;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+.main nav {
+  background-color: #f9fafb;
+  z-index: 666;
+  position: fixed;
+  top: 15rem;
+}
+
+.quote {
+  display: block;
+  font-family: 'Iosevka Term';
+  margin: 25rem 6rem 4rem 3rem;
+  font-size: 3rem;
+}
+
+.quote-text::before {
+  content: '\201c';
+}
+
+.quote-text::after {
+  content: '\201d';
+}
+
+h1 {
+  font-family: 'Share Tech Mono';
+  margin-top: 25rem;
+  margin-bottom: 2rem;
+}
+
+.drawer {
+  position: relative;
+  top: 10rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  transition: all .3s;
+}
+
+.drawer ul {
+  list-style-type: none;
+}
+
+.drawer img {
+  width: auto;
+  height: 15rem;
+  margin-bottom: 5rem;
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+}
+
+a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -.1em;
+  width: calc(100% + .2em);
+  height: .3em;
+  z-index: -1;
+  background-color: rgba(47, 231, 173, 0.3);
+  transition: all .2s;
+}
+
+a:hover::before {
+  height: 100%;
+}
