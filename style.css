@@ -1,25 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono');
-@font-face {
-  font-family: 'GT Pressura Mono';
-  src: url(GT-Pressura-Mono-Regular.ttf);
-}
-
 body {
-  font-family: 'GT Pressura Mono';
+  font-family: 'Iosevka';
+  color: #fff;
+  font-size: 1.8rem;
+  background: linear-gradient(to top left, #041016, #263238);
+  background-repeat: repeat-x;
   -webkit-font-smoothing: antialiased;
-  background-image: url(geometry2.png);
-  background-attachment: fixed;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 2.2rem;
 }
 
 .main nav {
-  background-color: #f9fafb;
   z-index: 666;
   position: fixed;
   top: 15rem;
@@ -27,7 +21,6 @@ body {
 
 .quote {
   display: block;
-  font-family: 'Iosevka Term';
   margin: 25rem 6rem 4rem 3rem;
   font-size: 3rem;
 }
@@ -40,16 +33,14 @@ body {
   content: '\201d';
 }
 
-h1 {
-  font-family: 'Share Tech Mono';
-  margin-top: 25rem;
+section {
+  margin-top: 20rem;
   margin-bottom: 2rem;
 }
 
 .drawer {
   position: relative;
   top: 10rem;
-  font-size: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -62,32 +53,164 @@ h1 {
   list-style-type: none;
 }
 
-.drawer img {
+.logo {
   width: auto;
   height: 15rem;
   margin-bottom: 5rem;
+  filter: invert();
 }
 
 a {
   text-decoration:none;
-  color: inherit;
+  color: #00bfa5;
   position: relative;
   background: transparent;
   cursor: pointer;
+  transition: color .2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
 }
 
-a::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -.1em;
-  width: calc(100% + .2em);
-  height: .3em;
-  z-index: -1;
-  background-color: rgba(47, 231, 173, 0.3);
-  transition: all .2s;
-}
-
-a:hover::before {
+a:hover {
+  color: inherit;
   height: 100%;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+p a {
+    font-size: inherit;
+    letter-spacing: inherit;
+    text-transform: none;
+}
+
+::selection {
+    background: rgba(255,255,255,0.1);
+}
+
+@media screen and (max-width: 950px) {
+    .drawer {
+        text-align: center;
+        display: block;
+    }
+}
+
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 100;
+	src: url('assets/iosevka-thin.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 100;
+	font-style: italic;
+	src: url('assets/iosevka-thinitalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 100;
+	font-style: oblique;
+	src: url('assets/iosevka-thinoblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 200;
+	src: url('assets/iosevka-extralight.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 200;
+	font-style: italic;
+	src: url('assets/iosevka-extralightitalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 200;
+	font-style: oblique;
+	src: url('assets/iosevka-extralightoblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 300;
+	src: url('assets/iosevka-light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 300;
+	font-style: italic;
+	src: url('assets/iosevka-lightitalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 300;
+	font-style: oblique;
+	src: url('assets/iosevka-lightoblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	src: url('assets/iosevka-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: italic;
+	src: url('assets/iosevka-italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: oblique;
+	src: url('assets/iosevka-oblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 500;
+	src: url('assets/iosevka-medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: italic;
+	font-weight: 500;
+	src: url('assets/iosevka-mediumitalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: oblique;
+	font-weight: 500;
+	src: url('assets/iosevka-mediumoblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 700;
+	src: url('assets/iosevka-bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: italic;
+	font-weight: 700;
+	src: url('assets/iosevka-bolditalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: oblique;
+	font-weight: 700;
+	src: url('assets/iosevka-boldoblique.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-weight: 900;
+	src: url('assets/iosevka-heavy.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: italic;
+	font-weight: 900;
+	src: url('assets/iosevka-heavyitalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Iosevka';
+	font-style: oblique;
+	font-weight: 900;
+	src: url('assets/iosevka-heavyoblique.ttf') format('truetype');
 }
