@@ -95,6 +95,19 @@ p a {
         text-align: center;
         display: block;
     }
+    .main.container {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0 5%;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 3.3rem;
+    }
 }
 
 @font-face {
