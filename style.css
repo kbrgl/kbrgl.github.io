@@ -3,7 +3,7 @@ body {
   color: #fff;
   font-size: 1.8rem;
   background: linear-gradient(to top left, #041016, #263238);
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -11,12 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.main nav {
-  z-index: 666;
-  position: fixed;
-  top: 15rem;
 }
 
 .quote {
@@ -90,23 +84,53 @@ p a {
     background: rgba(255,255,255,0.1);
 }
 
-@media screen and (max-width: 950px) {
-    .drawer {
+@media screen and (max-width: 850px) {
+    section {
+        margin-top: 0;
+    }
+    .row {
+        margin-top: 10rem;
+    }
+    .drawer.two.columns.offset-by-two {
+        position: static;
+        top: 0;
+        width: 100%;
         text-align: center;
-        display: block;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-bottom: 10%;
+        padding: 0 5%;
+    }
+    ul {
+        width: 100%;
+        height: auto;
+    }
+    ul li {
+        display: inline;
     }
     .main.container {
         width: 100%;
         box-sizing: border-box;
         margin: 0;
-        padding: 0 5%;
+        padding: 0 20%;
         text-align: justify;
+    }
+    h1 {
+        font-size: 3rem;
     }
 }
 
-@media screen and (max-width: 375px) {
-    h1 {
-        font-size: 3.3rem;
+@media screen and (max-width: 550px) {
+    .main.container {
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .main.container {
+        padding: 0 5%;
     }
 }
 
