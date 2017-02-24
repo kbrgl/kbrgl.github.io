@@ -1,0 +1,164 @@
+---
+---
+
+$base-font-size: 17px;
+$font-family: 'Overpass', sans-serif;
+$font-color: #333;
+$accent-color: #777;
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin smallupper {
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+@mixin horizontal-padding($amt) {
+    padding-left: $amt;
+    padding-right: $amt;
+}
+
+@mixin vertical-padding($amt) {
+    padding-top: $amt;
+    padding-bottom: $amt;
+}
+
+@mixin horizontal-margin($amt) {
+    margin-left: $amt;
+    margin-right: $amt;
+}
+
+@mixin vertical-margin($amt) {
+    margin-top: $amt;
+    margin-bottom: $amt;
+}
+
+body {
+    color: $font-color;
+    -webkit-font-smoothing: antialiased;
+    font-family: $font-family;
+    font-size: $base-font-size;
+    background: linear-gradient(to bottom, #fff, #f6f8f8);
+    background-attachment: fixed;
+
+    -moz-font-feature-settings: "locl";
+    -ms-font-feature-settings: "locl";
+    -webkit-font-feature-settings: "locl";
+    font-feature-settings: "locl";
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #555;
+}
+
+.columns:not([class*="offset-by-"]) {
+    margin-left: 0;
+}
+
+.navbar {
+    @include clearfix;
+
+    position: relative;
+    top: 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+
+    .navbar-name {
+        @include smallupper;
+
+        float: left;
+    }
+
+    .navbar-nav {
+        float: right;
+        text-align: right;
+        word-spacing: 5px;
+    }
+}
+
+.intro {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro-social {
+        cursor: default;
+
+        a {
+            font-size: $base-font-size * 1.2;
+            display: inline;
+            color: lighten($font-color, 10);
+            word-spacing: 15px;
+
+            &:not(:first-child) {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    .intro-text {
+        text-align: justify;
+    }
+}
+
+.section {
+    @include vertical-margin(5rem);
+
+    box-sizing: border-box;
+
+    h1, h2 {
+        @include smallupper;
+
+        font-size: $base-font-size;
+    }
+}
+
+.post {
+    @include vertical-padding(2rem);
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .post-title .post-link {
+        @include smallupper;
+
+        font-size: $base-font-size * 0.85;
+        color: lighten($font-color, 15%);
+
+        &:hover {
+            color: $font-color;
+        }
+    }
+
+    .post-meta {
+        @include smallupper;
+
+        color: lighten($font-color, 7%);
+        font-size: $base-font-size * 0.85;
+    }
+
+    .post-excerpt {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .primary.container {
+        @include horizontal-padding(2rem);
+    }
+}

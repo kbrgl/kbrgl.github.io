@@ -1,50 +1,69 @@
+---
+---
 <html>
-<head>
-  <title>Kabir Goel</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#2fe7ad">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="I'm a 14 year old designer, Unix geek and quizzer from New Delhi, India.">
+    <head>
+        <title>Kabir Goel</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#212121">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="I'm a 14 year old designer, Unix geek and quizzer from New Delhi, India.">
 
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="carpal.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://kbrgl.github.io">
-</head>
-<body>
-  <div class="row">
-    <div class="drawer two columns offset-by-two">
-      <img src="logo.png" class="logo">
-      <ul>
-        <li>
-          <a href="blog/">Blog</a>
-        </li>
-        <li>
-          <a href="https://github.com/kbrgl">GitHub</a>
-        </li>
-        <li>
-          <a href="https://behance.net/kbrgl">Behance</a>
-        </li>
-        <li>
-          <a href="https://open.spotify.com/user/12181834510">Spotify</a>
-        </li>
-        <li>
-          <a href="mailto:kabirgoel.kg@gmail.com">Mail</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main container six columns">
-      <section>
-        <h1>
-          I'm a <strong>14 year old designer, Unix geek and quizzer</strong> from New Delhi, India.
-        </h1>
-        <p>
-          I'm also the national winner of the 2015 Texas Instruments Science and Technology Quiz and a number of interschool
-          tech quizzes and events as well as a member of my school's tech club, <a href="http://exunclan.com">Exun clan</a>.
-        </p>
-      </section>
-    </div>
-  </div>
-</body>
+        <link rel="stylesheet" href="vendor/normalize.css">
+        <link rel="stylesheet" href="vendor/skeleton.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <link rel="canonical" href="https://kbrgl.github.io">
+    </head>
+
+    <body>
+        <div class="primary container">
+            <div class="navbar">
+                <div class="navbar-content-wrapper">
+                    <span class="navbar-name">Kabir Goel</span>
+                </div>
+            </div>
+
+            <div class="intro">
+                <h1 class="intro-heading">About</h1>
+                <div class="intro-text seven columns">
+                    <p>I'm a 14 year old designer, Unix geek and quizzer from New Delhi, India.</p>
+                    <p>I'm the national winner of the 2015 Texas Instruments Science and Technology Quiz.</p>
+                    <p>I've also won a number of interschool tech quizzes and events.</p>
+                    <p>I'm a member of my school's tech club, <a href="http://exunclan.com">Exun clan</a>.</p>
+                </div>
+                <div class="intro-social">
+                    <a title="GitHub" href="https://github.com/kbrgl"><i class="fa fa-github"></i></a>
+                    <a title="Spotify" href="https://open.spotify.com/user/12181834510"><i class="fa fa-spotify"></i></a>
+                    <a title="Mail" href="mailto:kabirgoel.kg@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                    <a title="Behance" href="https://behance.net/kbrgl"><i class="fa fa-behance"></i></a>
+                    <a title="Save details to contacts" href="Kabir Goel.vcf" download><i class="fa fa-id-card-o"></i></a>
+                </div>
+            </div>
+
+            {% unless site.posts == empty %}
+            <div id="writing" class="writing section">
+                <h1>Blog</h1>
+                <div class="posts">
+                {% for post in site.posts %}
+                    <section class="post">
+                        <div class="post-header">
+                            <span class="post-title">
+                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                                    {{ post.title }}
+                                </a>
+                            </span>
+                            <span class="post-meta u-pull-right">
+                                Posted {{ post.date | date: "%b %-d, %Y" }} • <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comment</a> {% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}
+                            </span>
+                        </div>
+                    </section>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endunless %}
+    </body>
+
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:200,400,900">
 </html>
