@@ -69,8 +69,7 @@ p {
 .navbar {
     @include clearfix;
 
-    position: relative;
-    top: 3rem;
+    margin-top: 3rem;
     box-sizing: border-box;
     width: 100%;
     padding-bottom: 1rem;
