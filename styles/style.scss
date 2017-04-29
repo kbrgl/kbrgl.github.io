@@ -2,9 +2,8 @@
 ---
 
 $base-font-size: 17px;
-$font-family: 'Overpass', sans-serif;
-$font-color: #333;
-$accent-color: #777;
+$font-family: 'Circular', 'Fira Sans', 'Karla', 'Helvetica Neue', 'Segoe UI', 'Ubuntu', 'Cantarell', sans-serif;
+$font-color: #03346c;
 
 @mixin clearfix {
     &:after {
@@ -12,12 +11,6 @@ $accent-color: #777;
         display: table;
         clear: both;
     }
-}
-
-@mixin smallupper {
-    text-transform: uppercase;
-    font-weight: bolder;
-    letter-spacing: 1px;
 }
 
 @mixin horizontal-padding($amt) {
@@ -44,120 +37,234 @@ body {
     color: $font-color;
     -webkit-font-smoothing: antialiased;
     font-family: $font-family;
+    font-weight: 400;
     font-size: $base-font-size;
-    background: linear-gradient(to bottom, #fff, #f6f8f8);
-    background-attachment: fixed;
-
-    -moz-font-feature-settings: "locl";
-    -ms-font-feature-settings: "locl";
-    -webkit-font-feature-settings: "locl";
-    font-feature-settings: "locl";
 }
 
-a {
-    text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
-p {
-    color: #555;
+h1 {
+    font-weight: 600;
+    font-size: 7rem;
 }
 
-.columns:not([class*="offset-by-"]) {
-    margin-left: 0;
+h2 {
+    font-weight: 500;
+    font-size: 2.2rem;
 }
 
-.navbar {
-    @include clearfix;
-
-    margin-top: 3rem;
-    box-sizing: border-box;
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-
-    .navbar-name {
-        @include smallupper;
-
-        float: left;
-    }
-
-    .navbar-nav {
-        float: right;
-        text-align: right;
-        word-spacing: 5px;
-    }
+a, a:hover, a:visited {
+    color: $font-color;
 }
 
 .intro {
-    height: 80vh;
+    padding-top: 12rem;
+    padding-bottom: 20rem;
+
+    background-image: linear-gradient(to top left, #5881e0, #90baf5);
+
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+        width: 50%;
+    }
+
+    .social {
+        cursor: pointer;
+    }
+
+    .social a {
+        font-size: 2.5rem;
+        margin-right: 2rem;
+        text-decoration: none;
+    }
+}
+
+.primary {
+    margin-top: -20rem;
+    padding-bottom: 5rem;
+}
+
+.projects-projects {
+    @include horizontal-margin(-3rem);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
 
-    .intro-social {
-        cursor: default;
+.project {
+    box-sizing: border-box;
+    position: relative;
+    padding: 2rem;
+    background-color: #fff;
+    width: 20%;
+    min-height: 220px;
+    border-radius: 1px;
+    box-shadow: 0 2px 16px 0 rgba(3, 52, 108, 0.0196);
+    border: 1px solid rgba(3, 52, 108, 0.09);
+}
 
-        a {
-            font-size: $base-font-size * 1.2;
-            display: inline;
-            color: lighten($font-color, 10);
-            word-spacing: 15px;
+.project-name {
+    font-weight: 500;
+}
 
-            &:not(:first-child) {
-                padding-left: 1.5rem;
-            }
-        }
-    }
+.project-desc {
+    margin-top: 1rem;
+}
 
-    .intro-text {
-        text-align: justify;
-    }
+.project-link a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.project-info {
+    font-weight: 500;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.material-icons {
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
 }
 
 .section {
-    @include vertical-margin(5rem);
+    margin-top: 7rem;
 
-    box-sizing: border-box;
-
-    h1, h2 {
-        @include smallupper;
-
-        font-size: $base-font-size;
-    }
-}
-
-.post {
-    @include vertical-padding(2rem);
-
-    &:not(:last-child) {
-        border-bottom: 1px solid #ccc;
-    }
-
-    .post-title .post-link {
-        @include smallupper;
-
-        font-size: $base-font-size * 0.85;
-        color: lighten($font-color, 15%);
-
-        &:hover {
-            color: $font-color;
-        }
-    }
-
-    .post-meta {
-        @include smallupper;
-
-        color: lighten($font-color, 7%);
-        font-size: $base-font-size * 0.85;
-    }
-
-    .post-excerpt {
+    & > p {
         margin-top: 5px;
     }
 }
 
-@media (max-width: 400px) {
-    .primary.container {
-        @include horizontal-padding(2rem);
+.footer {
+    color: #657a92;
+    text-align: center;
+
+    a, a:visited {
+        color: inherit;
     }
+}
+
+.photo-showcase {
+    position: relative;
+    background-image: url(/photos/water_puppets.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    display: inline-block;
+    background: white;
+    padding: 2rem;
+}
+
+hr {
+    display: block;
+    width: 50px;
+    border: 0;
+    border-top: 2px solid #657a92;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.footer hr {
+    margin: 1em auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .intro p {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .intro p {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .projects-projects {
+        @include horizontal-margin(0);
+
+        width: 100%;
+        display: block;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 2rem;
+        min-height: 0;
+        position: static;
+
+        .project-info {
+            position: static;
+        }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .intro p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .primary {
+        margin-top: 0;
+    }
+
+    .intro p {
+        width: 100%;
+    }
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 400;
+    src: url(/vendor/circular/circular-book.otf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 500;
+    src: url(/vendor/circular/circular-medium.otf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 600;
+    src: url(/vendor/circular/circular-black.otf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 400;
+    font-style: italic;
+    src: url(/vendor/circular/circular-book-italic.otf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 500;
+    font-style: italic;
+    src: url(/vendor/circular/circular-medium-italic.otf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-weight: 600;
+    font-style: italic;
+    src: url(/vendor/circular/circular-black-italic.otf);
 }
