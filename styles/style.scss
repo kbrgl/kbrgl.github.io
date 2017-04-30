@@ -91,10 +91,9 @@ a, a:hover, a:visited {
 }
 
 .projects-projects {
-    @include horizontal-margin(-3rem);
     display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .project {
