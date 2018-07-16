@@ -8,7 +8,7 @@ import Container from '../components/Container'
 const NotFoundPage = () => (
   <Container>
     <VerticalMargin top={rhythm(6)}>
-      <h1 style={{ margin: 0 }}>
+      <h1>
         <Link to="/">
           404 <span style={{ fontWeight: 'lighter' }}>&mdash; Not Found.</span>
         </Link>

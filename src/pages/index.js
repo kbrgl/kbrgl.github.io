@@ -51,10 +51,10 @@ const Splash = () => (
 
 const About = () => (
   <p>
-    Find me on VSCO or Medium, or take a look at<br />
-    <Link to="/showcase" className="link--styled">
-      the design &amp; photography showcase
-    </Link>. 🌝
+    I&#39;m a 16 year old designer & developer from New Delhi, India.{' '}
+    <span aria-label="" role="img">
+      🌝
+    </span>
   </p>
 )
 

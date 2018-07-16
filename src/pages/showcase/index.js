@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 
+import Nav from '../../components/Nav'
 import VerticalMargin from '../../components/VerticalMargin'
 import Container from '../../components/Container'
 import { Image, imageType } from '../../components/Image'
@@ -9,20 +9,11 @@ import typography from '../../utils/typography'
 
 const { rhythm } = typography
 
-const Title = () => (
-  <h1 style={{ margin: 0 }}>
-    <Link to="/">
-      Kabir Goel{' '}
-      <span style={{ fontWeight: 'lighter' }}>
-        &mdash; design &amp; photography showcase.
-      </span>
-    </Link>
-  </h1>
-)
+const Title = () => <h1>Showcase</h1>
 
 const About = () => (
   <div>
-    <p style={{ margin: 0 }}>
+    <p>
       A gallery of my best shots.{' '}
       <span style={{ color: '#555' }}>© {new Date().getFullYear()}</span>
     </p>
@@ -84,8 +75,8 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-export const indexQuery = graphql`
-  query IndexQuery {
+export const imagesQuery = graphql`
+  query ImagesQuery {
     allImageSharp {
       edges {
         node {
