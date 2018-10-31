@@ -1,2 +1,0 @@
-webpackJsonp([57552020475521],{454:function(e,a){e.exports={data:{allImageSharp:{edges:[{node:{image:{src:"/static/Torii-7956fe955adf81f7d1e722046a49fa94-1eede.jpg",aspectRatio:1.6,originalImg:"/static/Torii-7956fe955adf81f7d1e722046a49fa94-411ea.jpg"}}},{node:{image:{src:"/static/header-d1df14c3e521cb868d27510c94350885-1eede.jpg",aspectRatio:1.4362053437406184,originalImg:"/static/header-d1df14c3e521cb868d27510c94350885-ccc35.jpg"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---showcase-57747f9e48571593e0ac.js.map
