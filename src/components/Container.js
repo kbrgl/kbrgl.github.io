@@ -1,26 +1,25 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
-import cssPropType from 'css-prop-type'
+import type { Node } from 'react'
 
-const Container = ({ children, maxWidth }) => (
+type ContainerProps = {
+  children: Node,
+  maxWidth?: number | string,
+}
+const Container = ({ children, maxWidth }: ContainerProps) => (
   <div
     style={{
+      position: 'relative',
       margin: '0 auto',
       maxWidth,
-      padding: '0px 1.0875rem 1.45rem',
+      padding: '0 1.0875rem 1.45rem',
     }}
   >
     {children}
   </div>
 )
 
-Container.propTypes = {
-  children: PropTypes.node,
-  maxWidth: cssPropType,
-}
-
 Container.defaultProps = {
-  children: [],
   maxWidth: 960,
 }
 

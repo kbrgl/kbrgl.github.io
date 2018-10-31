@@ -1,8 +1,13 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
-import cssPropType from 'css-prop-type'
+import type { Node } from 'react'
 
-const VerticalMargin = ({ children, top, bottom }) => (
+type VerticalMarginProps = {
+  children: Node,
+  bottom?: number | string,
+  top?: number | string,
+}
+const VerticalMargin = ({ children, top, bottom }: VerticalMarginProps) => (
   <div
     style={{
       marginTop: top,
@@ -13,14 +18,7 @@ const VerticalMargin = ({ children, top, bottom }) => (
   </div>
 )
 
-VerticalMargin.propTypes = {
-  children: PropTypes.node,
-  bottom: cssPropType,
-  top: cssPropType,
-}
-
 VerticalMargin.defaultProps = {
-  children: [],
   bottom: 0,
   top: 0,
 }

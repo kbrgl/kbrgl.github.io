@@ -1,58 +1,54 @@
-const metadata = require('./metadata')
-
 module.exports = {
   siteMetadata: {
-    ...metadata,
+    socialMedia: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/kbrgl',
+        icon: 'github',
+      },
+      {
+        name: 'Email',
+        url: 'mailto:kabirgoel.kg@gmail.com',
+        icon: 'envelope',
+      },
+      {
+        name: 'Spotify',
+        url: 'https://open.spotify.com/user/12181834510',
+        icon: 'spotify',
+      },
+      {
+        name: 'Medium',
+        url: 'https://medium.com/@kbrgl',
+        icon: 'medium',
+      },
+      {
+        name: 'VSCO',
+        url: 'https://vsco.co/kbrgl',
+        icon: 'camera',
+      },
+    ],
   },
   plugins: [
+    `gatsby-plugin-flow`,
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        pathToConfigModule: 'src/utils/typography.js',
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/kabir.jpg', // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-74242254-3',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'showcase',
-        path: `${__dirname}/data/showcase`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: `${__dirname}/data/blog`,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 512,
-              linkImagesToOriginal: false,
-              showCaptions: true,
-              backgroundColor: 'transparent',
-            },
-          },
-          'gatsby-remark-copy-linked-files',
-        ],
+        pathToConfigModule: `src/utils/typography.js`,
       },
     },
   ],

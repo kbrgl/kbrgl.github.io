@@ -1,8 +1,16 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
-import cssPropType from 'css-prop-type'
+import type { Node } from 'react'
 
-const Padding = ({ children, all, top, bottom, left, right }) => (
+type PaddingProps = {
+  children?: Node,
+  all?: number | string | null,
+  top?: number | string | null,
+  bottom?: number | string | null,
+  left?: number | string | null,
+  right?: number | string | null,
+}
+const Padding = ({ children, all, top, bottom, left, right }: PaddingProps) => (
   <div
     style={{
       paddingTop: top !== null ? top : all,
@@ -14,15 +22,6 @@ const Padding = ({ children, all, top, bottom, left, right }) => (
     {children}
   </div>
 )
-
-Padding.propTypes = {
-  children: PropTypes.node,
-  all: cssPropType,
-  top: cssPropType,
-  bottom: cssPropType,
-  left: cssPropType,
-  right: cssPropType,
-}
 
 Padding.defaultProps = {
   children: [],

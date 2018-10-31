@@ -1,7 +1,7 @@
 import Typography from 'typography'
 
-const fontStack = [
-  'Overpass',
+const bodyFontStack = [
+  'Rubik',
   '-apple-system',
   'BlinkMacSystemFont',
   'Segoe UI',
@@ -11,21 +11,28 @@ const fontStack = [
   'Ubuntu',
   'sans-serif',
 ]
+const headerFontStack = [...bodyFontStack]
 
 const typography = new Typography({
   title: 'kbrgl',
   baseFontSize: '14px',
-  scaleRatio: 1.1,
+  baseLineHeight: 1.66,
+  scaleRatio: 1.2,
+  headerColor: '#232230',
+  headerFontFamily: headerFontStack,
+  headerWeight: '500',
+  bodyColor: '#38365a',
+  bodyFontFamily: bodyFontStack,
   googleFonts: [
     {
-      name: 'Overpass',
-      styles: ['400', '400i', '700', '700i'],
+      name: 'Rubik',
+      styles: ['400', '400i', '500', '500i'],
     },
   ],
-  headerColor: '#373d3f',
-  headerFontFamily: fontStack,
-  bodyColor: '#373d3f',
-  bodyFontFamily: fontStack,
 })
 
-export default typography
+typography.injectStyles()
+
+const { rhythm } = typography
+
+export { rhythm, typography as default }

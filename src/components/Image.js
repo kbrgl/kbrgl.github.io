@@ -1,23 +1,32 @@
-import PropTypes from 'prop-types'
+// @flow
 import React from 'react'
 import Waypoint from 'react-waypoint'
 import _ from 'lodash'
 
-const imageType = {
-  src: PropTypes.string,
-  aspectRatio: PropTypes.number,
+type ImageType = {
+  src: string,
+  aspectRatio: number,
 }
 
-class Image extends React.Component {
-  constructor(props) {
+type ImageProps = {
+  data: ImageType,
+}
+
+type State = {
+  imagePaddingBottom: number,
+  imageLoaded: boolean,
+  beginImageLoad: boolean,
+}
+
+class Image extends React.Component<ImageProps, State> {
+  constructor(props: ImageProps) {
     super(props)
     this.state = {
       imagePaddingBottom: 0,
       imageLoaded: false,
       beginImageLoad: false,
     }
-    this.onImageLoad = this.onImageLoad.bind(this)
-    this.calculatePadding = _.debounce(this.calculatePadding.bind(this), 100, {
+    this.calculatePadding = _.debounce(this.calculatePadding, 100, {
       leading: true,
     })
   }
@@ -31,26 +40,32 @@ class Image extends React.Component {
     window.removeEventListener('resize', this.calculatePadding)
   }
 
-  onImageLoad() {
+  onImageLoad = () => {
     this.setState({
       imageLoaded: true,
     })
   }
 
-  calculatePadding() {
+  calculatePadding = () => {
+    const { data } = this.props
+    if (!this.imgDiv) return
     this.setState({
-      imagePaddingBottom: this.imgDiv.clientWidth / this.props.data.aspectRatio,
+      imagePaddingBottom: this.imgDiv.clientWidth / data.aspectRatio,
     })
   }
 
+  imgDiv: ?Object
+
   render() {
+    const { beginImageLoad, imagePaddingBottom, imageLoaded } = this.state
+    const { data } = this.props
     return (
       <section>
         <Waypoint onEnter={() => this.setState({ beginImageLoad: true })} />
         {/* this img is for loading the image */}
-        {this.state.beginImageLoad ? (
+        {beginImageLoad ? (
           <img
-            src={this.props.data.src}
+            src={data.src}
             alt=""
             style={{ display: 'none' }}
             onLoad={this.onImageLoad}
@@ -63,7 +78,7 @@ class Image extends React.Component {
           }}
           style={{
             backgroundColor: '#ddd',
-            paddingBottom: this.state.imagePaddingBottom,
+            paddingBottom: imagePaddingBottom,
             position: 'relative',
             borderRadius: 3,
             overflow: 'hidden',
@@ -77,12 +92,10 @@ class Image extends React.Component {
               bottom: 0,
               right: 0,
               left: 0,
-              backgroundImage: this.state.imageLoaded
-                ? `url(${this.props.data.src})`
-                : 'none',
+              backgroundImage: imageLoaded ? `url(${data.src})` : 'none',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
-              opacity: this.state.imageLoaded ? '1' : '0',
+              opacity: imageLoaded ? '1' : '0',
               transition: 'opacity .4s',
             }}
           />
@@ -91,9 +104,5 @@ class Image extends React.Component {
     )
   }
 }
-Image.propTypes = { data: PropTypes.shape(imageType).isRequired }
 
-export default {
-  Image,
-  imageType,
-}
+export default Image
