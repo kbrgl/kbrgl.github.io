@@ -3,7 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import typography, { rhythm } from '../utils/typography'
+import { rhythm } from '../utils/typography'
 
 import Layout from '../components/Layout'
 import VerticalMargin from '../components/VerticalMargin'
@@ -67,13 +67,25 @@ const Header = () => (
     </h1>
     <p style={{ marginBottom: 0 }}>
       16 year old developer, designer, creator &amp; US politics junkie from New
-      Delhi, India. Member at <a href="//exunclan.com">Exun Clan</a>.{' '}
+      Delhi, India. Member at <a href="https://exunclan.com">Exun Clan</a>.{' '}
       <span aria-label="" role="img">
         🌝
       </span>
     </p>
   </section>
 )
+
+const SocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  border-bottom: 0;
+  color: #a6a6ab;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #3d29f5;
+  }
+`
 
 type SocialProps = {
   media: Object[],
@@ -87,17 +99,9 @@ const Social = ({ media }: SocialProps) => {
         marginRight: index !== media.length - 1 ? 16 : 0,
       }}
     >
-      <a
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          borderBottom: '0',
-          color: info.color || typography.options.headerColor,
-        }}
-        href={info.url}
-      >
+      <SocialLink href={info.url}>
         <FontAwesome icon={info.icon ? info.icon : info.name} />
-      </a>
+      </SocialLink>
     </li>
   ))
 
@@ -157,6 +161,17 @@ const Work = () => (
   <section>
     <SectionHeading>Work &amp; Projects</SectionHeading>
     <ul>
+      <li>
+        <a href="https://github.com/kbrgl/wayfer">
+          Wayfer &mdash; cross platform file transfer app
+        </a>
+      </li>
+      <p>
+        Wayfer allows you to transfer a file by dropping it on the window and
+        scanning a QR code it gives you. Still a work in progress &mdash; only
+        the core functionality has been implemented so far.
+      </p>
+      <p>Written in Electron.</p>
       <li>
         <a href="https://exunclan.com">Exun Clan website</a>
       </li>
@@ -258,7 +273,7 @@ const skillsInfo = [
     body: (
       <span>
         I know Ruby fairly well. I use it for shell scripting, since I don&#39;t
-        like Perl. I&#39;m also familiar with Rails, and I used it to build an
+        like Bash. I&#39;m also familiar with Rails, and I used it to build an
         platform for online cryptic hunts.
       </span>
     ),
@@ -300,6 +315,28 @@ const Skills = () => (
   </section>
 )
 
+const Misc = () => (
+  <section>
+    <SectionHeading>Misc</SectionHeading>
+    <ul>
+      <li>
+        <a href="https://github.com/kbrgl/dotfiles">Dotfiles</a>
+      </li>
+      <p>
+        My dotfiles from back when I was on Arch Linux. (I&#39;ve since switched
+        to macOS.)
+      </p>
+      <li>
+        <a href="https://www.npmjs.com/~kbrgl">NPM packages</a>
+      </li>
+      <p>
+        NPM packages I&#39;ve published. Mostly some basic modules that I
+        couldn&#39;t find anywhere else, so I wrote them myself.
+      </p>
+    </ul>
+  </section>
+)
+
 type IndexPageProps = {
   data: {
     site: {
@@ -337,6 +374,9 @@ const IndexPage = ({
         </VerticalMargin>
         <VerticalMargin top={64}>
           <Skills />
+        </VerticalMargin>
+        <VerticalMargin top={64}>
+          <Misc />
         </VerticalMargin>
       </VerticalMargin>
     </Container>
