@@ -375,6 +375,7 @@ class Meta extends React.Component {
               color: '#3d29f5',
               display: 'flex',
               alignItems: 'center',
+              cursor: 'pointer',
             }}
             onClick={() =>
               this.setState({
