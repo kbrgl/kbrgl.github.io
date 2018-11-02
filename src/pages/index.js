@@ -131,7 +131,7 @@ const About = () => (
       I&#39;ve always enjoyed building (and breaking!) stuff, and I&#39;ve loved
       writing code ever since I found out there&#39;s a way to experience the
       thrill of creating beautiful things without having to move for extended
-      periods of time. I&#39;m also a huge US politics junkie: I enjoy how
+      periods of time. I&#39;m a huge US politics junkie: I enjoy how
       American political news has the capacity to make me feel all six basic
       emotions simultaneously.
     </p>
