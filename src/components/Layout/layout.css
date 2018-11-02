@@ -1,3 +1,11 @@
+/* Pseudo-classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: #3d29f5;
+}
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
@@ -24,6 +32,14 @@ a:hover {
 
 .link--styled:hover {
   text-decoration-color: transparent;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 /* Forms
