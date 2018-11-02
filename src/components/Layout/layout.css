@@ -45,10 +45,11 @@ select {
   outline: 0;
   border-style: solid;
   border-color: #eaeaef;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
 }
 input[type='email']::placeholder,
 input[type='number']::placeholder,
@@ -59,7 +60,7 @@ input[type='url']::placeholder,
 input[type='password']::placeholder,
 textarea::placeholder,
 select::placeholder {
-  color: #a6a6ab;
+  color: #86868b;
 }
 /* Removes awkward default styles on some inputs for iOS */
 input[type='email'],
@@ -86,14 +87,14 @@ input[type='url']:focus,
 input[type='password']:focus,
 textarea:focus,
 select:focus {
-  border-color: #2977f5;
+  border-color: #3d29f5;
   outline: 0;
 }
 label,
 legend {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 fieldset {
   padding: 0;
@@ -102,11 +103,6 @@ fieldset {
 input[type='checkbox'],
 input[type='radio'] {
   display: inline;
-}
-label > .label-body {
-  display: inline-block;
-  margin-left: 0.5rem;
-  font-weight: normal;
 }
 
 /* Lists
@@ -157,7 +153,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #eaeaef;
 }
 
 /* Utilities
