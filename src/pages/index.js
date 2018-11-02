@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { rhythm } from '../utils/typography'
 
@@ -131,9 +131,9 @@ const About = () => (
       I&#39;ve always enjoyed building (and breaking!) stuff, and I&#39;ve loved
       writing code ever since I found out there&#39;s a way to experience the
       thrill of creating beautiful things without having to move for extended
-      periods of time. I&#39;m a huge US politics junkie: I enjoy how
-      American political news has the capacity to make me feel all six basic
-      emotions simultaneously.
+      periods of time. I&#39;m a huge US politics junkie: I enjoy learning about
+      political processes &amp; institutions and their impact on American
+      citizens.
     </p>
   </section>
 )
@@ -300,7 +300,7 @@ const Skills = () => (
             <span
               style={{
                 fontSize: '0.9em',
-                color: '#777',
+                color: '#86868b',
                 textTransform: 'uppercase',
                 letterSpacing: 1,
               }}
@@ -336,6 +336,73 @@ const Misc = () => (
     </ul>
   </section>
 )
+
+const hiddenMixin = `
+  opacity: 0;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.15s, font-size 0.3s 0.15s, margin 0.3s 0.15s,
+      padding 0.3s 0.15s;
+`
+const visibleMixin = `
+  transition: font-size 0.15s, margin 0.15s, padding 0.15s, opacity 0.3s 0.15s;
+`
+const fadeInOut = css`
+  ${props => (!props.visible ? hiddenMixin : visibleMixin)};
+  transition-timing-function: ease-in-out;
+`
+const MetaBody = styled.p`
+  ${fadeInOut};
+`
+
+class Meta extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      expanded: false,
+    }
+  }
+
+  render() {
+    const { expanded } = this.state
+
+    return (
+      <section>
+        <h2>
+          <button
+            style={{
+              color: '#3d29f5',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+            onClick={() =>
+              this.setState({
+                expanded: !expanded,
+              })
+            }
+            type="button"
+          >
+            <div style={{ width: '1em' }}>{expanded ? '−' : '+'}</div> Meta
+          </button>
+        </h2>
+        <MetaBody visible={expanded}>
+          The website you&#39;re looking at right now has been around since
+          September 2015. I&#39;ve used it as a testbed for my ideas: new
+          designs, libraries and more. You can find every change I&#39;ve ever
+          made to this website{' '}
+          <a href="https://github.com/kbrgl/kbrgl.github.io">on GitHub</a>.
+        </MetaBody>
+      </section>
+    )
+  }
+}
+
+const FooterWrapper = styled.footer`
+  color: #86868b;
+`
+
+const Footer = () => <FooterWrapper>© 2018 Kabir Goel</FooterWrapper>
 
 type IndexPageProps = {
   data: {
@@ -377,6 +444,12 @@ const IndexPage = ({
         </VerticalMargin>
         <VerticalMargin top={64}>
           <Misc />
+        </VerticalMargin>
+        <VerticalMargin top={64}>
+          <Meta />
+        </VerticalMargin>
+        <VerticalMargin top={64}>
+          <Footer />
         </VerticalMargin>
       </VerticalMargin>
     </Container>
