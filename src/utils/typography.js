@@ -16,7 +16,7 @@ const headerFontStack = [...bodyFontStack]
 const typography = new Typography({
   title: 'kbrgl',
   baseFontSize: '14px',
-  baseLineHeight: 1.66,
+  baseLineHeight: 1.8,
   scaleRatio: 1.2,
   headerColor: '#232230',
   headerFontFamily: headerFontStack,
