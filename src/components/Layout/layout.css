@@ -124,10 +124,10 @@ input[type='radio'] {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: disc inside;
+  list-style: disc outside;
 }
 ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
 }
 ol,
 ul {
