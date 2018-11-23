@@ -60,7 +60,7 @@ class Image extends React.Component<ImageProps, State> {
     const { beginImageLoad, imagePaddingBottom, imageLoaded } = this.state
     const { data } = this.props
     return (
-      <section>
+      <div>
         <Waypoint onEnter={() => this.setState({ beginImageLoad: true })} />
         {/* this img is for loading the image */}
         {beginImageLoad ? (
@@ -77,11 +77,12 @@ class Image extends React.Component<ImageProps, State> {
             this.imgDiv = div
           }}
           style={{
-            backgroundColor: '#ddd',
+            background: '#ddd',
             paddingBottom: imagePaddingBottom,
             position: 'relative',
             borderRadius: 3,
             overflow: 'hidden',
+            boxShadow: '0 3px 9px 0 #eaeaef',
           }}
         >
           {/* this div is for the actual image */}
@@ -100,7 +101,7 @@ class Image extends React.Component<ImageProps, State> {
             }}
           />
         </div>
-      </section>
+      </div>
     )
   }
 }

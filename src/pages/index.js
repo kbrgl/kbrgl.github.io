@@ -2,6 +2,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled, { css } from 'styled-components'
+import { useSpring, animated, config } from 'react-spring'
 
 import { rhythm } from '../utils/typography'
 
@@ -18,6 +19,7 @@ import python from '../images/skills/python.svg'
 import ruby from '../images/skills/ruby.svg'
 import go from '../images/skills/go.svg'
 import splash from '../images/kabir.jpg'
+import caption from './caption.png'
 
 const birthday = new Date(1016908200000)
 function isToday(date, _today) {
@@ -36,22 +38,55 @@ function isToday(date, _today) {
   return res
 }
 
-const Splash = () => (
-  <div
-    style={{
-      width: 70,
-      height: 70,
-      boxShadow: '0 3px 9px 0 #eaeaef',
-    }}
-  >
-    <Image
-      data={{
-        src: splash,
-        aspectRatio: 1,
+const Splash = () => {
+  const scaleTemplate = s => `scale(${s})`
+  const opacityTemplate = o => `${o}`
+  const [{ scale, opacity }, set] = useSpring({
+    scale: 1,
+    opacity: 0,
+    config: config.gentle,
+  })
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
-    />
-  </div>
-)
+    >
+      <animated.div
+        style={{
+          width: 70,
+          height: 70,
+          transform: scale.interpolate(scaleTemplate),
+        }}
+        onMouseEnter={() => set({ scale: 1.4, opacity: 1 })}
+        onMouseLeave={() => set({ scale: 1, opacity: 0 })}
+      >
+        <Image data={{ src: splash, aspectRatio: 1 }} />
+      </animated.div>
+      <animated.div
+        style={{
+          opacity: opacity.interpolate(opacityTemplate),
+          flex: 1,
+          display: 'flex',
+          filter: 'color(#00f55)',
+        }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${caption})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPositionX: 30,
+            height: 40,
+            flex: 1,
+          }}
+        />
+      </animated.div>
+    </div>
+  )
+}
 
 const Bio = () => (
   <section>
