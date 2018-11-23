@@ -41,6 +41,7 @@ const Splash = () => (
     style={{
       width: 70,
       height: 70,
+      boxShadow: '0 3px 9px 0 #eaeaef',
     }}
   >
     <Image
@@ -52,7 +53,7 @@ const Splash = () => (
   </div>
 )
 
-const Header = () => (
+const Bio = () => (
   <section>
     <h1
       style={{
@@ -126,7 +127,7 @@ const SectionHeading = styled.h2`
 
 const About = () => (
   <section>
-    <SectionHeading>About Me</SectionHeading>
+    <SectionHeading>About</SectionHeading>
     <p>
       I&#39;ve always enjoyed building (and breaking!) stuff, and I&#39;ve loved
       writing code ever since I found out there&#39;s a way to experience the
@@ -426,10 +427,10 @@ const IndexPage = ({
 }: IndexPageProps) => (
   <Layout>
     <Container maxWidth={512}>
-      <VerticalMargin top={128} bottom={128}>
+      <VerticalMargin top={rhythm(4)} bottom={rhythm(4)}>
         <Splash />
         <VerticalMargin top={rhythm(2)}>
-          <Header />
+          <Bio />
         </VerticalMargin>
         <VerticalMargin top={rhythm(1)}>
           <Social media={socialMedia} />
