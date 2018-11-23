@@ -434,25 +434,25 @@ const IndexPage = ({
         <VerticalMargin top={rhythm(1)}>
           <Social media={socialMedia} />
         </VerticalMargin>
-        <VerticalMargin top={96}>
+        <VerticalMargin top={rhythm(3)}>
           <About />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Education />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Work />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Skills />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Misc />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Meta />
         </VerticalMargin>
-        <VerticalMargin top={64}>
+        <VerticalMargin top={rhythm(3)}>
           <Footer />
         </VerticalMargin>
       </VerticalMargin>
