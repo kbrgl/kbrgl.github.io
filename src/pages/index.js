@@ -18,7 +18,8 @@ import react from '../images/skills/react.svg'
 import python from '../images/skills/python.svg'
 import ruby from '../images/skills/ruby.svg'
 import go from '../images/skills/go.svg'
-import splash from '../images/kabir.jpg'
+// $FlowFixMe
+import splash from '../images/kabir.webp'
 import caption from './caption.png'
 
 const birthday = new Date(1016908200000)
@@ -109,12 +110,18 @@ const Bio = () => (
       <span style={{ fontWeight: 'normal' }}>
         &mdash; designer &amp; developer.
       </span>{' '}
-      {isToday(birthday) ? '🎉' : ''}
+      {isToday(birthday) ? (
+        <span aria-label="" role="img" alt="Confetti emoji">
+          🎉
+        </span>
+      ) : (
+        ''
+      )}
     </h1>
     <p style={{ marginBottom: 0 }}>
       16 year old developer, designer, creator &amp; US politics junkie from New
       Delhi, India. Member at <a href="https://exunclan.com">Exun Clan</a>.{' '}
-      <span aria-label="" role="img">
+      <span aria-label="" role="img" alt="Moon emoji">
         🌝
       </span>
     </p>
@@ -355,7 +362,7 @@ const Skills = () => (
             <span
               style={{
                 fontSize: '0.9em',
-                color: '#86868b',
+                color: '#535358',
                 textTransform: 'uppercase',
                 letterSpacing: 1,
               }}
@@ -463,7 +470,7 @@ class Meta extends React.Component<{}, MetaState> {
 }
 
 const FooterWrapper = styled.footer`
-  color: #86868b;
+  color: #535358;
 `
 
 const Footer = () => <FooterWrapper>© 2018 Kabir Goel</FooterWrapper>

@@ -7,7 +7,7 @@ type FontAwesomeProps = {
   icon: string,
 }
 const FontAwesome = ({ icon }: FontAwesomeProps) => (
-  <i className={`fa fa-${icon}`} />
+  <i aria-label={icon} role="img" alt={icon} className={`fa fa-${icon}`} />
 )
 
 export default FontAwesome

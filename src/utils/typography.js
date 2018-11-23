@@ -26,7 +26,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Rubik',
-      styles: ['400', '400i', '500', '500i'],
+      styles: ['400', '500'],
     },
   ],
 })
