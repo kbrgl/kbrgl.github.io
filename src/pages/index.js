@@ -350,7 +350,7 @@ const visibleMixin = `
 `
 const fadeInOut = css`
   ${props => (!props.visible ? hiddenMixin : visibleMixin)};
-  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 `
 const MetaBody = styled.p`
   ${fadeInOut};
