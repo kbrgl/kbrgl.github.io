@@ -38,6 +38,16 @@ function isToday(date, _today) {
   return res
 }
 
+const Strip = () => (
+  <div
+    style={{
+      height: 4,
+      width: '100%',
+      background: '#3d29f5',
+    }}
+  />
+)
+
 const Splash = () => {
   const scaleTemplate = s => `scale(${s})`
   const opacityTemplate = o => `${o}`
@@ -60,7 +70,7 @@ const Splash = () => {
           height: 70,
           transform: scale.interpolate(scaleTemplate),
         }}
-        onMouseEnter={() => set({ scale: 1.4, opacity: 1 })}
+        onMouseEnter={() => set({ scale: 1.2, opacity: 1 })}
         onMouseLeave={() => set({ scale: 1, opacity: 0 })}
       >
         <Image data={{ src: splash, aspectRatio: 1 }} />
@@ -193,42 +203,51 @@ const Education = () => (
   </section>
 )
 
+const ListItemHeading = styled.div`
+  margin-bottom: ${rhythm(0.5)};
+`
 const Work = () => (
   <section>
     <SectionHeading>Work &amp; Projects</SectionHeading>
     <ul>
       <li>
-        <a href="https://github.com/kbrgl/wayfer">
-          Wayfer &mdash; cross platform file transfer app
-        </a>
+        <ListItemHeading>
+          <a href="https://github.com/kbrgl/wayfer">
+            Wayfer &mdash; cross platform file transfer app
+          </a>
+        </ListItemHeading>
+        <p>
+          Wayfer allows you to transfer a file by dropping it on the window and
+          scanning a QR code it gives you. Still a work in progress &mdash; only
+          the core functionality has been implemented so far.
+        </p>
+        <p>Written in Electron.</p>
       </li>
-      <p>
-        Wayfer allows you to transfer a file by dropping it on the window and
-        scanning a QR code it gives you. Still a work in progress &mdash; only
-        the core functionality has been implemented so far.
-      </p>
-      <p>Written in Electron.</p>
       <li>
-        <a href="https://exunclan.com">Exun Clan website</a>
+        <ListItemHeading>
+          <a href="https://exunclan.com">Exun Clan website</a>
+        </ListItemHeading>
+        <p>
+          The website of my school&#39;s computer club, Exun Clan, which has
+          more than 25 years of history and a legacy as the most prestigious
+          high-school computer club in India.
+        </p>
+        <p>Written in Gatsby.</p>
       </li>
-      <p>
-        The website of my school&#39;s computer club, Exun Clan, which has more
-        than 25 years of history and a legacy as the most prestigious
-        high-school computer club in India.
-      </p>
-      <p>Written in Gatsby.</p>
       <li>
-        <a href="https://exun.co/app">Exun 2018 app</a>
+        <ListItemHeading>
+          <a href="https://exun.co/app">Exun 2018 app</a>
+        </ListItemHeading>
+        <p>
+          An app to view schedules, live updates, and more at Exun 2018, Exun
+          Clan&#39;s 2018 edition of its annual event. 58,000+ notifications
+          were delivered to participants from across the country using my app.
+        </p>
+        <p>
+          The app was written in React Native, the server was written in the Koa
+          framework, and the admin (for pushing updates) was written in React.
+        </p>
       </li>
-      <p>
-        An app to view schedules, live updates, and more at Exun 2018, Exun
-        Clan&#39;s 2018 edition of its annual event. 58,000+ notifications were
-        delivered to participants from across the country using my app.
-      </p>
-      <p>
-        The app was written in React Native, the server was written in the Koa
-        framework, and the admin (for pushing updates) was written in React.
-      </p>
     </ul>
   </section>
 )
@@ -356,19 +375,24 @@ const Misc = () => (
     <SectionHeading>Misc</SectionHeading>
     <ul>
       <li>
-        <a href="https://github.com/kbrgl/dotfiles">Dotfiles</a>
+        <ListItemHeading>
+          <a href="https://github.com/kbrgl/dotfiles">Dotfiles</a>
+        </ListItemHeading>
+        <p>
+          My dotfiles from back when I was on Arch Linux. (I&#39;ve since
+          switched to macOS.)
+        </p>
       </li>
-      <p>
-        My dotfiles from back when I was on Arch Linux. (I&#39;ve since switched
-        to macOS.)
-      </p>
+
       <li>
-        <a href="https://www.npmjs.com/~kbrgl">NPM packages</a>
+        <ListItemHeading>
+          <a href="https://www.npmjs.com/~kbrgl">NPM packages</a>
+        </ListItemHeading>
+        <p>
+          NPM packages I&#39;ve published. Mostly some basic modules that I
+          couldn&#39;t find anywhere else, so I wrote them myself.
+        </p>
       </li>
-      <p>
-        NPM packages I&#39;ve published. Mostly some basic modules that I
-        couldn&#39;t find anywhere else, so I wrote them myself.
-      </p>
     </ul>
   </section>
 )
@@ -461,6 +485,7 @@ const IndexPage = ({
   },
 }: IndexPageProps) => (
   <Layout>
+    <Strip />
     <Container maxWidth={512}>
       <VerticalMargin top={rhythm(4)} bottom={rhythm(4)}>
         <Splash />
