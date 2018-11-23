@@ -356,7 +356,10 @@ const MetaBody = styled.p`
   ${fadeInOut};
 `
 
-class Meta extends React.Component {
+type MetaState = {
+  expanded: boolean,
+}
+class Meta extends React.Component<{}, MetaState> {
   constructor(props) {
     super(props)
     this.state = {
@@ -378,9 +381,9 @@ class Meta extends React.Component {
               cursor: 'pointer',
             }}
             onClick={() =>
-              this.setState({
-                expanded: !expanded,
-              })
+              this.setState(prevState => ({
+                expanded: !prevState.expanded,
+              }))
             }
             type="button"
           >
