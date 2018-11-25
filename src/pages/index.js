@@ -70,6 +70,9 @@ const Splash = () => {
           width: 70,
           height: 70,
           transform: scale.interpolate(scaleTemplate),
+          borderRadius: 3,
+          overflow: 'hidden',
+          boxShadow: '0 3px 9px 0 #eaeaef',
         }}
         onMouseEnter={() => set({ scale: 1.2, opacity: 1 })}
         onMouseLeave={() => set({ scale: 1, opacity: 0 })}

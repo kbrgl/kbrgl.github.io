@@ -80,9 +80,6 @@ class Image extends React.Component<ImageProps, State> {
             background: '#ddd',
             paddingBottom: imagePaddingBottom,
             position: 'relative',
-            borderRadius: 3,
-            overflow: 'hidden',
-            boxShadow: '0 3px 9px 0 #eaeaef',
           }}
         >
           {/* this div is for the actual image */}
