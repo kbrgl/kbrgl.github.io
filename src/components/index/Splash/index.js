@@ -11,7 +11,7 @@ import caption from './caption.png'
 const Splash = () => {
   const scaleTemplate = s => `scale(${s})`
   const opacityTemplate = o => `${o}`
-  const rotationTemplate = d => `rotate(-${d}deg)`
+  const rotationTemplate = d => `rotate(${d}deg)`
   const [{ scale, opacity, rotation }, set] = useSpring({
     scale: 1,
     opacity: 0,
@@ -41,7 +41,7 @@ const Splash = () => {
           overflow: 'hidden',
           boxShadow: '0 3px 9px 0 #eaeaef',
         }}
-        onMouseEnter={() => set({ scale: 1.2, opacity: 1, rotation: 2 })}
+        onMouseEnter={() => set({ scale: 1.2, opacity: 1, rotation: -2 })}
         onMouseLeave={() => set({ scale: 1, opacity: 0, rotation: 0 })}
       >
         <Image data={{ src: splash, aspectRatio: 1 }} />
