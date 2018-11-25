@@ -12,12 +12,12 @@ import Container from '../components/Container'
 import FontAwesome from '../components/FontAwesome'
 import Image from '../components/Image'
 
-import nodejs from '../images/skills/nodejs.svg'
-import gatsby from '../images/skills/gatsby.svg'
-import react from '../images/skills/react.svg'
-import python from '../images/skills/python.svg'
-import ruby from '../images/skills/ruby.svg'
-import go from '../images/skills/go.svg'
+import nodejs from '../images/toolbelt/nodejs.svg'
+import gatsby from '../images/toolbelt/gatsby.svg'
+import react from '../images/toolbelt/react.svg'
+import python from '../images/toolbelt/python.svg'
+import ruby from '../images/toolbelt/ruby.svg'
+import go from '../images/toolbelt/go.svg'
 // $FlowFixMe
 import splash from '../images/kabir.webp'
 import caption from './caption.png'
@@ -173,8 +173,6 @@ const Social = ({ media }: SocialProps) => {
 const SectionHeading = styled.h2`
   border-bottom: 1px solid #eaeaef;
   padding-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 `
 
 const About = () => (
@@ -259,7 +257,7 @@ const Work = () => (
   </section>
 )
 
-const SkillImage = styled.img.attrs({
+const ToolImage = styled.img.attrs({
   alt: '',
 })`
   margin-bottom: 0;
@@ -267,7 +265,7 @@ const SkillImage = styled.img.attrs({
   height: 1em;
 `
 
-const skillsInfo = [
+const ToolbeltInfo = [
   {
     image: nodejs,
     title: 'Node.js',
@@ -343,11 +341,11 @@ const skillsInfo = [
   },
 ]
 
-const Skills = () => (
+const Toolbelt = () => (
   <section>
-    <SectionHeading>Skills</SectionHeading>
+    <SectionHeading>Toolbelt</SectionHeading>
     <div>
-      {skillsInfo.map(skill => (
+      {ToolbeltInfo.map(skill => (
         <div key={skill.title}>
           <div
             style={{
@@ -356,7 +354,7 @@ const Skills = () => (
             }}
           >
             <div style={{ display: 'flex' }}>
-              <SkillImage src={skill.image} />
+              <ToolImage src={skill.image} />
               <h3>{skill.title}</h3>
             </div>
             <span
@@ -512,7 +510,7 @@ const IndexPage = ({
           <Work />
         </VerticalMargin>
         <VerticalMargin top={rhythm(3)}>
-          <Skills />
+          <Toolbelt />
         </VerticalMargin>
         <VerticalMargin top={rhythm(3)}>
           <Misc />
