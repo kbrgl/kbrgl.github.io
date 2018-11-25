@@ -10,7 +10,7 @@ const SocialLink = styled.a`
   align-items: center;
   border-bottom: 0;
   color: #a6a6ab;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 
   &:hover {
     color: #3d29f5;

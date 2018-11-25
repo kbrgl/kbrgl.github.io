@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import InfoText from '../InfoText'
+
 import SectionHeading from './SectionHeading'
 
 import nodejs from '../../images/toolbelt/nodejs.svg'
@@ -110,16 +112,7 @@ const Toolbelt = () => (
               <ToolImage src={skill.image} />
               <h3>{skill.title}</h3>
             </div>
-            <span
-              style={{
-                fontSize: '0.9em',
-                color: '#535358',
-                textTransform: 'uppercase',
-                letterSpacing: 1,
-              }}
-            >
-              {skill.duration}
-            </span>
+            <InfoText>{skill.duration}</InfoText>
           </div>
           <p>{skill.body}</p>
         </div>

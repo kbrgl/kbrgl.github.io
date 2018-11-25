@@ -1,3 +1,9 @@
+html {
+  background-image: linear-gradient(to bottom, #fff, #fafaff);
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
 /* Pseudo-classes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :focus {
@@ -13,7 +19,7 @@ a {
   font-weight: 500;
   text-decoration: none;
   border-bottom: 2px solid #eaeaef;
-  transition: border-bottom-color 0.3s ease-in-out;
+  transition: border-bottom-color 0.3s;
 }
 
 a:hover {
@@ -65,7 +71,7 @@ select {
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
-  transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s;
 }
 input[type='email']::placeholder,
 input[type='number']::placeholder,

@@ -1,16 +1,51 @@
 import React from 'react'
-import SectionHeading from './SectionHeading'
+import styled, { keyframes } from 'styled-components'
+
+const Strip = styled.div`
+  height: 1px;
+  width: 50px;
+  margin-bottom: 1.8rem;
+  background: #eaeaef;
+`
+
+const bob = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+`
+
+const EmphasisWrapper = styled.em`
+  cursor: crosshair;
+  font-style: normal;
+  border: 1px solid #eaeaef;
+  padding: 5px;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+
+  span {
+    display: inline-block;
+  }
+
+  &:hover span {
+    animation: ${bob} 0.2s infinite alternate;
+  }
+`
 
 const About = () => (
   <section>
-    <SectionHeading>About</SectionHeading>
+    <Strip />
     <p>
-      I&#39;ve always enjoyed building (and breaking!) stuff, and I&#39;ve loved
-      writing code ever since I found out there&#39;s a way to experience the
-      thrill of creating beautiful things without having to move for extended
-      periods of time. I&#39;m a huge US politics junkie: I enjoy learning about
-      political processes &amp; institutions and their impact on American
-      citizens.
+      I love{' '}
+      <EmphasisWrapper>
+        building and tearing down{' '}
+        <span aria-label="" role="img">
+          🔨
+        </span>
+      </EmphasisWrapper>{' '}
+      things.
     </p>
   </section>
 )

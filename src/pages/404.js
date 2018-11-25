@@ -12,10 +12,12 @@ const NotFoundPage = () => (
     <Container>
       <VerticalMargin top={rhythm(6)}>
         <h1>
-          <Link to="/">
-            404 <span style={{ fontWeight: 'normal' }}>&mdash; Not Found.</span>
-          </Link>
+          404 <span style={{ fontWeight: 'normal' }}>&mdash; Not Found.</span>{' '}
+          😐
         </h1>
+        <p>
+          But you can always <Link to="/">go home</Link>.
+        </p>
       </VerticalMargin>
     </Container>
   </Layout>

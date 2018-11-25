@@ -27,9 +27,9 @@ const IndexPage = () => (
   <Layout>
     <Strip />
     <Container maxWidth={512}>
-      <VerticalMargin top={rhythm(4)} bottom={rhythm(4)}>
+      <VerticalMargin top={rhythm(6)} bottom={rhythm(5)}>
         <Header />
-        <VerticalMargin top={rhythm(3)}>
+        <VerticalMargin top={rhythm(2)}>
           <About />
         </VerticalMargin>
         <VerticalMargin top={rhythm(3)}>
