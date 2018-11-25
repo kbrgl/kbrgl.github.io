@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import FontAwesome from '../FontAwesome'
@@ -16,34 +17,56 @@ const SocialLink = styled.a`
   }
 `
 
-type SocialProps = {
-  media: Object[],
+type Query = {
+  site: {
+    siteMetadata: {
+      socialMedia: Object[],
+    },
+  },
 }
-const Social = ({ media }: SocialProps) => {
-  const socialIcons = media.map((info, index) => (
-    <li
-      key={info.name}
-      style={{
-        display: 'inline-block',
-        marginRight: index !== media.length - 1 ? 16 : 0,
-      }}
-    >
-      <SocialLink href={info.url}>
-        <FontAwesome icon={info.icon ? info.icon : info.name} />
-      </SocialLink>
-    </li>
-  ))
 
-  return (
-    <ul
-      style={{
-        listStyleType: 'none',
-        margin: 0,
-      }}
-    >
-      {socialIcons}
-    </ul>
-  )
-}
+const Social = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            socialMedia {
+              name
+              url
+              icon
+            }
+          }
+        }
+      }
+    `}
+    render={({
+      site: {
+        siteMetadata: { socialMedia },
+      },
+    }: Query) => (
+      <ul
+        style={{
+          listStyleType: 'none',
+          margin: 0,
+        }}
+      >
+        {socialMedia.map((info, index) => (
+          <li
+            key={info.name}
+            style={{
+              display: 'inline-block',
+              marginRight: index !== socialMedia.length - 1 ? 16 : 0,
+            }}
+          >
+            <SocialLink href={info.url}>
+              <FontAwesome icon={info.icon ? info.icon : info.name} />
+            </SocialLink>
+          </li>
+        ))}
+      </ul>
+    )}
+  />
+)
 
 export default Social
