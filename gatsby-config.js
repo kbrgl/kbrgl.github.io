@@ -26,6 +26,11 @@ module.exports = {
         url: 'https://vsco.co/kbrgl',
         icon: 'camera',
       },
+      {
+        name: 'CodePen',
+        url: 'https://codepen.io/kbrgl',
+        icon: 'codepen',
+      },
     ],
   },
   plugins: [
