@@ -1,10 +1,12 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
+import { rhythm } from '../../utils/typography'
+
 const Strip = styled.div`
   height: 1px;
   width: 50px;
-  margin-bottom: 1.8rem;
+  margin-bottom: ${rhythm(1)};
   background: #eaeaef;
 `
 
