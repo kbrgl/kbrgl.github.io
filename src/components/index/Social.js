@@ -18,55 +18,47 @@ const SocialLink = styled.a`
 `
 
 type Query = {
-  site: {
-    siteMetadata: {
-      socialMedia: Object[],
-    },
+  file: {
+    childrenSocialJson: Object[],
   },
 }
 
-const Social = () => (
+const Social = ({ file: { childrenSocialJson: socialMedia } }: Query) => (
+  <ul
+    style={{
+      listStyleType: 'none',
+      margin: 0,
+    }}
+  >
+    {socialMedia.map((info, index) => (
+      <li
+        key={info.name}
+        style={{
+          display: 'inline-block',
+          marginRight: index !== socialMedia.length - 1 ? 16 : 0,
+        }}
+      >
+        <SocialLink href={info.url}>
+          <FontAwesome icon={info.icon ? info.icon : info.name} />
+        </SocialLink>
+      </li>
+    ))}
+  </ul>
+)
+
+export default () => (
   <StaticQuery
     query={graphql`
       query {
-        site {
-          siteMetadata {
-            socialMedia {
-              name
-              url
-              icon
-            }
+        file(relativePath: { eq: "social.json" }) {
+          childrenSocialJson {
+            name
+            url
+            icon
           }
         }
       }
     `}
-    render={({
-      site: {
-        siteMetadata: { socialMedia },
-      },
-    }: Query) => (
-      <ul
-        style={{
-          listStyleType: 'none',
-          margin: 0,
-        }}
-      >
-        {socialMedia.map((info, index) => (
-          <li
-            key={info.name}
-            style={{
-              display: 'inline-block',
-              marginRight: index !== socialMedia.length - 1 ? 16 : 0,
-            }}
-          >
-            <SocialLink href={info.url}>
-              <FontAwesome icon={info.icon ? info.icon : info.name} />
-            </SocialLink>
-          </li>
-        ))}
-      </ul>
-    )}
+    render={data => <Social {...data} />}
   />
 )
-
-export default Social

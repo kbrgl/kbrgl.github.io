@@ -1,39 +1,24 @@
 module.exports = {
-  siteMetadata: {
-    socialMedia: [
-      {
-        name: 'GitHub',
-        url: 'https://github.com/kbrgl',
-        icon: 'github',
-      },
-      {
-        name: 'Email',
-        url: 'mailto:kabirgoel.kg@gmail.com',
-        icon: 'envelope',
-      },
-      {
-        name: 'Spotify',
-        url: 'https://open.spotify.com/user/12181834510',
-        icon: 'spotify',
-      },
-      {
-        name: 'Medium',
-        url: 'https://medium.com/@kbrgl',
-        icon: 'medium',
-      },
-      {
-        name: 'VSCO',
-        url: 'https://vsco.co/kbrgl',
-        icon: 'camera',
-      },
-      {
-        name: 'CodePen',
-        url: 'https://codepen.io/kbrgl',
-        icon: 'codepen',
-      },
-    ],
-  },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+        ignore: [`**/.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+        ignore: [`**/.*`], // ignore files starting with a dot
+      },
+    },
+    `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-flow`,
     'gatsby-plugin-react-helmet',
     {
