@@ -2,6 +2,8 @@ import React from 'react'
 
 import { rhythm } from '../../utils/typography'
 
+import Tagline from './Tagline'
+
 const birthday = new Date(1016908200000)
 function isToday(date, _today) {
   let today = _today
@@ -28,7 +30,14 @@ const Bio = () => (
     >
       Kabir Goel{' '}
       <span style={{ fontWeight: 'normal' }}>
-        &mdash; designer &amp; developer.
+        &mdash;&nbsp;
+        <Tagline
+          items={[
+            'designer & developer.',
+            'serial procrastinator.',
+            'on by default.',
+          ]}
+        />
       </span>{' '}
       {isToday(birthday) ? (
         <span aria-label="" role="img" alt="Confetti emoji">
