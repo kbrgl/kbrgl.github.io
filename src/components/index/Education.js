@@ -1,31 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { rhythm } from '../../utils/typography'
+
 import InfoText from '../InfoText'
 
 import SectionHeading from './SectionHeading'
 
-const Line = styled.div`
-  height: 1px;
-  flex: 1;
-  background: transparent;
-  margin: 3px 0;
-
-  @media screen and (min-width: 400px) {
-    background: #eaeaef;
-    margin: 10px 10px;
-  }
-`
-
 const SchoolInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.8rem;
-
-  @media screen and (min-width: 400px) {
-    flex-direction: row;
-    align-items: center;
-  }
+  margin-bottom: ${rhythm(0.75)};
 `
 
 type SchoolInfoProps = {
@@ -37,14 +22,11 @@ const SchoolInfo = ({ name, duration }: SchoolInfoProps) => (
   <SchoolInfoWrapper>
     <h3
       style={{
-        marginBottom: 0,
-        textTransform: 'uppercase',
-        fontSize: '0.9em',
+        marginBottom: rhythm(0.25),
       }}
     >
       {name}
     </h3>
-    <Line />
     <InfoText>{duration}</InfoText>
   </SchoolInfoWrapper>
 )
