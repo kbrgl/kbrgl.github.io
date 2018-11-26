@@ -29,6 +29,11 @@ const typography = new Typography({
       styles: ['400', '500'],
     },
   ],
+  overrideStyles: ({ rhythm }) => ({
+    li: {
+      marginBottom: rhythm(1),
+    },
+  }),
 })
 
 typography.injectStyles()
