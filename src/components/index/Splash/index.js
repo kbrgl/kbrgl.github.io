@@ -1,41 +1,29 @@
 // @flow
 import React from 'react'
-import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
 import { useSpring, animated, config, interpolate } from 'react-spring'
 
 import Image from '../../Image'
 
-// $FlowFixMe
-import splash from '../../../images/kabir.webp'
 import caption from './caption.png'
 
-const Stick = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`
+type Query = {
+  file: {
+    childImageSharp: {
+      resize: {
+        src: string,
+      },
+    },
+  },
+}
 
-const Branch = () => (
-  <div
-    style={{
-      height: '100%',
-      display: 'flex',
-      alignItems: 'center',
-    }}
-  >
-    <div
-      style={{
-        height: 1,
-        flex: 1,
-        backgroundColor: '#eaeaef',
-      }}
-    />
-  </div>
-)
-
-const Splash = () => {
+const Splash = ({
+  file: {
+    childImageSharp: {
+      resize: { src: splash },
+    },
+  },
+}: Query) => {
   const scaleTemplate = s => `scale(${s})`
   const opacityTemplate = o => `${o}`
   const rotationTemplate = d => `rotate(${d}deg)`
@@ -48,11 +36,10 @@ const Splash = () => {
   return (
     <div
       style={{
-        position: 'relative',
         height: 70,
       }}
     >
-      <Stick
+      <div
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -98,16 +85,24 @@ const Splash = () => {
             }}
           />
         </animated.div>
-      </Stick>
-      <Stick
-        style={{
-          zIndex: -1,
-        }}
-      >
-        <Branch />
-      </Stick>
+      </div>
     </div>
   )
 }
 
-export default Splash
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "kabir.jpg" }) {
+          childImageSharp {
+            resize(quality: 30) {
+              src
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Splash {...data} />}
+  />
+)
