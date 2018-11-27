@@ -27,11 +27,8 @@ class Tagline extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    const { items } = this.props
     this.intervalID = setInterval(() => {
-      this.setState(prevState => ({
-        index: (prevState.index + 1) % items.length,
-      }))
+      requestAnimationFrame(this.next)
     }, 10 * 1000)
   }
 
@@ -39,6 +36,13 @@ class Tagline extends React.Component<Props, State> {
     if (this.intervalID) {
       clearInterval(this.intervalID)
     }
+  }
+
+  next = () => {
+    const { items } = this.props
+    this.setState(prevState => ({
+      index: (prevState.index + 1) % items.length,
+    }))
   }
 
   // eslint-disable-next-line no-undef
