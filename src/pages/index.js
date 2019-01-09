@@ -17,12 +17,6 @@ import Misc from '../components/index/Misc'
 import Meta from '../components/index/Meta'
 import Footer from '../components/index/Footer'
 
-const Strip = styled.div`
-  height: 4px;
-  width: 100%;
-  background: #3d29f5;
-`
-
 const IndexPage = () => (
   <Layout>
     <Container maxWidth={512}>
