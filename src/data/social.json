@@ -28,5 +28,10 @@
     "name": "CodePen",
     "url": "https://codepen.io/kbrgl",
     "icon": "codepen"
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/kabirgoel",
+    "icon": "twitter"
   }
 ]

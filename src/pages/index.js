@@ -25,7 +25,6 @@ const Strip = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <Strip />
     <Container maxWidth={512}>
       <VerticalMargin top={rhythm(4)} bottom={rhythm(4)}>
         <Header />
