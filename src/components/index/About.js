@@ -1,15 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { rhythm } from '../../utils/typography'
-
-const Strip = styled.div`
-  height: 1px;
-  width: 50px;
-  margin-bottom: ${rhythm(1)};
-  background: #eaeaef;
-`
-
 const bob = keyframes`
   from {
     transform: rotate(0deg);
@@ -22,9 +13,8 @@ const bob = keyframes`
 const EmphasisWrapper = styled.em`
   cursor: crosshair;
   font-style: normal;
-  border: 1px solid #eaeaef;
+  border-bottom: 1px solid #eaeaef;
   padding: 5px;
-  border-radius: 4px;
   transition: border-color 0.3s;
 
   span {
@@ -38,7 +28,6 @@ const EmphasisWrapper = styled.em`
 
 const About = () => (
   <section>
-    <Strip />
     <p>
       I love{' '}
       <EmphasisWrapper>
