@@ -8,7 +8,6 @@ import VerticalMargin from '../components/VerticalMargin'
 import Container from '../components/Container'
 
 import Header from '../components/index/Header'
-import About from '../components/index/About'
 import Education from '../components/index/Education'
 import Work from '../components/index/Work'
 import Toolbelt from '../components/index/Toolbelt'
@@ -21,9 +20,6 @@ const IndexPage = () => (
     <Container maxWidth={512}>
       <VerticalMargin top={rhythm(4)} bottom={rhythm(4)}>
         <Header />
-        <VerticalMargin top={rhythm(2)}>
-          <About />
-        </VerticalMargin>
         <VerticalMargin top={rhythm(3)}>
           <Education />
         </VerticalMargin>
