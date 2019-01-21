@@ -48,8 +48,8 @@ const Bio = () => (
       )}
     </h1>
     <p style={{ marginBottom: 0 }}>
-      16 year old developer, designer, creator, amateur pyromaniac, professional
-      pro &amp; American politics junkie from New Delhi, India. Member at{' '}
+      16 year old developer, designer, creator, amateur pyromaniac &amp;
+      American politics enthusiast from New Delhi, India. Member at{' '}
       <a href="https://exunclan.com">Exun Clan</a>.{' '}
       <span aria-label="" role="img" alt="Moon emoji">
         🌝
