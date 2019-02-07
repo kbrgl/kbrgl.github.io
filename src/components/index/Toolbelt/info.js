@@ -30,7 +30,7 @@ export default [
   },
   {
     image: go,
-    title: 'Golang',
+    title: 'Go',
     level: 3,
   },
   {
