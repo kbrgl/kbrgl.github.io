@@ -1,7 +1,7 @@
 import Typography from 'typography'
 
 const bodyFontStack = [
-  'Rubik',
+  'Avenir',
   '-apple-system',
   'BlinkMacSystemFont',
   'Segoe UI',
@@ -15,23 +15,21 @@ const headerFontStack = [...bodyFontStack]
 
 const typography = new Typography({
   title: 'kbrgl',
-  baseFontSize: '16px',
+  baseFontSize: '18px',
   baseLineHeight: 1.8,
-  scaleRatio: 1.1,
-  headerColor: '#232230',
+  scaleRatio: 1,
+  headerColor: '#16133f',
   headerFontFamily: headerFontStack,
   headerWeight: '500',
-  bodyColor: '#38365a',
+  bodyColor: '#16133fd8',
+  bodyWeight: '500',
   bodyFontFamily: bodyFontStack,
-  googleFonts: [
-    {
-      name: 'Rubik',
-      styles: ['400', '500'],
-    },
-  ],
   overrideStyles: ({ rhythm }) => ({
     li: {
       marginBottom: rhythm(1),
+    },
+    h1: {
+      fontFamily: 'Leitura Display',
     },
   }),
 })

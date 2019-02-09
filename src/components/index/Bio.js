@@ -2,8 +2,6 @@ import React from 'react'
 
 import { rhythm } from '../../utils/typography'
 
-import Tagline from './Tagline'
-
 const birthday = new Date(1016908200000)
 function isToday(date, _today) {
   let today = _today
@@ -23,33 +21,39 @@ function isToday(date, _today) {
 
 const Bio = () => (
   <section>
-    <h1
+    <div
       style={{
-        marginBottom: rhythm(0.5),
+        display: 'flex',
+        alignItems: 'baseline',
       }}
     >
-      Kabir Goel{' '}
-      <span style={{ fontWeight: 'normal' }}>
-        &mdash;&nbsp;
-        <Tagline
-          items={[
-            'designer & developer.',
-            'serial procrastinator.',
-            'on by default.',
-          ]}
-        />
-      </span>{' '}
-      {isToday(birthday) ? (
-        <span aria-label="" role="img" alt="Confetti emoji">
-          🎉
-        </span>
-      ) : (
-        ''
-      )}
-    </h1>
+      <h1
+        style={{
+          marginBottom: rhythm(0.5),
+          fontSize: '2rem',
+        }}
+        className="title"
+      >
+        <span style={{ color: '#2b65d4' }}>kabir goel&nbsp;</span>
+      </h1>
+      <span
+        style={{
+          marginBottom: rhythm(0.5),
+          fontSize: '1.6rem',
+        }}
+      >
+        <span style={{ fontWeight: '300' }}>&mdash;&nbsp;maker.</span>{' '}
+        {isToday(birthday) ? (
+          <span aria-label="" role="img" alt="Confetti emoji">
+            🎉
+          </span>
+        ) : (
+          ''
+        )}
+      </span>
+    </div>
     <p style={{ marginBottom: 0 }}>
-      16 year old creator, amateur pyromaniac &amp; American politics enthusiast
-      from New Delhi, India. Member at{' '}
+      16 year old designer and developer from New Delhi, India. Member at{' '}
       <a href="https://exunclan.com">Exun Clan</a>.{' '}
       <span aria-label="" role="img" alt="Moon emoji">
         🌝

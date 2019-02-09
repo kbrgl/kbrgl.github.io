@@ -1,7 +1,10 @@
+@import url('https://use.typekit.net/xtm3mnp.css');
+
 html {
-  background-image: linear-gradient(to bottom, #fff, #fafaff);
-  background-repeat: no-repeat;
   min-height: 100%;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 /* Pseudo-classes
@@ -9,16 +12,16 @@ html {
 :focus {
   outline-width: 1px;
   outline-style: dotted;
-  outline-color: #3d29f5;
+  outline-color: #2b65d4;
 }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #3d29f5;
-  font-weight: 500;
+  color: #2b65d4;
+  font-weight: 600;
   text-decoration: none;
-  border-bottom: 2px solid #eaeaef;
+  border-bottom: 2px solid currentColor;
   transition: border-bottom-color 0.3s;
 }
 
@@ -109,7 +112,7 @@ input[type='url']:focus,
 input[type='password']:focus,
 textarea:focus,
 select:focus {
-  border-color: #3d29f5;
+  border-color: #2b65d4;
   outline: 0;
 }
 label,

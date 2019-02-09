@@ -19,7 +19,7 @@ const Circle = styled.div`
 const Disc = styled(Circle)`
   border: 0;
   filter: drop-shadow(0 2px 3px #eaeaef);
-  background: linear-gradient(to bottom right, #b4b4c6cc, #b4b4c6);
+  background-color: #98a4bc;
 `
 
 type Props = {

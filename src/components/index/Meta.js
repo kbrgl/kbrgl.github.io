@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import fadeInOut from '../../utils/fadeInOut'
+import SectionHeading from './SectionHeading'
 
 const MetaBody = styled.p`
   ${fadeInOut};
@@ -23,10 +24,10 @@ class Meta extends React.Component<{}, MetaState> {
 
     return (
       <section>
-        <h2>
+        <SectionHeading>
           <button
             style={{
-              color: '#3d29f5',
+              color: '#2b65d4',
               display: 'flex',
               alignItems: 'center',
               cursor: 'pointer',
@@ -40,7 +41,7 @@ class Meta extends React.Component<{}, MetaState> {
           >
             <div style={{ width: '1em' }}>{expanded ? '−' : '+'}</div> Meta
           </button>
-        </h2>
+        </SectionHeading>
         <MetaBody visible={expanded}>
           The website you&#39;re looking at right now has been around since
           September 2015. I&#39;ve used it as a testbed for my ideas: new

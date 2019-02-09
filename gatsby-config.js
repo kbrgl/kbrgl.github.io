@@ -27,8 +27,8 @@ module.exports = {
         name: 'Kabir Goel',
         short_name: 'Kabir Goel',
         start_url: '/',
-        background_color: '#3d29f5',
-        theme_color: '#3d29f5',
+        background_color: '#2b65d4',
+        theme_color: '#2b65d4',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
