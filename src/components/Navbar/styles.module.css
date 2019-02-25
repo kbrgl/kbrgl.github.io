@@ -1,0 +1,23 @@
+.list {
+  list-style-type: none;
+  cursor: default;
+  line-height: 2.2rem;
+}
+
+.list li {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 0;
+}
+
+.circle {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 100%;
+  border: 2px solid var(--primary-color);
+  transition: border-color 0.2s ease;
+}
+.circle:hover {
+  border-color: var(--text-color);
+}

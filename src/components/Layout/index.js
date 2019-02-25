@@ -1,28 +1,44 @@
 // @flow
 import React from 'react'
-import type { Node } from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
-import './layout.css'
+import Background from '../Background'
+import Navbar from '../Navbar'
+import { Container, Row, Column } from '../Grid'
 
-type LayoutProps = {
-  children: Node,
-}
-const Layout = ({ children }: LayoutProps) => (
-  <div>
+import './normalize.css'
+import './skeleton.css'
+import styles from './styles.module.css'
+
+const Layout = ({ children }) => (
+  <div className={styles.padding}>
     <Helmet
       title="Kabir Goel"
       meta={[
         {
           name: 'description',
-          content: 'Designer, developer and creator from New Delhi, India.',
+          content: '16 year old maker from New Delhi, India.',
         },
       ]}
     >
       <html lang="en" />
     </Helmet>
-    <main>{children}</main>
+    <Background />
+    <main>
+      <Container>
+        <Row>
+          <Column size="six">
+            <Navbar />
+          </Column>
+        </Row>
+        {children}
+      </Container>
+    </main>
   </div>
 )
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Layout

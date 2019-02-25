@@ -10,7 +10,6 @@
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off"
   },
-  "plugins": ["flowtype"],
   "parser": "babel-eslint",
   "env": {
     "browser": true
