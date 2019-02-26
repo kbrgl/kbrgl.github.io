@@ -8,6 +8,7 @@ import Navbar from '../Navbar'
 import { Container, Row, Column } from '../Grid'
 
 import './normalize.css'
+import './fonts.css'
 import './skeleton.css'
 import styles from './styles.module.css'
 

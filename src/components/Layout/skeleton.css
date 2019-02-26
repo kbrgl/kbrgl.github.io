@@ -15,42 +15,6 @@
   outline-color: var(--primary-color);
 }
 
-/* use Gentium Plus - Regular in .woff format */
-@font-face {
-  font-family: 'Gentium Plus';
-  src: url(./GentiumPlus-R.woff);
-}
-/* use Gentium Plus - Italic in .woff format */
-@font-face {
-  font-family: 'Gentium Plus';
-  font-style: italic;
-  src: url(./GentiumPlus-I.woff);
-}
-/* use IBM Plex Sans - Text in .woff2 format */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  src: url(./IBMPlexSans-Text.woff2);
-}
-/* use IBM Plex Sans - Text Italic in .woff2 format */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: italic;
-  src: url(./IBMPlexSans-TextItalic.woff2);
-}
-/* use IBM Plex Sans - Light in .woff2 format */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-weight: 300;
-  src: url(./IBMPlexSans-Light.woff2);
-}
-/* use IBM Plex Sans - Light Italic in .woff2 format */
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-weight: 300;
-  font-style: italic;
-  src: url(./IBMPlexSans-LightItalic.woff2);
-}
-
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
