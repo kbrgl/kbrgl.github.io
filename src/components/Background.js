@@ -9,7 +9,7 @@ class Background extends React.Component {
       circles: {
         count: 5,
         radii: [100, 200, 400],
-        colors: ['#2b56d411', '#55555511', '#2b56d411'],
+        colors: ['#2b56d411'],
       },
     }
   }
@@ -17,7 +17,7 @@ class Background extends React.Component {
   componentDidMount() {
     this.two = new Two({
       width: window.innerWidth,
-      height: window.innerHeight,
+      height: document.body.clientHeight,
     }).appendTo(this.el.current)
 
     const group = this.two.makeGroup()
@@ -64,16 +64,17 @@ class Background extends React.Component {
 
   onResize = () => {
     this.two.width = window.innerWidth
-    this.two.height = window.innerHeight
+    this.two.height = document.body.clientHeight
   }
 
   render() {
     return (
       <div
         style={{
-          position: 'fixed',
+          position: 'absolute',
           overflow: 'hidden',
           zIndex: -1,
+          height: '100%',
           top: 0,
           left: 0,
           bottom: 0,

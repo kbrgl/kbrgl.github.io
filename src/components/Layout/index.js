@@ -13,7 +13,7 @@ import './skeleton.css'
 import styles from './styles.module.css'
 
 const Layout = ({ children }) => (
-  <div className={styles.padding}>
+  <div className={styles.wrapper}>
     <Helmet
       title="Kabir Goel"
       meta={[
