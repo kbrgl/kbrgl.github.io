@@ -12,7 +12,7 @@ Container.propTypes = {
 export const Column = ({ children, size, offset }) => (
   <div
     className={`${styles[size]} ${styles.columns} ${
-      offset ? styles[`offset-by-${offset}`] : ''
+      offset || offset === 'zero' ? styles[`offset-by-${offset}`] : ''
     }`}
   >
     {children}
@@ -38,6 +38,8 @@ Column.propTypes = {
     'one-half',
   ]).isRequired,
   offset: PropTypes.oneOf([
+    '',
+    'zero',
     'one',
     'two',
     'three',
