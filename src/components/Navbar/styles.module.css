@@ -15,9 +15,9 @@
   line-height: 2.2rem;
   width: 2.2rem;
   border-radius: 100%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--color-primary);
   transition: border-color 0.2s ease;
 }
 .circle:hover {
-  border-color: var(--text-color);
+  border-color: var(--color-text);
 }
