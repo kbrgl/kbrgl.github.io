@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Title = ({ title }) => (
+const Title = ({ children }) => (
   <div
     style={{
       marginTop: '4rem',
       marginBottom: '4rem',
     }}
   >
-    <h1>{title}</h1>
+    <h1>{children}</h1>
   </div>
 )
 Title.propTypes = {
-  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Title
