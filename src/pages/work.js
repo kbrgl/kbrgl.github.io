@@ -2,13 +2,14 @@ import React from 'react'
 
 import { Row, Column } from '../components/Grid'
 import Layout from '../components/Layout'
+import Title from '../components/Title'
 
 const IndexPage = () => (
   <Layout>
     <section>
       <Row>
         <Column size="seven">
-          <h1>Work</h1>
+          <Title>Work</Title>
         </Column>
       </Row>
       <Row>

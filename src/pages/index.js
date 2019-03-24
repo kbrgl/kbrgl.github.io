@@ -2,16 +2,17 @@ import React from 'react'
 
 import { Row, Column } from '../components/Grid'
 import Layout from '../components/Layout'
+import Title from '../components/Title'
 
 const IndexPage = () => (
   <Layout>
     <section>
       <Row>
         <Column size="seven">
-          <h1>
+          <Title>
             Hey there! I’m Kabir,
             <br />a designer &amp;&nbsp;developer from New&nbsp;Delhi, India.
-          </h1>
+          </Title>
         </Column>
       </Row>
       <Row>
