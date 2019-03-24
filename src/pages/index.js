@@ -11,7 +11,9 @@ const IndexPage = () => (
         <Column size="seven">
           <Title>
             Hey there! I’m Kabir,
-            <br />a designer &amp;&nbsp;developer from New&nbsp;Delhi, India.
+            <br />a designer &amp;&nbsp;developer from
+            <br />
+            New&nbsp;Delhi, India.
           </Title>
         </Column>
       </Row>
@@ -27,8 +29,9 @@ const IndexPage = () => (
           </p>
           <p>
             I’m currently reading <em>The Signal and&shy; the Noise</em> by
-            Nate&nbsp;Silver and <em>The&shy; Elements of Typographic Style</em>{' '}
-            by Robert&nbsp;Bringhurst.
+            Nate&nbsp;Silver and{' '}
+            <em>The&nbsp;Elements&nbsp;of&nbsp;Typographic&nbsp;Style</em> by
+            Robert&nbsp;Bringhurst.
           </p>
           <p>
             I’ll be heading over to Kennedy Space Center in April for the{' '}

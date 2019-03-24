@@ -29,7 +29,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.8;
   font-weight: 400;
   font-family: var(--font-primary);
@@ -55,15 +55,15 @@ h6 {
   margin-bottom: 2rem;
 }
 h1 {
-  font-size: 4rem;
-  letter-spacing: -0.1rem;
-}
-h2 {
   font-size: 3.6rem;
   letter-spacing: -0.1rem;
 }
+h2 {
+  font-size: 3.2rem;
+  letter-spacing: -0.1rem;
+}
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   letter-spacing: -0.1rem;
 }
 h4 {
@@ -71,11 +71,11 @@ h4 {
   letter-spacing: -0.08rem;
 }
 h5 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: -0.05rem;
 }
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0;
 }
 
