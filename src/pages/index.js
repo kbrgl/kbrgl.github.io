@@ -8,19 +8,13 @@ const IndexPage = () => (
   <Layout>
     <section>
       <Row>
-        <Column size="seven">
+        <Column size="six" offset="one">
           <Title>
-            Hey there! I’m Kabir,
-            <br />a designer &amp;&nbsp;developer from
-            <br />
+            Hey there! I’m Kabir, a designer &amp; developer from
             New&nbsp;Delhi, India.
           </Title>
-        </Column>
-      </Row>
-      <Row>
-        <Column size="six">
           <p>
-            I’m a member of{' '}
+            I’m the President of{' '}
             <a className="external" href="https://exunclan.com">
               Exun Clan
             </a>
@@ -29,9 +23,8 @@ const IndexPage = () => (
           </p>
           <p>
             I’m currently reading <em>The Signal and&shy; the Noise</em> by
-            Nate&nbsp;Silver and{' '}
-            <em>The&nbsp;Elements&nbsp;of&nbsp;Typographic&nbsp;Style</em> by
-            Robert&nbsp;Bringhurst.
+            Nate&nbsp;Silver and <em>Born&nbsp;a&nbsp;Crime</em> by
+            Trevor&nbsp;Noah.
           </p>
           <p>
             I’ll be heading over to Kennedy Space Center in April for the{' '}

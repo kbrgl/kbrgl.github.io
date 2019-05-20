@@ -3,44 +3,23 @@ import React from 'react'
 import { Row, Column } from '../components/Grid'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
+import Showcase from '../components/work/Showcase'
 
-const IndexPage = () => (
+const WorkPage = () => (
   <Layout>
     <section>
       <Row>
-        <Column size="seven">
+        <Column size="six" offset="one">
           <Title>Work</Title>
         </Column>
       </Row>
       <Row>
-        <Column size="six">
-          <p>
-            I built the{' '}
-            <a className="external" href="//exun.co/app">
-              Exun 2018 app
-            </a>{' '}
-            and{' '}
-            <a className="external" href="//exunclan.com">
-              website
-            </a>
-            , which were together used to deliver 58,000+ notifications to
-            participants from across India at Exun 2018, the 23rd edition of
-            Exun Clan’s annual event.
-          </p>
-          <p>
-            In 9th grade, I interned at{' '}
-            <a className="external" href="//attentive.ai">
-              Attentive AI
-            </a>
-            , where I built their website.
-          </p>
-          <p>
-            In addition, I’ve contributed to a number of open-source projects.
-          </p>
+        <Column size="ten" offset="one">
+          <Showcase />
         </Column>
       </Row>
     </section>
   </Layout>
 )
 
-export default IndexPage
+export default WorkPage

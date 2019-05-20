@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styles from './styles.module.css'
 
 const Navbar = () => (
-  <header className="u-cf u-full-width">
+  <header className={`u-cf u-full-width ${styles.header}`}>
     <div className="u-pull-left">
       <Link to="/">
         <div className={styles.circle} />

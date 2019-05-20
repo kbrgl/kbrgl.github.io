@@ -22,17 +22,12 @@ const Layout = ({ children }) => (
           content: '16 year old maker from New Delhi, India.',
         },
       ]}
-    >
-      <html lang="en" />
-    </Helmet>
+      htmlAttributes={{ lang: 'en' }}
+    />
     <Background />
     <main>
       <Container>
-        <Row>
-          <Column size="six">
-            <Navbar />
-          </Column>
-        </Row>
+        <Navbar />
         {children}
       </Container>
     </main>

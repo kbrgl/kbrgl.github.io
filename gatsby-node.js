@@ -6,8 +6,11 @@
 
 // You can delete this file if you're not using it
 
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
+
 const cssLoaderRe = /\/css-loader\//
-const targetFile = `.module.css`
+const targetFile = '.module.css'
 
 const processRule = rule => {
   if (rule.oneOf) {
@@ -68,4 +71,47 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
       },
     })
   }
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'pages' })
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    })
+  }
+}
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allMarkdownRemark {
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            link
+          }
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allMarkdownRemark.nodes.forEach(node => {
+      if (!node.frontmatter.link)
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/work.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.fields.slug,
+          },
+        })
+    })
+  })
 }
