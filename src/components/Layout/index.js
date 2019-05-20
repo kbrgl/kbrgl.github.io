@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import Background from '../Background'
 import Navbar from '../Navbar'
-import { Container, Row, Column } from '../Grid'
+import { Container } from '../Grid'
 
 import './normalize.css'
 import './fonts.css'
@@ -20,6 +20,10 @@ const Layout = ({ children }) => (
         {
           name: 'description',
           content: '16 year old maker from New Delhi, India.',
+        },
+        {
+          name: 'google-site-verification',
+          content: 'mYCbMoGP2dt071GwtAtMtstdSx4tkrIBffu2E2fGbOA',
         },
       ]}
       htmlAttributes={{ lang: 'en' }}
