@@ -27,11 +27,12 @@ const IndexPage = () => (
             Trevor&nbsp;Noah.
           </p>
           <p>
-            I’ll be heading over to Kennedy Space Center in April for the{' '}
-            <a className="external" href="https://www.conradchallenge.org">
-              Conrad Challenge
-            </a>{' '}
-            finals.
+            In April, I spent an extremely exciting week at the finals summit of
+            the <a href="https://conradchallenge.org">Conrad Challenge</a>.
+          </p>
+          <p>
+            On the weekend of May 4–5, I participated at AngelHack Delhi 2019,
+            where I won the Grand Prize against 30+ college teams.
           </p>
           <p>
             You can find me on the web on{' '}
