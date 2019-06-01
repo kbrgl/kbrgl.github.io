@@ -22,9 +22,9 @@ const IndexPage = () => (
             Puram, where I make things.
           </p>
           <p>
-            I’m currently reading <em>The Signal and&shy; the Noise</em> by
-            Nate&nbsp;Silver and <em>Born&nbsp;a&nbsp;Crime</em> by
-            Trevor&nbsp;Noah.
+            I’m currently reading <em>Zero&nbsp;To&nbsp;One</em> by
+            Peter&nbsp;Thiel and Blake&nbsp;Masters and{' '}
+            <em>Born&nbsp;a&nbsp;Crime</em> by Trevor&nbsp;Noah.
           </p>
           <p>
             In April, I spent an extremely exciting week at the finals summit of
