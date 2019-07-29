@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Title = ({ children, style }) => (
-  <div
+  <h1
     style={{
       marginTop: '8rem',
       marginBottom: '4rem',
       ...style,
     }}
   >
-    <h1>{children}</h1>
-  </div>
+    {children}
+  </h1>
 )
 Title.propTypes = {
   children: PropTypes.node.isRequired,

@@ -11,7 +11,9 @@ const WorkTemplate = ({ data }) => {
     <Layout>
       <Row>
         <Column size="six" offset="one">
-          <Title style={{ marginBottom: 0 }}>{post.frontmatter.title}</Title>
+          <Title style={{ fontSize: '4.4rem', marginBottom: 0 }}>
+            {post.frontmatter.title}
+          </Title>
           <h2 style={{ marginBottom: '2rem' }}>
             {post.frontmatter.description}
           </h2>
