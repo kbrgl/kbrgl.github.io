@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
@@ -29,14 +28,12 @@ const Layout = ({ children }) => (
       ]}
       htmlAttributes={{ lang: 'en' }}
     />
-    <main>
-      <Container>
-        <Navbar />
-        {children}
-        <hr style={{ marginTop: '8rem' }} />
-        <Footer />
-      </Container>
-    </main>
+    <Container>
+      <Navbar />
+      <main>{children}</main>
+      <hr style={{ marginTop: '8rem' }} />
+      <Footer />
+    </Container>
   </div>
 )
 Layout.propTypes = {
