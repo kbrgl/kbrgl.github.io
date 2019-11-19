@@ -2,6 +2,7 @@
 title: A Fresh Look, and What Comes Now
 description: A look into the latest redesign of my website.
 date: 2019-11-19
+draft: false
 ---
 
 Since four years ago, when I made my first web page and put it up on kabirgoel.com, this website has served as a testing ground for my design skills. This redesign marks (I think) the 12th or 13th iteration.
