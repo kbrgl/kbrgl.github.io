@@ -1,0 +1,6 @@
+.footer {
+  font-size: var(--font-size-small);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-light);
+}

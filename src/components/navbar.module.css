@@ -1,0 +1,48 @@
+.header {
+  margin-bottom: 2rem;
+  font-size: var(--font-size-small);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  list-style-type: none;
+  cursor: default;
+  line-height: 2.2rem;
+  margin-bottom: 0;
+}
+
+.list li {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 0;
+}
+
+.list li:last-child {
+  margin-right: 0;
+}
+
+.list li a {
+  color: var(--color-text-light);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-left: 8px;
+}
+
+img.external {
+  opacity: 0.3;
+  height: 0.6em;
+  padding-bottom: 1px;
+  vertical-align: baseline;
+}

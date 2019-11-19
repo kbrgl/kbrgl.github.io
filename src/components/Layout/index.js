@@ -2,13 +2,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
+import 'typeface-ibm-plex-sans'
+import 'typeface-ibm-plex-serif'
 
-import Background from '../Background'
-import Navbar from '../Navbar'
-import { Container } from '../Grid'
+import Navbar from '../navbar'
+import { Container } from '../grid'
+import Footer from '../footer'
 
 import './normalize.css'
-import './fonts.css'
 import './skeleton.css'
 import styles from './styles.module.css'
 
@@ -19,7 +20,7 @@ const Layout = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: '16 year old maker from New Delhi, India.',
+          content: '17 year old maker from New Delhi, India.',
         },
         {
           name: 'google-site-verification',
@@ -28,11 +29,12 @@ const Layout = ({ children }) => (
       ]}
       htmlAttributes={{ lang: 'en' }}
     />
-    <Background />
     <main>
       <Container>
         <Navbar />
         {children}
+        <hr style={{ marginTop: '8rem' }} />
+        <Footer />
       </Container>
     </main>
   </div>

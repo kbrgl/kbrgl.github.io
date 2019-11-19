@@ -1,13 +1,17 @@
 :root {
-  --color-primary: #2b65d4;
-  --color-highlight: #2b65d422;
-  --color-text: #212121;
+  --color-primary: #000000;
+  --color-highlight: #00000022;
+  --color-highlight-dark: #2b65d4;
+  --color-text-dark: #333;
+  --color-text: #7a7a7f;
+  --color-text-light: #888;
   --transition-style: 0.2s ease;
-  --font-primary: 'Iowan Old Style', 'Gentium Book Basic', 'Seravek', 'Georgia',
-    'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-accent: 'IBM Plex Sans', Avenir, -apple-system, BlinkMacSystemFont,
+  --font-primary: 'IBM Plex Sans', 'Seravek', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
+  --font-accent: 'IBM Plex Serif', Georgia, sans-serif;
+  --font-size-small: 1.8rem;
+  --font-size-x-small: 1.6rem;
 }
 
 ::selection {
@@ -29,8 +33,8 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1.8rem;
-  line-height: 1.5;
+  font-size: 2.1rem;
+  line-height: 1.35;
   font-weight: 400;
   font-family: var(--font-primary);
   color: var(--color-text);
@@ -48,19 +52,18 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.3;
-  font-weight: 400;
-  font-family: var(--font-accent);
+  color: var(--color-text-dark);
+  line-height: 1.2;
+  font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0;
 }
 h1 {
-  font-weight: 500;
-  font-size: 3.6rem;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 3.2rem;
   letter-spacing: -0.1rem;
 }
 h2 {
-  color: #2b65d4;
   font-size: 2.4rem;
   letter-spacing: -0.1rem;
 }
@@ -83,19 +86,31 @@ h6 {
 
 p {
   margin-top: 0;
-  color: #333;
 }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   text-decoration: none;
   transition: color var(--transition-style),
     background-color var(--transition-style);
 }
 a:hover {
-  color: var(--color-text);
+  color: inherit;
+}
+
+p a {
+  color: inherit;
+  position: relative;
+}
+
+p a {
+  border-bottom: 2px solid var(--color-highlight);
+  transition: border-bottom-color var(--transition-style);
+}
+p a:hover {
+  border-bottom-color: var(--color-highlight-dark);
 }
 
 /* Lists

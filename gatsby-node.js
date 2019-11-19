@@ -20,7 +20,11 @@ const processRule = rule => {
     }
   }
 
-  if (!rule.test.test(targetFile)) {
+  try {
+    if (!rule.test.test(targetFile)) {
+      return rule
+    }
+  } catch (err) {
     return rule
   }
 
@@ -47,7 +51,7 @@ const processRule = rule => {
   return rule
 }
 
-exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   const config = getConfig()
 
   const newConfig = {
@@ -58,24 +62,11 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, loaders, actions }) => {
     },
   }
   actions.replaceWebpackConfig(newConfig)
-
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /two.js/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'MarkdownRemark' && !node.frontmatter.draft) {
     const slug = createFilePath({ node, getNode, basePath: 'pages' })
     createNodeField({
       node,
@@ -95,23 +86,24 @@ exports.createPages = ({ graphql, actions }) => {
             slug
           }
           frontmatter {
-            link
+            draft
           }
         }
       }
     }
   `).then(result => {
     result.data.allMarkdownRemark.nodes.forEach(node => {
-      if (!node.frontmatter.link)
+      if (!node.frontmatter.draft) {
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/work.js`),
+          component: path.resolve(`./src/templates/note.js`),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
             slug: node.fields.slug,
           },
         })
+      }
     })
   })
 }

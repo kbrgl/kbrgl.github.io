@@ -1,0 +1,18 @@
+.body {
+  margin-top: 3rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  color: var(--color-text-dark);
+}
+
+.meta {
+  font-size: var(--font-size-x-small);
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  font-size: var(--font-size-small);
+}
