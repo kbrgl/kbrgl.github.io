@@ -1,0 +1,25 @@
+.image {
+  margin-top: 5rem;
+}
+
+.imageTitle {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.imageDesc {
+  font-size: var(--font-size-x-small);
+  margin-bottom: 1rem;
+}
+
+.imageType {
+  display: inline-block;
+  font-size: var(--font-size-tiny);
+  text-transform: capitalize;
+  border: 1px solid var(--color-text-light);
+  padding: 5px 10px;
+  border-radius: 100px;
+}

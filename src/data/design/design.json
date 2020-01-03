@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Torii",
+    "description": "Illustration of the gateway of a Shinto shrine.",
+    "media": "./torii.jpg"
+  },
+  {
+    "title": "Psycho CRT",
+    "description": "Inspired by HAL 9000.",
+    "media": "./crt.png"
+  },
+  {
+    "title": "Kabir",
+    "description": "Pop-art style silhouette of me.",
+    "media": "./kabir.png"
+  },
+  {
+    "title": "Quizzing Club Poster",
+    "description": "Poster designed for the Quizzing Club 2019 auditions.",
+    "media": "./qc.png"
+  },
+  {
+    "title": "Shore",
+    "description": "Ambient noise generator concept design.",
+    "media": "./shore.png"
+  },
+  {
+    "title": "Typography Sample",
+    "description": "Created for design workshop conducted summer '19. Text from Paul Graham’s ‘Before The Startup’ essay.",
+    "media": "./typography-assignment.png"
+  },
+  {
+    "title": "Sudocrypt Logo",
+    "description": "Logo for Sudocrypt v9.0, Exun’s annual online cryptic hunt.",
+    "media": "./sudocrypt.png"
+  },
+  {
+    "title": "Sudocrypt Interface",
+    "description": "Concept text-based design for Sudocrypt v9.0. We ultimately went with a different idea.",
+    "media": "./sudocrypt-interface.png"
+  },
+  {
+    "title": "Acid Reflux Analysis Software Interface",
+    "description": "Interface for my project at Stanford Medicine.",
+    "media": "./impedance.png"
+  },
+  {
+    "title": "Uber Dash",
+    "description": "Concept Uber entertainment system for Exun e-Lite 2017.",
+    "media": "./uber-dash.png"
+  },
+  {
+    "title": "e-Lite 2018",
+    "description": "Poster for Exun’s annual recruitment test.",
+    "media": "./elite-poster.png"
+  }
+]

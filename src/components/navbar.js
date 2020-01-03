@@ -30,6 +30,9 @@ const Navbar = () => (
         <div>
           <ul className={styles.list}>
             <li>
+              <Link to="/design">Design</Link>
+            </li>
+            <li>
               <Link to="/notes">Notes</Link>
             </li>
             <li>
