@@ -46,3 +46,15 @@ img.external {
   padding-bottom: 1px;
   vertical-align: baseline;
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: block;
+  }
+
+  .list {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaef;
+  }
+}
