@@ -1,18 +1,25 @@
 .body {
-  margin-top: 3rem;
-  font-family: var(--font-accent);
   hyphens: auto;
   color: var(--color-text-body);
   font-size: var(--font-size-body);
-  line-height: 1.625;
+  line-height: 1.6;
 }
 
 .meta {
-  font-size: var(--font-size-x-small);
+  margin-top: 10rem;
+  font-size: var(--font-size-tiny);
+  color: #cccccc;
 }
 
 .title {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: var(--font-primary);
+}
+
+.description {
+  margin-bottom: 4rem;
+  font-size: var(--font-size-body);
 }
 
 .footer {
@@ -26,15 +33,9 @@
 
 .body :global(.footnotes) {
   font-family: var(--font-primary);
-  font-size: var(--font-size-small);
-}
-
-.body :global(.footnotes) ol {
-  list-style-position: outside;
 }
 
 .body :global(.footnotes) li a:not(:global(.footnote-backref)) {
-  border-bottom-width: 1px;
   color: var(--color-text-light);
 }
 

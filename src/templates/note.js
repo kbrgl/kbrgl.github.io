@@ -14,14 +14,11 @@ const NoteTemplate = ({ data }) => {
     <Layout>
       <Row>
         <Column size="six" offset="three">
-          <div style={{ marginTop: '4rem' }} className={styles.meta}>
+          <div className={styles.meta}>
             {formatDate(new Date(post.frontmatter.date))}
           </div>
-          <h1 style={{ marginTop: '2rem' }} className={styles.title}>
-            {post.frontmatter.title}
-          </h1>
-          <p style={{ marginBottom: '2rem' }}>{post.frontmatter.description}</p>
-          <hr width="50" align="left" />
+          <h1 className={styles.title}>{post.frontmatter.title}</h1>
+          <p className={styles.description}>{post.frontmatter.description}</p>
           <div
             className={styles.body}
             // eslint-disable-next-line react/no-danger
