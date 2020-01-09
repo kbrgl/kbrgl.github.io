@@ -18,3 +18,31 @@
 .footer {
   font-size: var(--font-size-small);
 }
+
+.body :global(.footnote-ref) {
+  border-bottom: 0;
+  color: var(--color-text-light);
+}
+
+.body :global(.footnotes) {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+}
+
+.body :global(.footnotes) ol {
+  list-style-position: outside;
+}
+
+.body :global(.footnotes) li a:not(:global(.footnote-backref)) {
+  border-bottom-width: 1px;
+  color: var(--color-text-light);
+}
+
+.body :global(.footnotes) li p {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.body :global(.footnote-backref) {
+  display: inline;
+}
