@@ -39,7 +39,7 @@ const Navbar = () => (
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.dropbox.com/s/yvz9cx3pctuu25d/r%C3%A9sum%C3%A9.pdf?dl=0"
+                href="https://www.dropbox.com/s/k3bvk9ls3yzv0a6/r%C3%A9sum%C3%A9.pdf?dl=0"
               >
                 Résumé{' '}
                 <img
