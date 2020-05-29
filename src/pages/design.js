@@ -28,34 +28,56 @@ function split(nodes) {
   )
 }
 
-const DesignPage = ({ data }) => (
-  <Layout>
-    <Row>
-      <Column size="six">
-        <h1 style={{ marginTop: '5rem', marginBottom: '1rem' }}>
-          Design+Typography
-        </h1>
-        <p style={{ marginBottom: '4rem' }}>
-          A showcase of select works from my portfolio.
-        </p>
-      </Column>
-    </Row>
-    <Row>
-      {split(
-        data.allDesignJson.nodes.map(node => (
-          <section>
-            <Image
-              className={styles.image}
-              fluid={node.media.childImageSharp.fluid}
-            />
-            <p className={styles.imageTitle}>{node.title}</p>
-            <p className={styles.imageDesc}>{node.description}</p>
-          </section>
-        ))
-      )}
-    </Row>
-  </Layout>
-)
+function layoutNodes(nodes) {
+  // Construct a dictionary separating nodes of different types.
+  // e.g. art, design, etc.
+  const types = {}
+  nodes.forEach(node => {
+    if (!Array.isArray(types[node.type])) {
+      types[node.type] = []
+    }
+    types[node.type].push(node)
+  })
+
+  // Construct a separate section for all types.
+  return Object.entries(types).map(([type, typeNodes]) => (
+    <section className={styles.section} key={type}>
+      <Row>
+        {split(
+          typeNodes.map(node => (
+            <div className={styles.imageWrapper}>
+              <Image
+                className={styles.image}
+                fluid={node.media.childImageSharp.fluid}
+              />
+              <p className={styles.imageTitle}>{node.title}</p>
+              {node.description ? (
+                <p className={styles.imageDesc}>{node.description}</p>
+              ) : null}
+            </div>
+          ))
+        )}
+      </Row>
+    </section>
+  ))
+}
+
+const DesignPage = ({ data }) => {
+  return (
+    <Layout>
+      <Row>
+        <Column size="six">
+          <h1 style={{ marginTop: '5rem', marginBottom: '1rem' }}>
+            Art & Design
+          </h1>
+          <p>Made mostly while procrastinating over other work. 🖌</p>
+        </Column>
+      </Row>
+      <hr style={{ marginBottom: '1rem' }} />
+      {layoutNodes(data.allDesignJson.nodes)}
+    </Layout>
+  )
+}
 DesignPage.propTypes = {
   data: PropTypes.shape({
     allDesignJson: PropTypes.shape({
@@ -77,6 +99,7 @@ export const DesignQuery = graphql`
             }
           }
         }
+        type
       }
     }
   }
