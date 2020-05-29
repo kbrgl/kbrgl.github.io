@@ -17,7 +17,7 @@ const NotesPage = ({ data }) => (
           Scribblings on various things, addressed to no one in particular.
         </p>
         <ul className={styles.list}>
-          {data.allMarkdownRemark.nodes.map(node =>
+          {data.allMarkdownRemark.nodes.map((node) =>
             !node.frontmatter.draft ? (
               <li key={node.frontmatter.title}>
                 <div className={styles.post}>

@@ -14,6 +14,7 @@ const IndexPage = ({ data }) => (
         width: 300,
         position: 'absolute',
         zIndex: -1,
+        top: '1rem',
         right: 'calc(50% - 150px)',
       }}
     />

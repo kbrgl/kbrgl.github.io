@@ -28,12 +28,11 @@ const Layout = ({ children }) => (
       ]}
       htmlAttributes={{ lang: 'en' }}
     />
+    <Navbar />
     <Container>
-      <Navbar />
       <main>{children}</main>
-      <hr style={{ marginTop: '8rem' }} />
-      <Footer />
     </Container>
+    <Footer />
   </div>
 )
 Layout.propTypes = {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
+import { Container } from './grid'
 
 import externalIcon from '../images/external.svg'
 
@@ -19,38 +20,46 @@ const Navbar = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <header className={styles.header}>
-        <div>
-          <Link to="/" className={styles.link}>
-            <Image fixed={data.file.childImageSharp.fixed} />
-            <span className={styles.name}>Kabir Goel</span>
-          </Link>
-        </div>
-        <div>
-          <ul className={styles.list}>
-            <li>
-              <Link to="/design">Art & Design</Link>
-            </li>
-            <li>
-              <Link to="/notes">Notes</Link>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.dropbox.com/s/k3bvk9ls3yzv0a6/r%C3%A9sum%C3%A9.pdf?dl=0"
-              >
-                Résumé{' '}
-                <img
-                  className={styles.external}
-                  src={externalIcon}
-                  alt="External link"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Container>
+          <div className={styles.headerContent}>
+            <div>
+              <Link to="/" className={styles.link}>
+                <Image fixed={data.file.childImageSharp.fixed} />
+                <span className={styles.name}>Kabir Goel</span>
+              </Link>
+            </div>
+            <div>
+              <ul className={styles.list}>
+                <li>
+                  <Link to="/design" activeClassName={styles.currentLink}>
+                    Art & Design
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/notes" activeClassName={styles.currentLink}>
+                    Notes
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.dropbox.com/s/k3bvk9ls3yzv0a6/r%C3%A9sum%C3%A9.pdf?dl=0"
+                  >
+                    Résumé{' '}
+                    <img
+                      className={styles.external}
+                      src={externalIcon}
+                      alt="External link"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Container>
       </header>
     )}
   />
