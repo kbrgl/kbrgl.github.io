@@ -1,4 +1,6 @@
 .image {
+  box-shadow: 0 3px 20px -5px rgba(0, 0, 20, 0.2);
+  border-radius: 4px;
   margin-top: 5rem;
 }
 
@@ -13,13 +15,4 @@
 .imageDesc {
   font-size: var(--font-size-x-small);
   margin-bottom: 1rem;
-}
-
-.imageType {
-  display: inline-block;
-  font-size: var(--font-size-tiny);
-  text-transform: capitalize;
-  border: 1px solid var(--color-text-light);
-  padding: 5px 10px;
-  border-radius: 100px;
 }
