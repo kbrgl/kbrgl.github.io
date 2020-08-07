@@ -1,25 +1,29 @@
-import React from 'react'
+// @jsx jsx
+import { jsx } from 'theme-ui'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
-import 'typeface-ibm-plex-sans'
-import 'typeface-ibm-plex-serif'
+import 'typeface-cooper-hewitt'
 
 import Navbar from '../navbar'
-import { Container } from '../grid'
 import Footer from '../footer'
+import Background from '../background'
 
 import './normalize.css'
-import './skeleton.css'
-import styles from './styles.module.css'
+import './style.css'
 
 const Layout = ({ children }) => (
-  <div className={styles.wrapper}>
+  <div
+    sx={{
+      position: 'relative',
+      minHeight: '100vh',
+    }}
+  >
     <Helmet
       title="Kabir Goel"
       meta={[
         {
           name: 'description',
-          content: '17 year old maker from New Delhi, India.',
+          content: 'Indian-American maker from New Delhi, India.',
         },
         {
           name: 'google-site-verification',
@@ -29,10 +33,9 @@ const Layout = ({ children }) => (
       htmlAttributes={{ lang: 'en' }}
     />
     <Navbar />
-    <Container>
-      <main>{children}</main>
-    </Container>
+    <main>{children}</main>
     <Footer />
+    <Background />
   </div>
 )
 Layout.propTypes = {

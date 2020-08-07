@@ -1,21 +1,42 @@
-import React from 'react'
+// @jsx jsx
+import { jsx, Container, Text, Heading } from 'theme-ui'
 import { Link } from 'gatsby'
 
-import { Row, Column } from '../components/grid'
 import Layout from '../components/layout'
 
-const IndexPage = () => (
+const NotFound = () => (
   <Layout>
-    <Row>
-      <Column size="six" offset="three">
-        <h1 style={{ marginTop: '4rem' }}>Not Found.</h1>
-        <p>
+    <Container
+      sx={{
+        py: 3,
+        borderBottom: '1px solid',
+        borderBottomColor: 'primary',
+        minHeight: ['60vh', '75vh'],
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
+      <div>
+        <Heading variant="title" mb={1}>
+          Not Found.
+        </Heading>
+        <Text>
           Whatever you’re looking for wasn’t found, but you can always{' '}
-          <Link to="/">go home</Link>.
-        </p>
-      </Column>
-    </Row>
+          <Link
+            sx={{
+              variant: 'styles.a',
+            }}
+            to="/"
+          >
+            go home
+          </Link>
+          .
+        </Text>
+      </div>
+    </Container>
   </Layout>
 )
 
-export default IndexPage
+export default NotFound

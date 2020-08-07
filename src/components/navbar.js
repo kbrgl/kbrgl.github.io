@@ -1,11 +1,7 @@
-import React from 'react'
+// @jsx jsx
+import { jsx, Text, Container, Box, Link as ALink } from 'theme-ui'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
-import { Container } from './grid'
-
-import externalIcon from '../images/external.svg'
-
-import styles from './navbar.module.css'
 
 const Navbar = () => (
   <StaticQuery
@@ -21,26 +17,62 @@ const Navbar = () => (
       }
     `}
     render={(data) => (
-      <header className={styles.header}>
+      <nav
+        sx={{
+          variant: 'layout.navbar',
+        }}
+      >
         <Container>
-          <div className={styles.headerContent}>
+          <div
+            sx={{
+              pt: 3,
+              pb: [1, 2],
+              borderBottom: '1px solid',
+              borderBottomColor: 'text',
+              display: ['block', 'flex'],
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
             <div>
-              <Link to="/" className={styles.link}>
-                <Image fixed={data.file.childImageSharp.fixed} />
-                <span className={styles.name}>Kabir Goel</span>
+              <Link
+                to="/"
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <Image sx={{ mr: 1 }} fixed={data.file.childImageSharp.fixed} />
+                <Text variant="logotype">Kabir Goel</Text>
               </Link>
             </div>
             <div>
-              <ul className={styles.list}>
+              <Box
+                as="ul"
+                mt={[2, 0]}
+                mb={0}
+                variant="lists.unstyled"
+                sx={{
+                  cursor: 'default',
+                  li: {
+                    display: 'inline-block',
+                    marginRight: [2, 3],
+                    marginBottom: 0,
+                    ':last-child': {
+                      marginRight: 0,
+                    },
+                  },
+                }}
+              >
                 <li>
-                  <Link to="/design" activeClassName={styles.currentLink}>
-                    Art & Design
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/notes" activeClassName={styles.currentLink}>
-                    Notes
-                  </Link>
+                  <ALink
+                    sx={{
+                      textDecoration: 'none',
+                    }}
+                    href="mailto:kabirgoel.kg@gmail.com"
+                  >
+                    Email
+                  </ALink>
                 </li>
                 <li>
                   <a
@@ -48,19 +80,14 @@ const Navbar = () => (
                     rel="noopener noreferrer"
                     href="https://www.dropbox.com/s/k3bvk9ls3yzv0a6/r%C3%A9sum%C3%A9.pdf?dl=0"
                   >
-                    Résumé{' '}
-                    <img
-                      className={styles.external}
-                      src={externalIcon}
-                      alt="External link"
-                    />
+                    Résumé
                   </a>
                 </li>
-              </ul>
+              </Box>
             </div>
           </div>
         </Container>
-      </header>
+      </nav>
     )}
   />
 )
