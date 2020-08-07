@@ -1,5 +1,7 @@
 // @jsx jsx
 import { jsx, Text, Container, Box, Link as ALink } from 'theme-ui'
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 

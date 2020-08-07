@@ -1,5 +1,7 @@
 // @jsx jsx
 import { jsx, Flex } from 'theme-ui'
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 
 export default ({ children, ...props }) => (
   <Flex

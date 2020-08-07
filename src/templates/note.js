@@ -1,5 +1,7 @@
 // @jsx jsx
 import { jsx, Box, Container, Flex, Heading, Text } from 'theme-ui'
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -54,23 +56,6 @@ const NoteTemplate = ({ data }) => {
       </Container>
     </Layout>
   )
-}
-NoteTemplate.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      html: PropTypes.string,
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string,
-        description: PropTypes.string,
-        date: PropTypes.string,
-      }),
-      fields: PropTypes.shape({
-        readingTime: PropTypes.shape({
-          text: PropTypes.string,
-        }),
-      }),
-    }),
-  }).isRequired,
 }
 
 export const query = graphql`

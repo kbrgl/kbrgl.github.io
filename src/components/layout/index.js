@@ -1,5 +1,7 @@
 // @jsx jsx
 import { jsx } from 'theme-ui'
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import 'typeface-cooper-hewitt'
@@ -38,8 +40,5 @@ const Layout = ({ children }) => (
     <Background />
   </div>
 )
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout
