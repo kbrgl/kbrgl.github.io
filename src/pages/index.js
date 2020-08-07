@@ -126,12 +126,12 @@ const Me = ({ data }) => {
   const breakpoint = theme.breakpoints[0]
   const sources = [
     {
-      ...data.meMobile.childImageSharp.fluid,
-      media: `(max-width: ${breakpoint})`,
-    },
-    {
       ...data.me.childImageSharp.fluid,
       media: `(min-width: ${breakpoint})`,
+    },
+    {
+      ...data.meMobile.childImageSharp.fluid,
+      media: `(max-width: ${breakpoint})`,
     },
   ]
   return (
